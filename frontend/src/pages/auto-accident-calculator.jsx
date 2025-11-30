@@ -417,7 +417,7 @@ export default function AutoAccidentCalculator() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-[#031339] via-[#0a2c70] to-[#1645a3] py-16 text-white">
+    <section className="bg-gradient-to-br from-[#031339] via-[#0a2c70] to-[#1645a3] py-8 md:py-16 text-white">
       <div className="container mx-auto max-w-6xl px-4">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_1fr]">
           <div className="flex flex-col justify-center">

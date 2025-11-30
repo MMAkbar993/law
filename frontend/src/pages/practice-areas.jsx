@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-
+import FeeFreeFormSection from '../components/home/FeeFreeFormSection';
 const HERO_ICON_MAP = {
   car: (
     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -50,6 +50,7 @@ export default function PracticeAreas() {
     : [];
 
   const [activeCorporateIndex, setActiveCorporateIndex] = useState(0);
+  const [selectedPracticeArea, setSelectedPracticeArea] = useState('');
 
   const practiceAreaColumns = useMemo(() => {
     if (!practiceAreaList.length) {
@@ -88,6 +89,26 @@ export default function PracticeAreas() {
 
       <section className="px-4 py-16">
         <div className="container mx-auto max-w-6xl">
+          {/* Practice Area Selector */}
+          <div className="mb-8">
+            <label htmlFor="practice-area-selector" className="block text-sm font-semibold text-gray-700 mb-2">
+              Select a Practice Area:
+            </label>
+            <select
+              id="practice-area-selector"
+              value={selectedPracticeArea || ''}
+              onChange={(e) => setSelectedPracticeArea(e.target.value)}
+              className="w-full md:w-auto px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-primary bg-white"
+            >
+              <option value="">All Practice Areas</option>
+              {practiceAreaList.map((area, index) => (
+                <option key={index} value={area}>
+                  {area}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <div className="grid gap-12 lg:grid-cols-5">
             <div className="lg:col-span-3">
               <h1 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-gray-900 mb-6">
@@ -244,19 +265,27 @@ export default function PracticeAreas() {
           <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {practiceAreaColumns.map((column, columnIndex) => (
               <ul key={columnIndex} className="space-y-4">
-                {column.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-brand-primary flex-shrink-0" />
-                    <span className="text-gray-800">{item}</span>
-                  </li>
-                ))}
+                {column
+                  .filter((item) => !selectedPracticeArea || item === selectedPracticeArea)
+                  .map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-brand-primary flex-shrink-0" />
+                      <span className="text-gray-800">{item}</span>
+                    </li>
+                  ))}
               </ul>
             ))}
+            {selectedPracticeArea && practiceAreaList.filter((area) => area === selectedPracticeArea).length === 0 && (
+              <div className="col-span-3 text-center py-8 text-gray-600">
+                No practice areas match your selection.
+              </div>
+            )}
           </div>
         </div>
       </section>
 
-    
+      
+      <FeeFreeFormSection />
     </div>
   );
 }

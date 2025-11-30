@@ -57,6 +57,21 @@ export default function FeeFreeSection() {
               {t('feeFree.heading')}
             </h1>
 
+            {/* Awarded Best Attorney */}
+            <p className="mb-2 text-lg font-semibold md:text-xl text-white">
+              Awarded <span className="text-[#f5d000]">Best Attorney</span> of America
+            </p>
+
+            {/* Over 2 BILLION recovered */}
+            <p className="mb-2 text-lg font-semibold md:text-xl text-white">
+              Over <span className="text-[#f5d000]">2 BILLION</span> recovered
+            </p>
+
+            {/* Help text */}
+            <p className="mb-4 text-lg font-semibold md:text-xl text-white">
+              Hurt in an accident? We'll help you recover and secure the maximum compensation.
+            </p>
+
             {/* Call to Action */}
             <p className="mb-4 text-lg font-semibold md:text-xl">
               <Trans
@@ -166,9 +181,12 @@ export default function FeeFreeSection() {
 
           {/* Right Column - Contact Form */}
           <div className="w-full max-w-md rounded-3xl border border-white/20  p-[32px] shadow-[0_20px_45px_rgba(0,0,0,0.35)] backdrop-blur">
-            <h2 className="mb-2 text-2xl font-semibold md:text-3xl">
-              {t('feeFree.formTitle')}
+            <h2 className="mb-2 text-2xl font-semibold md:text-3xl text-center">
+              Get your FREE case evaluation
             </h2>
+            <h3 className="mb-2 text-xl font-semibold md:text-2xl text-center text-white/80">
+              {t('feeFree.formTitle')}
+            </h3>
             
             {/* Phone Number */}
             <a 

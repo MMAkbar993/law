@@ -61,8 +61,13 @@
       "practiceAreas": "Áreas de práctica",
       "attorneys": "Abogados",
       "about": "Nosotros",
-      "results": "Nuestros resultados",
-      "contact": "Contacto"
+      "results": "Nuestro proceso",
+      "contact": "Contacto",
+      "aboutDropdown": {
+        "whoWeAre": "Quiénes Somos",
+        "blog": "Blog",
+        "disclaimer": "Aviso Legal y Términos de Uso"
+      }
     }
   },
   "practiceAreas": {

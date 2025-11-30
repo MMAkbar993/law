@@ -13,12 +13,14 @@ import InsightsResourcesSection from '../components/home/InsightsResourcesSectio
 import FeeFreeFormSection from '../components/home/FeeFreeFormSection';
 import GetJusticeStepsSection from '../components/home/GetJusticeStepsSection';
 import ReviewsSection from '../components/home/ReviewsSection';
+import CalculatorTabBox from '../components/home/CalculatorTabBox';
 
 export default function Home() {
   return (
     <>
       <FeeFreeSection />
       <HeroSection />
+      <CalculatorTabBox />
 
       <GetJusticeStepsSection />
       <BigWinsSection />

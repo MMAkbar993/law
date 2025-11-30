@@ -8,6 +8,13 @@ import Home from './pages/home';
 import PracticeAreas from './pages/practice-areas';
 import Locations from './pages/locations';
 import AutoAccidentCalculator from './pages/auto-accident-calculator';
+import CaseProcess from './pages/case-process';
+import Attorneys from './pages/attorneys';
+import OurFirm from './pages/our-firm';
+import Contact from './pages/contact';
+import Terms from './pages/terms';
+import News from './pages/news';
+import Articles from './pages/articles';
 import { INTEGRATIONS } from './config/integrations';
 
 export default function App() {
@@ -120,6 +127,14 @@ export default function App() {
             <Route path="/practice-areas" element={<PracticeAreas />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/auto-accident-calculator" element={<AutoAccidentCalculator />} />
+            <Route path="/our-results" element={<CaseProcess />} />
+            <Route path="/attorneys" element={<Attorneys />} />
+            <Route path="/our-firm" element={<OurFirm />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/disclaimer-and-terms-of-use" element={<Terms />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/articles" element={<Articles />} />
           </Routes>
         </main>
         <Footer />

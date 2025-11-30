@@ -226,13 +226,27 @@ function NewsletterSection() {
     setIsSubmitting(true);
     setMessage('');
 
-    // TODO: Implement actual newsletter subscription API call
-    // For now, just simulate a submission
-    setTimeout(() => {
+    try {
+      const response = await fetch(API_ROUTES.newsletter, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || 'Subscription failed');
+      }
+
       setMessage('Thank you for subscribing!');
       setEmail('');
+    } catch (error) {
+      setMessage(error.message || 'Failed to subscribe. Please try again.');
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
