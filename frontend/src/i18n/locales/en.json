@@ -15,6 +15,7 @@
       "submitting": "Submitting..."
     },
     "form": {
+      "fullName": "Full Name",
       "firstName": "First Name",
       "lastName": "Last Name",
       "phone": "Phone Number",

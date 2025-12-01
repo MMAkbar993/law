@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
@@ -15,6 +16,7 @@ import Contact from './pages/contact';
 import Terms from './pages/terms';
 import News from './pages/news';
 import Articles from './pages/articles';
+import Admin from './pages/admin';
 import { INTEGRATIONS } from './config/integrations';
 
 export default function App() {
@@ -117,29 +119,32 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/practice-areas" element={<PracticeAreas />} />
-            <Route path="/locations" element={<Locations />} />
-            <Route path="/auto-accident-calculator" element={<AutoAccidentCalculator />} />
-            <Route path="/our-results" element={<CaseProcess />} />
-            <Route path="/attorneys" element={<Attorneys />} />
-            <Route path="/our-firm" element={<OurFirm />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/disclaimer-and-terms-of-use" element={<Terms />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/articles" element={<Articles />} />
-          </Routes>
-        </main>
-        <Footer />
-        <MobileCallButton />
-      </div>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/practice-areas" element={<PracticeAreas />} />
+              <Route path="/locations" element={<Locations />} />
+              <Route path="/auto-accident-calculator" element={<AutoAccidentCalculator />} />
+              <Route path="/our-results" element={<CaseProcess />} />
+              <Route path="/attorneys" element={<Attorneys />} />
+              <Route path="/our-firm" element={<OurFirm />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/disclaimer-and-terms-of-use" element={<Terms />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/articles" element={<Articles />} />
+              <Route path="/admin" element={<Admin />} />
+            </Routes>
+          </main>
+          <Footer />
+          <MobileCallButton />
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }

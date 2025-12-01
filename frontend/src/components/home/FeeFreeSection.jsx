@@ -7,8 +7,7 @@ export default function FeeFreeSection() {
   const { submit, status, resetStatus } = useSubmission();
 
   const initialFormState = {
-    firstName: '',
-    lastName: '',
+    fullName: '',
     phone: '',
     zipCode: '',
     email: '',
@@ -197,27 +196,16 @@ export default function FeeFreeSection() {
             </a>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* First Name and Last Name */}
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder={t('common.form.firstName')}
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-accent"
-                  required
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder={t('common.form.lastName')}
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-accent"
-                  required
-                />
-              </div>
+              {/* Full Name */}
+              <input
+                type="text"
+                name="fullName"
+                placeholder={t('common.form.fullName')}
+                value={formData.fullName}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-accent"
+                required
+              />
 
               {/* Phone Number and Zip Code */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

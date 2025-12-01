@@ -45,8 +45,15 @@
     left: auto !important;
   }
 
-  /* Add bottom padding to prevent content from being hidden behind fixed call button */
+  /* Add bottom padding to prevent content from being hidden behind fixed call button on mobile */
   body {
     padding-bottom: 72px;
+  }
+}
+
+/* Ensure floating call button has space on desktop */
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 80px;
   }
 }

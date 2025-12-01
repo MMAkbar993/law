@@ -20,6 +20,9 @@ export default function Terms() {
             <p className="text-gray-700 leading-relaxed mb-4">
               To ensure that consumers' inquiries are handled accurately, courteously, and promptly, phone calls between you and Morgan & Morgan or any of our affiliates, agents, case managers, paralegals, and/or attorneys may be recorded. We may from time to time make calls and/or send text messages to you at any telephone number associated with your account. The manner in which these calls or text (SMS) messages are made to you may include, but is not limited to, the use of prerecorded/artificial voice messages and/or an automatic telephone dialing system. You certify, warrant, and represent that the telephone numbers you have provided to us are your contact numbers. You represent that you are permitted to receive calls at each of the telephone numbers you have provided to us. You agree that Morgan & Morgan may send emails to you at any email address you provide us, or use other electronic means of communication to the extent permitted by law.
             </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              I hereby expressly consent to receive text messages, emails, and calls (including those made using an automatic telephone dialing system, artificial or prerecorded voice) from us and our agents at the phone number(s) and email address I provided. These communications may be for marketing, informational, or case-related purposes. I understand my consent is not required to obtain legal services, message/data rates may apply, and I may opt out by replying STOP. By submitting this form, you agree to our Terms & acknowledge our Privacy Policy.
+            </p>
           </section>
 
           {/* Content Is Information Only, Not Advice */}

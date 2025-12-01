@@ -83,8 +83,8 @@ const STEP_DEFINITIONS = [
   {
     id: 'contact',
     type: 'contact',
-    field: ['firstName', 'lastName', 'email'],
-    label: 'You qualify! Let’s calculate your compensation!',
+    field: ['fullName', 'email'],
+    label: "You qualify! Let's calculate your compensation!",
     helper: "What's your name?",
   },
   {
@@ -158,8 +158,7 @@ const INITIAL_FORM_STATE = {
   lawyer: '',
   details: '',
   state: '',
-  firstName: '',
-  lastName: '',
+  fullName: '',
   email: '',
   phone: '',
   consent: false,
@@ -207,8 +206,7 @@ export default function AutoAccidentCalculator() {
         return Boolean(formState.details?.trim()) && Boolean(formState.state);
       case 'contact':
         return (
-          Boolean(formState.firstName?.trim()) &&
-          Boolean(formState.lastName?.trim()) &&
+          Boolean(formState.fullName?.trim()) &&
           Boolean(formState.email?.trim())
         );
       case 'phone':
@@ -311,29 +309,18 @@ export default function AutoAccidentCalculator() {
         <p className="text-lg font-semibold text-[#55c7d0]">You qualify! Let’s calculate your compensation!</p>
       </div>
       <div>
-        <label htmlFor="firstName" className="block text-lg font-semibold text-[#feb602]">
+        <label htmlFor="fullName" className="block text-lg font-semibold text-[#feb602]">
           What&apos;s your name?
         </label>
-        <div className="mt-3 grid gap-3 md:grid-cols-2">
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={formState.firstName}
-            onChange={handleInputChange}
-            placeholder="First name"
-            className="rounded-lg border border-[#1149bc] bg-[#0f2f67]/40 px-4 py-3 text-white placeholder:text-white/50 focus:border-[#55c7d0] focus:outline-none focus:ring-2 focus:ring-[#55c7d0]"
-          />
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={formState.lastName}
-            onChange={handleInputChange}
-            placeholder="Last name"
-            className="rounded-lg border border-[#1149bc] bg-[#0f2f67]/40 px-4 py-3 text-white placeholder:text-white/50 focus:border-[#55c7d0] focus:outline-none focus:ring-2 focus:ring-[#55c7d0]"
-          />
-        </div>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          value={formState.fullName}
+          onChange={handleInputChange}
+          placeholder="Full name"
+          className="mt-3 w-full rounded-lg border border-[#1149bc] bg-[#0f2f67]/40 px-4 py-3 text-white placeholder:text-white/50 focus:border-[#55c7d0] focus:outline-none focus:ring-2 focus:ring-[#55c7d0]"
+        />
       </div>
       <div>
         <label htmlFor="email" className="block text-lg font-semibold text-[#feb602]">

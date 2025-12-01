@@ -1,43 +1,57 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../../contexts/ThemeContext';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
   const [aboutDropdownTimeout, setAboutDropdownTimeout] = useState(null);
   const { t, i18n } = useTranslation();
+  const { theme, logo } = useTheme();
   const isSpanish = i18n.language.startsWith('es');
 
   useEffect(() => {
     document.documentElement.setAttribute('lang', i18n.language);
   }, [i18n.language]);
 
-  const navLinkBase =
-    'text-white text-sm font-semibold transition-colors duration-200 hover:text-[#f5d000] flex items-center';
-
   const toggleLanguage = () => {
     const nextLanguage = isSpanish ? 'en' : 'es';
     i18n.changeLanguage(nextLanguage);
   };
 
+  const headerBg = theme.primary || '#0a2043';
+  const accentColor = theme.accent || '#f5d000';
+  
+  const navLinkBase =
+    'text-white text-sm font-semibold transition-colors duration-200 flex items-center';
+
   return (
-    <header className="sticky top-0 z-50 bg-[#0a2043] text-white">
+    <header className="sticky top-0 z-50 text-white" style={{ backgroundColor: headerBg }}>
       <div className="container mx-auto flex items-center justify-between gap-6 px-4 py-3">
         {/* Logo */}
         <a href="/">
         <div className="flex items-center">
           <div className="flex flex-col items-center md:items-start">
-            <div className="inline-flex items-center border-2 border-black bg-black px-4 py-1.5">
-              <span className="text-[#f5d000] text-lg font-black leading-none tracking-tight">
-                {t('header.logo')}
-              </span>
-            </div>
-            <p className="mt-1 hidden text-xs font-semibold tracking-wide text-white md:block">
-              {t('header.tagline.prefix')}{' '}
-              <span className="text-[#f5d000]">{t('header.tagline.highlight')}</span>{' '}
-              {t('header.tagline.suffix')}
-            </p>
+            {logo ? (
+              <div 
+                className="max-w-xs max-h-16"
+                dangerouslySetInnerHTML={{ __html: logo }}
+              />
+            ) : (
+              <>
+                <div className="inline-flex items-center border-2 border-black bg-black px-4 py-1.5">
+                  <span className="text-lg font-black leading-none tracking-tight" style={{ color: accentColor }}>
+                    {t('header.logo')}
+                  </span>
+                </div>
+                <p className="mt-1 hidden text-xs font-semibold tracking-wide text-white md:block">
+                  {t('header.tagline.prefix')}{' '}
+                  <span style={{ color: accentColor }}>{t('header.tagline.highlight')}</span>{' '}
+                  {t('header.tagline.suffix')}
+                </p>
+              </>
+            )}
           </div>
         </div>
         </a>
@@ -45,13 +59,31 @@ export default function Header() {
         {/* Desktop Navigation */}
         <div className="hidden flex-1 items-center justify-end lg:flex">
           <nav className="flex items-center gap-6">
-            <Link to="/locations" className={navLinkBase}>
+            <Link 
+              to="/locations" 
+              className={navLinkBase}
+              style={{ '--hover-color': accentColor }}
+              onMouseEnter={(e) => e.target.style.color = accentColor}
+              onMouseLeave={(e) => e.target.style.color = 'white'}
+            >
               {t('header.nav.locations')}
             </Link>
-            <Link to="/practice-areas" className={navLinkBase}>
+            <Link 
+              to="/practice-areas" 
+              className={navLinkBase}
+              style={{ '--hover-color': accentColor }}
+              onMouseEnter={(e) => e.target.style.color = accentColor}
+              onMouseLeave={(e) => e.target.style.color = 'white'}
+            >
               {t('header.nav.practiceAreas')}
             </Link>
-            <a href="/attorneys" className={navLinkBase}>
+            <a 
+              href="/attorneys" 
+              className={navLinkBase}
+              style={{ '--hover-color': accentColor }}
+              onMouseEnter={(e) => e.target.style.color = accentColor}
+              onMouseLeave={(e) => e.target.style.color = 'white'}
+            >
               {t('header.nav.attorneys')}
             </a>
             <div 
@@ -70,7 +102,13 @@ export default function Header() {
                 setAboutDropdownTimeout(timeout);
               }}
             >
-              <Link to="/our-firm" className={navLinkBase}>
+              <Link 
+                to="/our-firm" 
+                className={navLinkBase}
+                style={{ '--hover-color': accentColor }}
+                onMouseEnter={(e) => e.target.style.color = accentColor}
+                onMouseLeave={(e) => e.target.style.color = 'white'}
+              >
                 {t('header.nav.about')}
                 <svg 
                   className={`ml-1 h-4 w-4 transition-transform ${isAboutDropdownOpen ? 'rotate-180' : ''}`}
@@ -121,23 +159,48 @@ export default function Header() {
                 </div>
               )}
             </div>
-            <Link to="/our-results" className={navLinkBase}>
+            <Link 
+              to="/our-results" 
+              className={navLinkBase}
+              style={{ '--hover-color': accentColor }}
+              onMouseEnter={(e) => e.target.style.color = accentColor}
+              onMouseLeave={(e) => e.target.style.color = 'white'}
+            >
               {t('header.nav.results')}
             </Link>
-            <a href="/contact" className={navLinkBase}>
+            <a 
+              href="/contact" 
+              className={navLinkBase}
+              style={{ '--hover-color': accentColor }}
+              onMouseEnter={(e) => e.target.style.color = accentColor}
+              onMouseLeave={(e) => e.target.style.color = 'white'}
+            >
               {t('header.nav.contact')}
             </a>
-            <button className="ml-4 text-white transition-colors duration-200 hover:text-[#f5d000]">
+            <button 
+              className="ml-4 text-white transition-colors duration-200"
+              style={{ '--hover-color': accentColor }}
+              onMouseEnter={(e) => e.target.style.color = accentColor}
+              onMouseLeave={(e) => e.target.style.color = 'white'}
+            >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </button>
-            <a 
-              href={`tel:${t('common.phone').replace(/[^\d]/g, '')}`}
-              className="ml-6 text-xl font-black tracking-tight text-[#f5d000] hover:text-[#f5d000]/80 transition-colors"
-            >
-              {t('common.phone')}
-            </a>
+            <div className="ml-6 flex flex-col items-end">
+              <a 
+                href={`tel:${t('common.phone').replace(/[^\d]/g, '')}`}
+                className="text-xl font-black tracking-tight transition-colors"
+                style={{ color: accentColor }}
+                onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+                onMouseLeave={(e) => e.target.style.opacity = '1'}
+              >
+                {t('common.phone')}
+              </a>
+              <p className="text-xs font-semibold text-white/90 mt-0.5">
+                Get Help Now. 24/7
+              </p>
+            </div>
             <button
               type="button"
               onClick={toggleLanguage}
@@ -150,7 +213,10 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-white transition-colors duration-200 hover:text-[#f5d000]"
+          className="lg:hidden text-white transition-colors duration-200"
+          style={{ '--hover-color': accentColor }}
+          onMouseEnter={(e) => e.target.style.color = accentColor}
+          onMouseLeave={(e) => e.target.style.color = 'white'}
           onClick={() => {
             setIsMenuOpen(!isMenuOpen);
             if (isMenuOpen) {
@@ -166,7 +232,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden border-t border-white/20 bg-[#0a2043] px-4 pb-6">
+        <div className="lg:hidden border-t border-white/20 px-4 pb-6" style={{ backgroundColor: headerBg }}>
           <nav className="flex flex-col space-y-4 pt-4">
             <Link
               to="/locations"
@@ -247,7 +313,10 @@ export default function Header() {
             </a>
             <a 
               href={`tel:${t('common.phone').replace(/[^\d]/g, '')}`}
-              className="pt-2 text-lg font-black text-[#f5d000] hover:text-[#f5d000]/80 transition-colors"
+              className="pt-2 text-lg font-black transition-colors"
+              style={{ color: accentColor }}
+              onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+              onMouseLeave={(e) => e.target.style.opacity = '1'}
             >
               {t('common.phone')}
             </a>
