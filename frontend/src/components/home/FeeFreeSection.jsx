@@ -67,17 +67,17 @@ export default function FeeFreeSection() {
             </p>
 
             {/* Help text */}
-            <p className="mb-4 text-lg font-semibold md:text-xl text-white">
+            {/* <p className="mb-4 text-lg font-semibold md:text-xl text-white">
               Hurt in an accident? We'll help you recover and secure the maximum compensation.
-            </p>
+            </p> */}
 
             {/* Call to Action */}
-            <p className="mb-4 text-lg font-semibold md:text-xl">
+            {/* <p className="mb-4 text-lg font-semibold md:text-xl">
               <Trans
                 i18nKey="feeFree.subheading"
                 components={[<span className="underline font-semibold" />]}
               />
-            </p>
+            </p> */}
             
             {/* Phone Number */}
             <a 
@@ -190,7 +190,7 @@ export default function FeeFreeSection() {
             {/* Phone Number */}
             <a 
               href={`tel:${t('common.phone').replace(/[^\d]/g, '')}`}
-              className="mb-6 text-xl md:text-2xl font-bold text-[#f5d000] hover:text-[#f5d000]/80 transition-colors inline-block"
+              className="mb-6 ml-24 text-xl md:text-2xl font-bold text-[#f5d000] hover:text-[#f5d000]/80 transition-colors inline-block"
             >
               {t('common.phone')}
             </a>
@@ -207,8 +207,19 @@ export default function FeeFreeSection() {
                 required
               />
 
-              {/* Phone Number and Zip Code */}
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {/* Email */}
+              <input
+                type="email"
+                name="email"
+                placeholder={t('common.form.email')}
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-accent"
+                required
+              />
+
+               {/* Phone Number and Zip Code */}
+               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <input
                   type="tel"
                   name="phone"
@@ -228,17 +239,6 @@ export default function FeeFreeSection() {
                   required
                 />
               </div>
-
-              {/* Email */}
-              <input
-                type="email"
-                name="email"
-                placeholder={t('common.form.email')}
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-accent"
-                required
-              />
 
               {/* Case Type Dropdown */}
               <select

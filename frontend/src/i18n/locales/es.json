@@ -64,6 +64,7 @@
       "about": "Nosotros",
       "results": "Nuestro proceso",
       "contact": "Contacto",
+      "calculator": "Calculadora de Accidentes",
       "aboutDropdown": {
         "whoWeAre": "Quiénes Somos",
         "blog": "Blog",
@@ -502,6 +503,24 @@
     "privacyPolicy": "Aviso de privacidad",
     "terms": "Avisos legales y términos de uso",
     "copyright": "©2025 Morgan and Morgan, P.A. Todos los derechos reservados"
+  },
+  "contact": {
+    "title": "CONTÁCTANOS A TU MANERA",
+    "description": "No importa dónde ocurra una lesión, obtener ayuda no debería ser difícil. Morgan & Morgan facilita la lucha por la compensación que mereces.",
+    "formTitle": "Es Gratis Comenzar",
+    "here247": "Estamos aquí 24/7.",
+    "formDescription": "Completa el formulario, llámanos al {{phone}}, o usa el botón de texto para tu evaluación de caso gratuita.",
+    "attorneyDisclaimer": "El abogado mostrado arriba puede no estar autorizado en tu estado. Para encontrar un abogado autorizado en tu área, visita nuestra",
+    "attorneyPage": "página de abogados",
+    "whyTitle": "¿Por qué Morgan & Morgan?",
+    "whyDescription": "Elegir Morgan & Morgan significa más que contratar un bufete de abogados—es tener un equipo fuerte, solidario y probado de tu lado.",
+    "fightingForMore": "LUCHANDO POR MÁS",
+    "fightingDescription": "35 años. 1,000 abogados. $25 mil millones recuperados. Tenemos el poder para enfrentar a cualquier corporación.",
+    "feeFree": "LA TARIFA ES GRATIS, A MENOS QUE GANEMOS",
+    "feeDescription": "Es fácil comenzar con una evaluación de caso gratuita por teléfono, texto o web — 24/7. La tarifa siempre es gratis a menos que ganemos.",
+    "localCare": "ATENCIÓN LOCAL + PODER NACIONAL",
+    "localDescription": "Tu abogado es de tu comunidad — respaldado por la fortaleza de una firma nacional.",
+    "findOffice": "Encuentra una oficina cerca de ti"
   }
 }
 

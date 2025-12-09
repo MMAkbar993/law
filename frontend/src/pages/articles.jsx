@@ -118,12 +118,12 @@ function CategorySection({ section }) {
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           {section.title}
         </h2>
-        <Link
+        {/* <Link
           to={`/articles/${section.id}`}
           className="text-blue-600 hover:text-blue-700 font-semibold"
         >
           View All
-        </Link>
+        </Link> */}
       </div>
 
       {/* Featured Article */}

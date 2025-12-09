@@ -58,10 +58,10 @@ export default function Contact() {
             {/* Left Side - Contact Us Your Way */}
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6">
-                CONTACT US YOUR WAY
+                {t('contact.title')}
               </h1>
               <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                No matter where an injury happens, getting help shouldn't be hard. Morgan & Morgan makes it easy to fight for the compensation you deserve.
+                {t('contact.description')}
               </p>
 
               {/* Attorney Image */}
@@ -91,36 +91,29 @@ export default function Contact() {
                   </svg>
                   <div>
                     <p className="text-lg font-semibold text-gray-900 mb-2">
-                      We're here 24/7.
+                      {t('contact.here247')}
                     </p>
                     <p className="text-base text-gray-700">
-                      Fill out the form, call us at{' '}
-                      <a
-                        href={`tel:${phoneNumber.replace(/[^\d]/g, '')}`}
-                        className="text-blue-600 hover:text-blue-700 font-semibold"
-                      >
-                        {phoneNumber}
-                      </a>
-                      , or use the text button for your free case evaluation.
+                      {t('contact.formDescription', { phone: phoneNumber })}
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Disclaimer */}
-              <p className="text-xs text-gray-600 mt-6">
-                The attorney shown above may not be licensed in your state. To find an attorney licensed in your area, please visit our{' '}
+              {/* <p className="text-xs text-gray-600 mt-6">
+                {t('contact.attorneyDisclaimer')}{' '}
                 <Link to="/attorneys" className="text-blue-600 hover:text-blue-700 underline">
-                  attorney page
+                  {t('contact.attorneyPage')}
                 </Link>
                 .
-              </p>
+              </p> */}
             </div>
 
             {/* Right Side - It's Free to Get Started Form */}
             <div className="bg-white rounded-xl p-6 md:p-8 shadow-xl border border-gray-200">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                It's Free to Get Started
+                {t('contact.formTitle')}
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -259,10 +252,10 @@ export default function Contact() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-              Why Morgan & Morgan?
+              {t('contact.whyTitle')}
             </h2>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-              Choosing Morgan & Morgan means more than hiring a law firm—it's having a strong, supportive, and proven team on your side.
+              {t('contact.whyDescription')}
             </p>
           </div>
 
@@ -270,36 +263,36 @@ export default function Contact() {
             {/* Column 1: Fighting for More */}
             <div className="text-center lg:text-left">
               <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-                FIGHTING FOR MORE
+                {t('contact.fightingForMore')}
               </h3>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                35 years. 1,000 lawyers. $25 billion recovered. We have the power to take on any corporation.
+                {t('contact.fightingDescription')}
               </p>
             </div>
 
             {/* Column 2: The Fee is Free, Unless We Win */}
             <div className="text-center lg:text-left">
               <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-                THE FEE IS FREE, UNLESS WE WIN
+                {t('contact.feeFree')}
               </h3>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                It's easy to get started with a free case evaluation by phone, text or web — 24/7. The fee is always free unless we win.
+                {t('contact.feeDescription')}
               </p>
             </div>
 
             {/* Column 3: Local Care + National Power */}
             <div className="text-center lg:text-left">
               <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-                LOCAL CARE + NATIONAL POWER
+                {t('contact.localCare')}
               </h3>
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-                Your attorney is from your community — backed by the strength of a national firm.
+                {t('contact.localDescription')}
               </p>
               <Link
                 to="/locations"
                 className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
               >
-                <span>Find an office near you</span>
+                <span>{t('contact.findOffice')}</span>
                 <svg
                   className="w-5 h-5"
                   fill="none"

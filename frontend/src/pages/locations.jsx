@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import FeeFreeFormSection from '../components/home/FeeFreeFormSection';
@@ -154,6 +154,7 @@ function StateList() {
   const { t } = useTranslation();
   const statesData = t('locations.states.items', { returnObjects: true });
   const statesTitle = t('locations.states.title');
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const columns = useMemo(() => {
     if (!Array.isArray(statesData) || !statesData.length) {
@@ -166,15 +167,54 @@ function StateList() {
     );
   }, [statesData]);
 
+  // Show first column when collapsed (preview)
+  const previewColumns = useMemo(() => {
+    if (!Array.isArray(statesData) || !statesData.length) {
+      return [];
+    }
+    const columnCount = 3;
+    const perColumn = Math.ceil(statesData.length / columnCount);
+    // When collapsed, only show the first column
+    return [
+      statesData.slice(0, perColumn),
+      [], // Empty columns for layout consistency
+      [],
+    ];
+  }, [statesData]);
+
   return (
     <section className="bg-white px-4 pb-16">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-          {statesTitle}
-        </h2>
-        <div className="mt-10 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {columns.map((column, columnIndex) => (
-            <div key={columnIndex} className="space-y-8">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            {statesTitle}
+          </h2>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex items-center gap-2 text-brand-primary hover:text-brand-primaryDark font-semibold transition-colors"
+            aria-expanded={isExpanded}
+            aria-label={isExpanded ? 'Collapse list' : 'Expand list'}
+          >
+            <span className="text-sm">
+              {isExpanded ? 'Show Less' : 'Show All'}
+            </span>
+            <svg
+              className={`h-5 w-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+        <div
+          className={`mt-10 grid gap-10 md:grid-cols-2 lg:grid-cols-3 overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[5000px]' : 'max-h-[400px]'
+            }`}
+        >
+          {(isExpanded ? columns : previewColumns).map((column, columnIndex) => (
+            <div key={columnIndex} className={`space-y-8 ${!isExpanded && columnIndex > 0 ? 'hidden lg:block lg:opacity-0' : ''}`}>
               {column.map((stateInfo) => (
                 <div key={stateInfo.state}>
                   <h3 className="text-lg font-semibold text-gray-900">
@@ -200,22 +240,7 @@ export default function Locations() {
 
   return (
     <div className="bg-white">
-      <nav className="container mx-auto max-w-6xl px-4 pt-6 text-sm text-gray-500" aria-label="Breadcrumb">
-        <ol className="flex flex-wrap items-center gap-2">
-          <li>
-            <Link to="/" className="hover:text-brand-primary">
-              {t('locations.breadcrumbs.home')}
-            </Link>
-          </li>
-          <li aria-hidden="true" className="text-gray-400">
-            /
-          </li>
-          <li className="text-gray-800 font-semibold">
-            {t('locations.breadcrumbs.current')}
-          </li>
-        </ol>
-      </nav>
-
+      
       <LocationSearch />
       <RemoteHelp />
       <Coverage />

@@ -159,31 +159,27 @@ export default function OurFirm() {
       {/* Secondary Navigation */}
       <section className="bg-white border-b border-gray-200">
         <div className="container mx-auto max-w-7xl px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-6">
-              <div className="w-10 h-10 bg-gray-200 rounded"></div>
-              <ul className="hidden lg:flex items-center gap-6 text-sm font-semibold text-gray-700">
-                <li><Link to="/our-firm" className="hover:text-blue-600">Our Firm</Link></li>
-                <li><a href="#" className="hover:text-blue-600">Español</a></li>
-                <li><Link to="/attorneys" className="hover:text-blue-600">Attorneys</Link></li>
-                <li><a href="#" className="hover:text-blue-600">Community Involvement</a></li>
-              </ul>
-            </div>
-            <div className="hidden lg:block">
+          <div className="flex items-center justify-center gap-6 flex-wrap">
+          
+            <ul className="flex items-center gap-6 text-sm font-semibold text-gray-700">
+              
+              <li className="hidden lg:list-item">
+                <Link
+                  to="/contact"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold text-sm transition"
+                >
+                  Start your claim
+                </Link>
+              </li>
+              
+            </ul>
+            <div className="lg:hidden">
               <Link
                 to="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold text-sm transition"
-              >
-                Start your claim
-              </Link>
-            </div>
-            <div className="lg:hidden">
-              <a
-                href={`tel:${t('common.phone').replace(/[^\d]/g, '')}`}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold text-sm transition"
               >
                 Start your claim
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -240,85 +236,7 @@ export default function OurFirm() {
       </section>
 
       {/* Through the Years Section */}
-      <section className="bg-white px-4 py-16">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {timeline.title ?? 'Through the Years'}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {timeline.intro ?? "We've spent nearly four decades fighting for what matters most. You."}
-            </p>
-          </div>
-
-          {/* Timeline Carousel */}
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${activeTimelineIndex * 100}%)` }}
-              >
-                {timelineEvents.map((event, index) => (
-                  <div key={index} className="min-w-full px-2 sm:px-4">
-                    <div className="max-w-2xl mx-auto">
-                      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                        {/* Image */}
-                        <div className="relative aspect-video overflow-hidden">
-                          <img
-                            src={event.image || '2a5933f1cc42ba8a6cb60f7dab85c4d5.jpg.avif'}
-                            alt={`Timeline ${event.year}`}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-
-                        {/* Content */}
-                        <div className="p-6 md:p-8">
-                          {/* Year */}
-                          <div className="text-6xl md:text-7xl font-extrabold text-brand-primary mb-4">
-                            {event.year}
-                          </div>
-
-                          {/* Description */}
-                          <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-                            {event.description}
-                          </p>
-
-                          {/* Watch Button */}
-                          <Link
-                            to={event.videoUrl || '#'}
-                            className="inline-flex items-center gap-2 text-brand-primary font-semibold hover:text-brand-primaryDark transition"
-                          >
-                            <span>Watch</span>
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M8 5v14l11-7z" />
-                            </svg>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Pagination Dots */}
-            <div className="flex justify-center gap-2 mt-8">
-              {timelineEvents.map((_, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  onClick={() => setActiveTimelineIndex(index)}
-                  className={`h-2 rounded-full transition-all ${activeTimelineIndex === index
-                      ? 'w-2 bg-gray-900'
-                      : 'w-2 bg-gray-300 hover:bg-gray-400'
-                    }`}
-                  aria-label={`Go to timeline event ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* We Built this Firm for You Section */}
       <section className="bg-white px-4 py-16">
@@ -937,7 +855,7 @@ export default function OurFirm() {
       </section>
 
       {/* Floating TEXT US Sidebar */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
+      {/* <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
         <div className="bg-blue-100 rounded-l-lg p-4 shadow-lg">
           <div className="flex flex-col items-center gap-2">
             <div className="text-blue-900 font-bold text-sm transform -rotate-90 whitespace-nowrap">
@@ -957,7 +875,7 @@ export default function OurFirm() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       <FeeFreeFormSection />
     </div>
   );

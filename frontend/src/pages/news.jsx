@@ -24,12 +24,7 @@ const ARTICLES = [
     category: 'Newsroom, Winning Cases',
     title: "Motorcyclist's Collision: Police Dashcam Captures Life-Changing Moment",
   },
-  {
-    id: 4,
-    category: 'Client Stories',
-    title: 'Less Worry, More Results – Ben\'s Morgan & Morgan Story',
-    image: 'Screen Shot 2024-03-04 at 12.47.51 PM.png.avif',
-  },
+ 
   {
     id: 5,
     category: 'Newsroom, Product Recalls',
@@ -221,20 +216,7 @@ export default function News() {
         {/* Middle Section - Sidebar and Featured Article */}
         <div className="grid lg:grid-cols-4 gap-8 mb-16">
           {/* Left Sidebar */}
-          <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Latest Stories</h3>
-            <nav className="space-y-2">
-              {SIDEBAR_LINKS.map((link, index) => (
-                <Link
-                  key={index}
-                  to="#"
-                  className="block text-gray-700 hover:text-blue-600 transition py-2"
-                >
-                  {link}
-                </Link>
-              ))}
-            </nav>
-          </div>
+         
 
           {/* Right - Second Featured Article */}
           <div className="lg:col-span-3">

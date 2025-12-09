@@ -64,71 +64,46 @@ export default function CaseProcess() {
         </ol>
       </nav>
 
-      {/* Hero Section with Light Blue Background */}
-      <section className="bg-blue-50 px-4 py-16">
+      {/* Hero Section - Modern and Clean */}
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 px-4 py-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            {/* Left Column - Title and Text */}
-            <div>
-              <h1 className="mb-6">
-                <span className="inline-block bg-black px-4 py-2 text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white mb-2">
-                  {heroConfig.titlePart1 ?? 'THE CASE'}
-                </span>
-                <br />
-                <span className="inline-block bg-black px-4 py-2 text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white">
-                  {heroConfig.titlePart2 ?? 'PROCESS'}
-                </span>
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 max-w-xl">
-                {heroConfig.description ?? "Injured and not sure what to do next? Start here. We'll guide you through what you need to know."}
-              </p>
-            </div>
-
-            {/* Right Column - Briefcase Illustration */}
-            <div className="flex justify-center lg:justify-end">
-              <img
-                src="/case-process-hero.avif"
-                alt="Case process illustration"
-                className="w-full max-w-md h-auto"
-              />
-            </div>
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              {heroConfig.titlePart1 ?? 'THE CASE'} {heroConfig.titlePart2 ?? 'PROCESS'}
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+              {heroConfig.description ?? "Injured and not sure what to do next? Start here. We'll guide you through what you need to know."}
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Content Section - After an Injury */}
-      <section className="bg-white px-4 py-16">
+      {/* Content Section - After an Injury - Simplified */}
+      <section className="bg-white px-4 py-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-5 mb-12">
-            {/* Left Column - Section Title */}
-            <div className="lg:col-span-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                {afterInjuryConfig.title ?? 'After an Injury'}
-              </h2>
-            </div>
-
-            {/* Right Column - Introductory Paragraph */}
-            <div className="lg:col-span-3">
-              <p className="text-lg text-gray-800">
-                {afterInjuryConfig.intro ?? "I've been hurt. Now what? Facing an injury can be overwhelming. Here are the basics."}
-              </p>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {afterInjuryConfig.title ?? 'After an Injury'}
+            </h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              {afterInjuryConfig.intro ?? "I've been hurt. Now what? Facing an injury can be overwhelming. Here are the basics."}
+            </p>
           </div>
 
-          {/* Content Cards */}
-          <div className="grid gap-6 md:grid-cols-3">
+          {/* Content Cards - Modern Grid */}
+          <div className="grid gap-8 md:grid-cols-3">
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden transition hover:-translate-y-1 hover:shadow-lg"
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Card Illustration */}
-                <div className="bg-gray-100 p-8 flex items-center justify-center min-h-[200px]">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 flex items-center justify-center min-h-[240px]">
                   {card.illustration ? (
                     <img
                       src={card.illustration}
                       alt={card.title}
-                      className="w-full h-auto max-w-[150px]"
+                      className="w-full h-auto max-w-[180px]"
                     />
                   ) : (
                     <div className="w-full h-32 bg-gray-200 rounded flex items-center justify-center">
@@ -139,7 +114,7 @@ export default function CaseProcess() {
 
                 {/* Card Title */}
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-xl font-bold text-gray-900">
                     {card.title}
                   </h3>
                 </div>
@@ -196,48 +171,37 @@ export default function CaseProcess() {
         </div>
       </section>
 
-      {/* Do I Have a Case Section */}
-      <section className="bg-gray-50 px-4 py-16">
-        <div className="container mx-auto max-w-6xl">
+      {/* Do I Have a Case Section - Simplified */}
+      <section className="bg-gray-50 px-4 py-20">
+        <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {doIHaveCaseConfig.title ?? 'Do I have a case?'}
             </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
               {doIHaveCaseConfig.intro ?? "Here's what we look for to see if an incident might qualify for a personal injury claim."}
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
-            {/* Left Column - Flashlight Illustration */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="bg-blue-900 rounded-lg p-8 max-w-sm">
-                <div className="flex items-center justify-center">
-                  {/* Flashlight SVG Illustration */}
-                    <img src="ftp-flashlight.png" alt="" />
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column - Accordion Items */}
-            <div className="space-y-4">
+          {/* Accordion Items - Centered */}
+          <div className="max-w-3xl mx-auto space-y-4">
               {accordionItems.length > 0 ? (
                 accordionItems.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden"
+                    className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden"
                   >
                     <button
                       type="button"
                       onClick={() => toggleAccordion(index)}
-                      className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition"
+                      className="w-full flex items-center justify-between p-6 text-left hover:bg-blue-50 transition"
                       aria-expanded={openAccordion === index}
                     >
-                      <span className="text-lg font-semibold text-gray-900">
+                      <span className="text-xl font-bold text-gray-900">
                         {item.title}
                       </span>
                       <svg
-                        className={`w-5 h-5 text-gray-500 transition-transform ${
+                        className={`w-6 h-6 text-gray-600 transition-transform ${
                           openAccordion === index ? 'rotate-180' : ''
                         }`}
                         fill="none"
@@ -253,7 +217,7 @@ export default function CaseProcess() {
                       </svg>
                     </button>
                     {openAccordion === index && item.content && (
-                      <div className="px-5 pb-5 text-gray-700">
+                      <div className="px-6 pb-6 text-gray-700 text-lg leading-relaxed">
                         {item.content}
                       </div>
                     )}
@@ -261,14 +225,14 @@ export default function CaseProcess() {
                 ))
               ) : (
                 <>
-                  <div className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden">
+                  <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden">
                     <button
                       type="button"
                       onClick={() => toggleAccordion(0)}
-                      className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition"
+                      className="w-full flex items-center justify-between p-6 text-left hover:bg-blue-50 transition"
                       aria-expanded={openAccordion === 0}
                     >
-                      <span className="text-lg font-semibold text-gray-900">
+                      <span className="text-xl font-bold text-gray-900">
                         There were damages
                       </span>
                       <svg
@@ -288,7 +252,7 @@ export default function CaseProcess() {
                       </svg>
                     </button>
                     {openAccordion === 0 && (
-                      <div className="px-5 pb-5 text-gray-700">
+                      <div className="px-6 pb-6 text-gray-700 text-lg leading-relaxed">
                         Content about damages would go here.
                       </div>
                     )}
@@ -396,41 +360,37 @@ export default function CaseProcess() {
               )}
             </div>
           </div>
-        </div>
       </section>
 
-      {/* Hiring An Attorney 101 Section */}
-      <section className="bg-white px-4 py-16">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-5">
-            {/* Left Column - Title and Intro */}
-            <div className="lg:col-span-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                {hiringAttorneyConfig.title ?? 'Hiring An Attorney 101'}
-              </h2>
-              <p className="text-lg text-gray-800">
-                {hiringAttorneyConfig.intro ?? 'All law firms are not the same.'}
-              </p>
-            </div>
+      {/* Hiring An Attorney 101 Section - Simplified */}
+      <section className="bg-white px-4 py-20">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {hiringAttorneyConfig.title ?? 'Hiring An Attorney 101'}
+            </h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              {hiringAttorneyConfig.intro ?? 'All law firms are not the same.'}
+            </p>
+          </div>
 
-            {/* Right Column - Links Card */}
-            <div className="lg:col-span-3">
-              <div className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden">
+          {/* Links Card - Modernized */}
+          <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
                 {attorneyLinks.length > 0 ? (
                   <div className="divide-y divide-gray-200">
                     {attorneyLinks.map((link, index) => (
                       <Link
                         key={index}
                         to={link.url || '#'}
-                        className="flex items-center justify-between p-5 hover:bg-gray-50 transition group"
+                        className="flex items-center justify-between p-6 hover:bg-blue-50 transition group border-b border-gray-100 last:border-b-0"
                       >
-                        <span className="text-lg font-semibold text-gray-900 group-hover:text-brand-primary">
+                        <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600">
                           {link.title}
                         </span>
                         <div className="flex-shrink-0 ml-4">
-                          <div className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center">
+                          <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center group-hover:bg-yellow-500 transition">
                             <svg
-                              className="w-5 h-5 text-black"
+                              className="w-6 h-6 text-black"
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"
@@ -556,89 +516,67 @@ export default function CaseProcess() {
                 )}
               </div>
             </div>
-          </div>
-        </div>
       </section>
 
-      {/* How much is my case worth? Section */}
-      <section className="bg-indigo-50 px-4 py-16">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            {/* Left Column - Money Bag Illustration */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="max-w-sm">
-                {/* Money Bag SVG Illustration */}
-                <img src="8.webp" alt="" />
-              </div>
-            </div>
-
-            {/* Right Column - Title, Text, and Link */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                {caseWorthConfig.title ?? 'How much is my case worth?'}
-              </h2>
-              <p className="text-lg text-gray-800 mb-6">
-                {caseWorthConfig.description ?? 'The estimated value of a claim is based on something called "damages."'}
-              </p>
-              <Link
-                to={caseWorthConfig.linkUrl || '#'}
-                className="inline-flex items-center text-lg font-semibold text-blue-600 hover:text-blue-700 transition group"
+      {/* How much is my case worth? Section - Simplified */}
+      <section className="bg-gradient-to-br from-indigo-50 to-blue-50 px-4 py-20">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            {caseWorthConfig.title ?? 'How much is my case worth?'}
+          </h2>
+          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+            {caseWorthConfig.description ?? 'The estimated value of a claim is based on something called "damages."'}
+          </p>
+          <Link
+            to={caseWorthConfig.linkUrl || '#'}
+            className="inline-flex items-center text-xl font-bold text-blue-600 hover:text-blue-700 transition group"
+          >
+            <span>{caseWorthConfig.linkText ?? "Here's how it works."}</span>
+            <div className="ml-3 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-700 transition">
+              <svg
+                className="w-4 h-4 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                <span>{caseWorthConfig.linkText ?? "Here's how it works."}</span>
-                <div className="ml-2 w-5 h-5 bg-blue-600 rounded flex items-center justify-center group-hover:bg-blue-700 transition">
-                  <svg
-                    className="w-3 h-3 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M7 17l9.2-9.2M17 8v9m-9-9h9"
-                    />
-                  </svg>
-                </div>
-              </Link>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
-      {/* Working with an Attorney Section */}
-      <section className="bg-white px-4 py-16">
+      {/* Working with an Attorney Section - Simplified */}
+      <section className="bg-white px-4 py-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-5 mb-12">
-            {/* Left Column - Title */}
-            <div className="lg:col-span-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                {workingWithAttorneyConfig.title ?? 'Working with an Attorney'}
-              </h2>
-            </div>
-
-            {/* Right Column - Intro Text */}
-            <div className="lg:col-span-3">
-              <p className="text-lg text-gray-800">
-                {workingWithAttorneyConfig.intro ?? 'Everything you need to know about what happens throughout your case journey.'}
-              </p>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {workingWithAttorneyConfig.title ?? 'Working with an Attorney'}
+            </h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              {workingWithAttorneyConfig.intro ?? 'Everything you need to know about what happens throughout your case journey.'}
+            </p>
           </div>
 
-          {/* Content Cards */}
-          <div className="grid gap-6 md:grid-cols-3">
+          {/* Content Cards - Modern Grid */}
+          <div className="grid gap-8 md:grid-cols-3">
             {workingCards.length > 0 ? (
               workingCards.map((card, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden transition hover:-translate-y-1 hover:shadow-lg"
+                  className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
                 >
-                  <div className="bg-gray-100 p-8 flex items-center justify-center min-h-[200px]">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 flex items-center justify-center min-h-[240px]">
                     {card.illustration ? (
                       <img
                         src={card.illustration}
                         alt={card.title}
-                        className="w-full h-auto max-w-[150px]"
+                        className="w-full h-auto max-w-[180px]"
                       />
                     ) : (
                       <div className="w-full h-32 bg-gray-200 rounded flex items-center justify-center">
@@ -647,7 +585,7 @@ export default function CaseProcess() {
                     )}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-xl font-bold text-gray-900">
                       {card.title}
                     </h3>
                   </div>
@@ -696,42 +634,29 @@ export default function CaseProcess() {
         </div>
       </section>
 
-      {/* Injured? CTA Section */}
-      <section className="bg-gray-900 px-4 py-16">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            {/* Left Column - Title and Button */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                {injuredCTAConfig.title ?? 'Injured? Getting the compensation you deserve starts here.'}
-              </h2>
-              <Link
-                to={injuredCTAConfig.buttonUrl || '#'}
-                className="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 py-4 rounded-lg transition"
-              >
-                {injuredCTAConfig.buttonText ?? 'Start your claim'}
-              </Link>
-            </div>
-
-            {/* Right Column - Car Collision Illustration */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="max-w-md">
-                {/* Car Collision SVG Illustration */}
-                <img src="cp-auto-acciden.png.webp" alt="" />
-              </div>
-            </div>
-          </div>
+      {/* Injured? CTA Section - Simplified */}
+      <section className="bg-gradient-to-r from-gray-900 to-gray-800 px-4 py-20">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            {injuredCTAConfig.title ?? 'Injured? Getting the compensation you deserve starts here.'}
+          </h2>
+          <Link
+            to={injuredCTAConfig.buttonUrl || '#'}
+            className="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-10 py-5 rounded-xl text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            {injuredCTAConfig.buttonText ?? 'Start your claim'}
+          </Link>
         </div>
       </section>
 
-      {/* The Case Process: A Breakdown Section */}
-      <section className="bg-white px-4 py-16">
+      {/* The Case Process: A Breakdown Section - Simplified */}
+      <section className="bg-white px-4 py-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {caseBreakdownConfig.title ?? 'The Case Process: A Breakdown'}
             </h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
               {caseBreakdownConfig.intro ?? 'Explore the steps of a personal injury case from start to finish.'}
             </p>
           </div>
@@ -918,70 +843,56 @@ export default function CaseProcess() {
         </div>
       </section>
 
-      {/* Documents 101: A Checklist Section */}
-      <section className="bg-gray-50 px-4 py-16">
-        <div className="container mx-auto max-w-6xl">
-          <div className="bg-blue-50 rounded-2xl p-8 md:p-12">
-            <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-              {/* Left Column - Notepad Illustration */}
-              <div className="flex justify-center lg:justify-start">
-                <div className="max-w-sm">
-                 <img src="cp-checklist.avif" alt="" />
-                </div>
-              </div>
-
-              {/* Right Column - Text Content */}
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {documents101Config.title ?? 'Documents 101: A Checklist'}
-                </h2>
-                <p className="text-lg text-gray-700 mb-6">
-                  {documents101Config.description ?? "Piles of paperwork can get messy. If you're wondering how to approach the forms, receipts, bills, and more related to your injury, look no further."}
-                </p>
-                <Link
-                  to={documents101Config.linkUrl || '#'}
-                  className="inline-flex items-center text-lg font-semibold text-gray-900 hover:text-brand-primary transition group"
+      {/* Documents 101: A Checklist Section - Simplified */}
+      <section className="bg-gray-50 px-4 py-20">
+        <div className="container mx-auto max-w-4xl">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 md:p-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              {documents101Config.title ?? 'Documents 101: A Checklist'}
+            </h2>
+            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+              {documents101Config.description ?? "Piles of paperwork can get messy. If you're wondering how to approach the forms, receipts, bills, and more related to your injury, look no further."}
+            </p>
+            <Link
+              to={documents101Config.linkUrl || '#'}
+              className="inline-flex items-center text-xl font-bold text-gray-900 hover:text-blue-600 transition group"
+            >
+              <span>{documents101Config.linkText ?? 'Learn More'}</span>
+              <div className="ml-3 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center group-hover:bg-yellow-500 transition">
+                <svg
+                  className="w-5 h-5 text-gray-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <span>{documents101Config.linkText ?? 'Learn More'}</span>
-                  <div className="ml-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center group-hover:bg-yellow-500 transition">
-                    <svg
-                      className="w-4 h-4 text-gray-900"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
-                </Link>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Glossary Section */}
-      <section className="bg-white px-4 py-16">
+      {/* Glossary Section - Simplified */}
+      <section className="bg-white px-4 py-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-5 mb-12">
-            {/* Left Column - Title and Description */}
-            <div className="lg:col-span-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                {glossaryConfig.title ?? 'Glossary'}
-              </h2>
-              <p className="text-lg text-gray-700">
-                {glossaryConfig.description ?? 'From defense to depositions, view the complete guide for helpful explanations of common legal terms.'}
-              </p>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {glossaryConfig.title ?? 'Glossary'}
+            </h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              {glossaryConfig.description ?? 'From defense to depositions, view the complete guide for helpful explanations of common legal terms.'}
+            </p>
+          </div>
 
-            {/* Right Column - Glossary Terms */}
-            <div className="lg:col-span-3">
-              <div className="grid gap-6 md:grid-cols-2">
+          {/* Glossary Terms - Centered Grid */}
+          <div className="max-w-4xl mx-auto">
+            <div className="grid gap-6 md:grid-cols-2">
                 {glossaryTerms.length > 0 ? (
                   glossaryTerms.map((term, index) => (
                     <div key={index} className="flex gap-3">
@@ -1099,15 +1010,15 @@ export default function CaseProcess() {
               </div>
 
               {glossaryConfig.linkText && (
-                <div className="mt-8">
+                <div className="mt-12 text-center">
                   <Link
                     to={glossaryConfig.linkUrl || '#'}
-                    className="inline-flex items-center text-lg font-semibold text-gray-900 hover:text-brand-primary transition group"
+                    className="inline-flex items-center text-xl font-bold text-gray-900 hover:text-blue-600 transition group"
                   >
                     <span>{glossaryConfig.linkText}</span>
-                    <div className="ml-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center group-hover:bg-yellow-500 transition">
+                    <div className="ml-3 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center group-hover:bg-yellow-500 transition">
                       <svg
-                        className="w-4 h-4 text-gray-900"
+                        className="w-5 h-5 text-gray-900"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1124,15 +1035,15 @@ export default function CaseProcess() {
                 </div>
               )}
               {!glossaryConfig.linkText && glossaryTerms.length === 0 && (
-                <div className="mt-8">
+                <div className="mt-12 text-center">
                   <Link
                     to="#"
-                    className="inline-flex items-center text-lg font-semibold text-gray-900 hover:text-brand-primary transition group"
+                    className="inline-flex items-center text-xl font-bold text-gray-900 hover:text-blue-600 transition group"
                   >
                     <span>Read all glossary terms</span>
-                    <div className="ml-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center group-hover:bg-yellow-500 transition">
+                    <div className="ml-3 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center group-hover:bg-yellow-500 transition">
                       <svg
-                        className="w-4 h-4 text-gray-900"
+                        className="w-5 h-5 text-gray-900"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1148,19 +1059,18 @@ export default function CaseProcess() {
                   </Link>
                 </div>
               )}
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Learn More Section */}
-      <section className="bg-white px-4 py-16">
+      {/* Learn More Section - Simplified */}
+      <section className="bg-white px-4 py-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {learnMoreConfig.title ?? 'Learn More'}
             </h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
               {learnMoreConfig.description ?? "Injured and not sure what to do next? We'll guide you through everything you need to know."}
             </p>
           </div>
@@ -1173,14 +1083,14 @@ export default function CaseProcess() {
                     <Link
                       key={index}
                       to={link.url || '#'}
-                      className="block py-4 border-b border-gray-200 hover:bg-gray-50 transition group"
+                      className="block py-5 border-b border-gray-200 hover:bg-blue-50 transition group"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-base font-semibold text-gray-900 group-hover:text-brand-primary">
+                        <span className="text-lg font-bold text-gray-900 group-hover:text-blue-600">
                           {link.title}
                         </span>
                         <svg
-                          className="w-5 h-5 text-gray-600 flex-shrink-0 ml-4"
+                          className="w-6 h-6 text-gray-600 flex-shrink-0 ml-4 group-hover:text-blue-600"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"

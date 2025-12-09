@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 text-white" style={{ backgroundColor: headerBg }}>
-      <div className="container mx-auto flex items-center justify-between gap-6 px-4 py-3">
+      <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-3 flex-wrap lg:flex-nowrap">
         {/* Logo */}
         <a href="/">
         <div className="flex items-center">
@@ -57,8 +57,8 @@ export default function Header() {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden flex-1 items-center justify-end lg:flex">
-          <nav className="flex items-center gap-6">
+        <div className="hidden flex-1 items-center justify-end lg:flex min-w-0">
+          <nav className="flex items-center gap-4 lg:gap-6 flex-wrap justify-end">
             <Link 
               to="/locations" 
               className={navLinkBase}
@@ -77,15 +77,15 @@ export default function Header() {
             >
               {t('header.nav.practiceAreas')}
             </Link>
-            <a 
-              href="/attorneys" 
+            <Link 
+              to="/attorneys" 
               className={navLinkBase}
               style={{ '--hover-color': accentColor }}
               onMouseEnter={(e) => e.target.style.color = accentColor}
               onMouseLeave={(e) => e.target.style.color = 'white'}
             >
               {t('header.nav.attorneys')}
-            </a>
+            </Link>
             <div 
               className="relative"
               onMouseEnter={() => {
@@ -143,18 +143,6 @@ export default function Header() {
                     >
                       {t('header.nav.aboutDropdown.whoWeAre')}
                     </Link>
-                    <Link
-                      to="/news"
-                      className="block px-4 py-2 text-gray-900 hover:bg-blue-50 transition-colors text-sm font-semibold"
-                    >
-                      {t('header.nav.aboutDropdown.blog')}
-                    </Link>
-                    <Link
-                      to="/disclaimer-and-terms-of-use"
-                      className="block px-4 py-2 text-gray-900 hover:bg-blue-50 transition-colors text-sm font-semibold"
-                    >
-                      {t('header.nav.aboutDropdown.disclaimer')}
-                    </Link>
                   </div>
                 </div>
               )}
@@ -168,16 +156,28 @@ export default function Header() {
             >
               {t('header.nav.results')}
             </Link>
-            <a 
-              href="/contact" 
+            <Link 
+              to="/auto-accident-calculator" 
+              className={`${navLinkBase} relative`}
+              style={{ '--hover-color': accentColor }}
+              onMouseEnter={(e) => e.target.style.color = accentColor}
+              onMouseLeave={(e) => e.target.style.color = 'white'}
+            >
+              {t('header.nav.calculator')}
+              <span className="ml-2 inline-flex items-center rounded-full bg-[#f5d000] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-black">
+                NEW
+              </span>
+            </Link>
+            <Link 
+              to="/contact" 
               className={navLinkBase}
               style={{ '--hover-color': accentColor }}
               onMouseEnter={(e) => e.target.style.color = accentColor}
               onMouseLeave={(e) => e.target.style.color = 'white'}
             >
               {t('header.nav.contact')}
-            </a>
-            <button 
+            </Link>
+            {/* <button 
               className="ml-4 text-white transition-colors duration-200"
               style={{ '--hover-color': accentColor }}
               onMouseEnter={(e) => e.target.style.color = accentColor}
@@ -186,7 +186,7 @@ export default function Header() {
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-            </button>
+            </button> */}
             <div className="ml-6 flex flex-col items-end">
               <a 
                 href={`tel:${t('common.phone').replace(/[^\d]/g, '')}`}
@@ -248,9 +248,13 @@ export default function Header() {
             >
               {t('header.nav.practiceAreas')}
             </Link>
-            <a href="#" className="text-white text-sm font-semibold uppercase tracking-wide">
+            <Link 
+              to="/attorneys" 
+              className="text-white text-sm font-semibold uppercase tracking-wide"
+              onClick={() => setIsMenuOpen(false)}
+            >
               {t('header.nav.attorneys')}
-            </a>
+            </Link>
             <div>
               <button
                 className="text-white text-sm font-semibold uppercase tracking-wide flex items-center w-full"
@@ -278,26 +282,6 @@ export default function Header() {
                   >
                     {t('header.nav.aboutDropdown.whoWeAre')}
                   </Link>
-                  <Link
-                    to="/news"
-                    className="block text-white/80 text-sm font-semibold uppercase tracking-wide hover:text-white transition-colors"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      setIsAboutDropdownOpen(false);
-                    }}
-                  >
-                    {t('header.nav.aboutDropdown.blog')}
-                  </Link>
-                  <Link
-                    to="/disclaimer-and-terms-of-use"
-                    className="block text-white/80 text-sm font-semibold uppercase tracking-wide hover:text-white transition-colors"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      setIsAboutDropdownOpen(false);
-                    }}
-                  >
-                    {t('header.nav.aboutDropdown.disclaimer')}
-                  </Link>
                 </div>
               )}
             </div>
@@ -308,9 +292,23 @@ export default function Header() {
             >
               {t('header.nav.results')}
             </Link>
-            <a href="#" className="text-white text-sm font-semibold uppercase tracking-wide">
+            <Link 
+              to="/auto-accident-calculator" 
+              className="text-white text-sm font-semibold uppercase tracking-wide flex items-center gap-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('header.nav.calculator')}
+              <span className="inline-flex items-center rounded-full bg-[#f5d000] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-black">
+                NEW
+              </span>
+            </Link>
+            <Link 
+              to="/contact" 
+              className="text-white text-sm font-semibold uppercase tracking-wide"
+              onClick={() => setIsMenuOpen(false)}
+            >
               {t('header.nav.contact')}
-            </a>
+            </Link>
             <a 
               href={`tel:${t('common.phone').replace(/[^\d]/g, '')}`}
               className="pt-2 text-lg font-black transition-colors"

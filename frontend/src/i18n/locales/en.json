@@ -64,6 +64,7 @@
       "about": "About",
       "results": "Our Process",
       "contact": "Contact",
+      "calculator": "Auto Accident Calculator",
       "aboutDropdown": {
         "whoWeAre": "Who We Are",
         "blog": "Blog",
@@ -328,7 +329,7 @@
     "disclaimer": "Results may vary depending on your particular facts and legal circumstances. The attorneys shown in these photos may not be licensed in your state. To find an attorney licensed in your area, please visit our attorney page."
   },
   "ways": {
-    "title": "Ways We Can Help",
+    "title": "Ways We Help",
     "cards": [
       {
         "title": "Injured in a car accident?",
@@ -345,7 +346,7 @@
     ]
   },
   "caseTypes": {
-    "title": "Over 50 Case Types, Like:",
+    "title": "Over 50 Case Types:",
     "items": [
       "Social Security",
       "Nursing Home Abuse",
@@ -354,7 +355,8 @@
       "Defective Products",
       "Truck Accidents",
       "Medical Malpractice",
-      "Class Actions"
+      "Class Actions",
+      "Dangerous Drugs"
     ]
   },
   "faces": {
@@ -367,7 +369,7 @@
     "disclaimer": "The attorneys shown in these videos may not be licensed in your state. To find an attorney licensed in your area, please visit our attorney page."
   },
   "compensation": {
-    "title": "We're here to help you recover compensation for:",
+    "title": "We're here to help you recover compensation:",
     "items": [
       "Medical Treatments",
       "Lost Wages",
@@ -462,7 +464,6 @@
           "Practice Areas",
           "Our Results",
           "How It Works",
-          "Careers",
           "Contact Us"
         ]
       },
@@ -472,9 +473,7 @@
           "Our Story",
           "Our Attorneys",
           "Newsroom",
-          "FAQ",
-          "In the Media",
-          "Community Impact"
+          "FAQ"
         ]
       },
       "quickLinks": {
@@ -482,10 +481,7 @@
         "links": [
           "Accessibility",
           "Complaints",
-          "Pound Law",
-          "Opt Out",
-          "Co-counsel",
-          "Editorial Policy"
+          "Opt Out"
         ]
       },
       "social": {
@@ -493,8 +489,6 @@
         "appStores": "App Stores"
       }
     },
-    "selectOffices": "Select Offices",
-    "officesList": "Orlando, Fort Myers, Jacksonville, Miami, Atlanta, Tampa, Los Angeles, Boston, New York City, Philadelphia, Nashville",
     "officeLink": "For a full list of locations in your area please visit our {{link}} page.",
     "officeLinkLabel": "Office Locations",
     "disclaimer": "This site is designed to be accessible to and usable by people with and without disabilities. Please contact us if you encounter an accessibility or usability issue on this site. Attorney advertising. Prior results do not guarantee a similar outcome. Cases will be handled by attorneys licensed in the local jurisdiction. Cases may be associated with, or referred to, other law firms as co-counsel or referral counsel. Based on select nationwide reviews.",
@@ -502,6 +496,24 @@
     "privacyPolicy": "Privacy Policy",
     "terms": "Disclaimers and Terms of Use",
     "copyright": "©2025 Morgan and Morgan, P.A. All rights reserved"
+  },
+  "contact": {
+    "title": "CONTACT US YOUR WAY",
+    "description": "No matter where an injury happens, getting help shouldn't be hard. Morgan & Morgan makes it easy to fight for the compensation you deserve.",
+    "formTitle": "It's Free to Get Started",
+    "here247": "We're here 24/7.",
+    "formDescription": "Fill out the form, call us at {{phone}}, or use the text button for your free case evaluation.",
+    "attorneyDisclaimer": "The attorney shown above may not be licensed in your state. To find an attorney licensed in your area, please visit our",
+    "attorneyPage": "attorney page",
+    "whyTitle": "Why Morgan & Morgan?",
+    "whyDescription": "Choosing Morgan & Morgan means more than hiring a law firm—it's having a strong, supportive, and proven team on your side.",
+    "fightingForMore": "FIGHTING FOR MORE",
+    "fightingDescription": "35 years. 1,000 lawyers. $25 billion recovered. We have the power to take on any corporation.",
+    "feeFree": "THE FEE IS FREE, UNLESS WE WIN",
+    "feeDescription": "It's easy to get started with a free case evaluation by phone, text or web — 24/7. The fee is always free unless we win.",
+    "localCare": "LOCAL CARE + NATIONAL POWER",
+    "localDescription": "Your attorney is from your community — backed by the strength of a national firm.",
+    "findOffice": "Find an office near you"
   }
 }
 

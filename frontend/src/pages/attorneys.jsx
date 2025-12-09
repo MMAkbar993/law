@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import MissionVideoSection from '../components/common/MissionVideoSection';
 import CareersSection from '../components/common/CareersSection';
 import FeeFreeFormSection from '../components/home/FeeFreeFormSection';
+import AttorneyModal from '../components/attorneys/AttorneyModal';
 
 export default function Attorneys() {
   const { t } = useTranslation();
@@ -13,6 +14,8 @@ export default function Attorneys() {
   const [city, setCity] = useState('');
   const [sortBy, setSortBy] = useState('firstName');
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedAttorney, setSelectedAttorney] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const attorneysPerPage = 12;
 
   // Dropdown states
@@ -61,22 +64,140 @@ export default function Attorneys() {
     "Workers' Compensation", 'Workplace Discrimination', 'Wrongful Death', 'Wrongful Termination'
   ];
 
-  // Sample attorney data
+  // Sample attorney data with contact info
   const allAttorneys = useMemo(() => {
     const sampleAttorneys = [
-      { id: 1, firstName: 'William J.', lastName: 'Degenhart', location: 'Georgia', image: '9606_Degenhart_WilliamJ_1000x1000-min (1).avif' },
-      { id: 2, firstName: 'William', lastName: 'Rosario', location: 'Florida', image: 'William_Rosario_1000x1000-min.avif' },
-      { id: 3, firstName: 'Wise', lastName: 'Rudolph', location: 'Tennessee', image: 'Wise_Rudolph_1000x1000_up2.avif' },
-      { id: 4, firstName: 'Yair', lastName: 'Bengio', location: 'Florida', image: 'Yair_Shalom_Bengio_1000x1000.avif' },
-      { id: 5, firstName: 'Yalkin', lastName: 'Gencel', location: 'Florida', image: 'Yalkin_Gencel_1000x1000-min.avif' },
-      { id: 6, firstName: 'Yechezkel', lastName: 'Rodal', nickname: 'Chezky', location: 'Florida', image: 'Chezky_Rodal_992x992 (1).avif' },
-      { id: 7, firstName: 'Zach', lastName: 'White', location: 'Washington D.C.', image: 'Zach_White_1000x1000-min.avif' },
-      { id: 8, firstName: 'Zachary', lastName: 'Baker', location: 'Florida', image: 'Zachary_Baker_1000x1000.avif' },
-      { id: 9, firstName: 'Zachary', lastName: 'Chesser', location: 'Kentucky', image: 'Zachary_Chesser_1000x1000-min.avif' },
-      { id: 10, firstName: 'Zachary', lastName: 'Hudson', location: 'Florida', image: '9411_Hudson_Zachary_1000x1000.avif' },
-      { id: 11, firstName: 'Zachary', lastName: 'Lodmer', location: 'California', image: 'Zachary_Lodmer_1000x1000.avif' },
-      { id: 12, firstName: 'Zachary', lastName: 'O\'Neill', location: 'Florida', image: 'Zachary_O.avif' },
-      { id: 13, firstName: 'Zilya', lastName: 'Ruga', location: 'Florida', image: 'Zilya_Ruga_1000x1000-min.avif' },
+      { 
+        id: 1, 
+        firstName: 'William J.', 
+        lastName: 'Degenhart', 
+        location: 'Georgia', 
+        image: '9606_Degenhart_WilliamJ_1000x1000-min (1).avif',
+        email: 'wdegenhart@forthepeople.com',
+        phone: '(404) 555-0100',
+        description: 'William J. Degenhart is an experienced attorney specializing in personal injury cases with a focus on helping clients receive the compensation they deserve.'
+      },
+      { 
+        id: 2, 
+        firstName: 'William', 
+        lastName: 'Rosario', 
+        location: 'Florida', 
+        image: 'William_Rosario_1000x1000-min.avif',
+        email: 'wrosario@forthepeople.com',
+        phone: '(407) 555-0101',
+        description: 'William Rosario brings years of expertise in personal injury law, dedicated to fighting for justice on behalf of his clients.'
+      },
+      { 
+        id: 3, 
+        firstName: 'Wise', 
+        lastName: 'Rudolph', 
+        location: 'Tennessee', 
+        image: 'Wise_Rudolph_1000x1000_up2.avif',
+        email: 'wrudolph@forthepeople.com',
+        phone: '(615) 555-0102',
+        description: 'Wise Rudolph is committed to providing exceptional legal representation and personalized service to each client.'
+      },
+      { 
+        id: 4, 
+        firstName: 'Yair', 
+        lastName: 'Bengio', 
+        location: 'Florida', 
+        image: 'Yair_Shalom_Bengio_1000x1000.avif',
+        email: 'ybengio@forthepeople.com',
+        phone: '(305) 555-0103',
+        description: 'Yair Bengio specializes in complex personal injury cases with a track record of successful outcomes for his clients.'
+      },
+      { 
+        id: 5, 
+        firstName: 'Yalkin', 
+        lastName: 'Gencel', 
+        location: 'Florida', 
+        image: 'Yalkin_Gencel_1000x1000-min.avif',
+        email: 'ygencel@forthepeople.com',
+        phone: '(954) 555-0104',
+        description: 'Yalkin Gencel is a dedicated attorney focused on achieving the best possible results for injury victims.'
+      },
+      { 
+        id: 6, 
+        firstName: 'Yechezkel', 
+        lastName: 'Rodal', 
+        nickname: 'Chezky', 
+        location: 'Florida', 
+        image: 'Chezky_Rodal_992x992 (1).avif',
+        email: 'crodal@forthepeople.com',
+        phone: '(561) 555-0105',
+        description: 'Chezky Rodal brings extensive experience in personal injury law and is committed to fighting for his clients\' rights.'
+      },
+      { 
+        id: 7, 
+        firstName: 'Zach', 
+        lastName: 'White', 
+        location: 'Washington D.C.', 
+        image: 'Zach_White_1000x1000-min.avif',
+        email: 'zwhite@forthepeople.com',
+        phone: '(202) 555-0106',
+        description: 'Zach White is an accomplished attorney with expertise in personal injury cases and a passion for client advocacy.'
+      },
+      { 
+        id: 8, 
+        firstName: 'Zachary', 
+        lastName: 'Baker', 
+        location: 'Florida', 
+        image: 'Zachary_Baker_1000x1000.avif',
+        email: 'zbaker@forthepeople.com',
+        phone: '(727) 555-0107',
+        description: 'Zachary Baker provides compassionate and effective legal representation for injury victims throughout Florida.'
+      },
+      { 
+        id: 9, 
+        firstName: 'Zachary', 
+        lastName: 'Chesser', 
+        location: 'Kentucky', 
+        image: 'Zachary_Chesser_1000x1000-min.avif',
+        email: 'zchesser@forthepeople.com',
+        phone: '(502) 555-0108',
+        description: 'Zachary Chesser is dedicated to helping clients navigate the legal process and secure fair compensation.'
+      },
+      { 
+        id: 10, 
+        firstName: 'Zachary', 
+        lastName: 'Hudson', 
+        location: 'Florida', 
+        image: '9411_Hudson_Zachary_1000x1000.avif',
+        email: 'zhudson@forthepeople.com',
+        phone: '(352) 555-0109',
+        description: 'Zachary Hudson brings a wealth of experience in personal injury law and a commitment to client success.'
+      },
+      { 
+        id: 11, 
+        firstName: 'Zachary', 
+        lastName: 'Lodmer', 
+        location: 'California', 
+        image: 'Zachary_Lodmer_1000x1000.avif',
+        email: 'zlodmer@forthepeople.com',
+        phone: '(213) 555-0110',
+        description: 'Zachary Lodmer specializes in personal injury cases with a focus on achieving maximum compensation for clients.'
+      },
+      { 
+        id: 12, 
+        firstName: 'Zachary', 
+        lastName: 'O\'Neill', 
+        location: 'Florida', 
+        image: 'Zachary_O.avif',
+        email: 'zoneill@forthepeople.com',
+        phone: '(904) 555-0111',
+        description: 'Zachary O\'Neill is committed to providing exceptional legal services and fighting for client rights.'
+      },
+      { 
+        id: 13, 
+        firstName: 'Zilya', 
+        lastName: 'Ruga', 
+        location: 'Florida', 
+        image: 'Zilya_Ruga_1000x1000-min.avif',
+        email: 'zruga@forthepeople.com',
+        phone: '(786) 555-0112',
+        description: 'Zilya Ruga brings dedication and expertise to every case, ensuring clients receive the representation they deserve.'
+      },
     ];
     
     if (Array.isArray(config.attorneys) && config.attorneys.length > 0) {
@@ -221,8 +342,8 @@ export default function Attorneys() {
     <div id="citrus-attorney-index" className="bg-white min-h-screen">
       <div className="application">
         {/* Attorney Index Header */}
-        <div className="attorney-index-header pt-8">
-          <div className="wrapper max-w-7xl mx-auto px-4">
+        <div className="attorney-index-header pt-8" style={{ overflow: 'visible' }}>
+          <div className="wrapper max-w-7xl mx-auto px-4" style={{ overflow: 'visible' }}>
             {/* Search Input */}
             <div className="new-search-input-wrapper relative mb-4">
               <label htmlFor="name-filter" className="sr-only">Find a lawyer by name</label>
@@ -247,7 +368,7 @@ export default function Attorneys() {
             </div>
 
             {/* Attorney Filters */}
-            <div className="attorney-filters attorney-filter-select">
+            <div className="attorney-filters attorney-filter-select relative" style={{ zIndex: 1 }}>
               <ul className="filters flex flex-wrap gap-4">
                 {/* Practice Area Filter */}
                 <li className="practice-area-filter" ref={practiceAreaRef}>
@@ -328,38 +449,40 @@ export default function Attorneys() {
                       </svg>
                     </button>
                     {stateOpen && (
-                      <ul className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
-                        <li>
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setState('');
-                              setCity('');
-                              setStateOpen(false);
-                              setCurrentPage(1);
-                            }}
-                            className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${!state ? 'bg-blue-50 font-semibold' : ''}`}
-                          >
-                            State
-                          </button>
-                        </li>
-                        {allStates.map((stateName) => (
-                          <li key={stateName}>
+                      <div className="absolute top-full left-0 mt-1 z-[100]" style={{ maxHeight: '400px', minWidth: '200px', width: 'max-content' }}>
+                        <ul className="bg-white border border-gray-300 rounded-lg shadow-xl overflow-y-auto overscroll-contain" style={{ maxHeight: '400px', minWidth: '200px' }}>
+                          <li className="sticky top-0 bg-white z-10 border-b border-gray-200 shadow-sm">
                             <button
                               type="button"
                               onClick={() => {
-                                setState(stateName);
+                                setState('');
                                 setCity('');
                                 setStateOpen(false);
                                 setCurrentPage(1);
                               }}
-                              className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${state === stateName ? 'bg-blue-50 font-semibold' : ''}`}
+                              className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${!state ? 'bg-blue-50 font-semibold' : ''}`}
                             >
-                              {stateName}
+                              State
                             </button>
                           </li>
-                        ))}
-                      </ul>
+                          {allStates.map((stateName) => (
+                            <li key={stateName}>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  setState(stateName);
+                                  setCity('');
+                                  setStateOpen(false);
+                                  setCurrentPage(1);
+                                }}
+                                className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${state === stateName ? 'bg-blue-50 font-semibold' : ''}`}
+                              >
+                                {stateName}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     )}
                   </div>
                 </li>
@@ -515,10 +638,13 @@ export default function Attorneys() {
             <div className="paginated-results">
               <div className="attorney-results-box-wrapper attorney-results-box-wrapper--grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 mb-8">
                 {paginatedAttorneys.map((attorney) => (
-                  <Link
+                  <button
                     key={attorney.id}
-                    to={`/attorneys/${attorney.id}`}
-                    className="attorney-box bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden hover:shadow-lg transition group"
+                    onClick={() => {
+                      setSelectedAttorney(attorney);
+                      setIsModalOpen(true);
+                    }}
+                    className="attorney-box bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden hover:shadow-lg transition group text-left w-full"
                   >
                     <div className="image-wrapper aspect-square bg-gray-100 overflow-hidden">
                       <img
@@ -537,7 +663,7 @@ export default function Attorneys() {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </button>
                 ))}
               </div>
 
@@ -649,6 +775,16 @@ export default function Attorneys() {
         </div>
       </div>
       <FeeFreeFormSection />
+      
+      {/* Attorney Modal */}
+      <AttorneyModal
+        attorney={selectedAttorney}
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedAttorney(null);
+        }}
+      />
     </div>
   );
 }

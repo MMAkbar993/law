@@ -69,23 +69,47 @@ export default function PracticeAreas() {
 
   const activeCorporateItem = corporateItems[activeCorporateIndex] || corporateItems[0];
 
+  // Map practice area names to their headlines
+  const getPracticeAreaHeadline = (areaName) => {
+    if (!areaName) return heroConfig.headline;
+    
+    // Map specific practice areas to their headlines
+    const headlineMap = {
+      'Car Accident': 'Fighting for Car Accident Victims',
+      'Slip & Fall': 'Fighting for Slip & Fall Victims',
+      "Workers' Compensation": 'Fighting for Workers\' Compensation',
+      'Motorcycle Accident': 'Fighting for Motorcycle Accident Victims',
+      'Truck Accident': 'Fighting for Truck Accident Victims',
+      'Medical Malpractice': 'Fighting for Medical Malpractice Victims',
+      'Nursing Home Abuse': 'Fighting for Nursing Home Abuse Victims',
+      'Brain Injury': 'Fighting for Brain Injury Victims',
+      'Wrongful Death': 'Fighting for Wrongful Death Victims',
+      'Product Liability': 'Fighting for Product Liability Victims',
+      'Premises Liability': 'Fighting for Premises Liability Victims',
+    };
+    
+    // Try exact match first
+    if (headlineMap[areaName]) {
+      return headlineMap[areaName];
+    }
+    
+    // Try partial match (case-insensitive)
+    const areaLower = areaName.toLowerCase();
+    for (const [key, value] of Object.entries(headlineMap)) {
+      if (key.toLowerCase().includes(areaLower) || areaLower.includes(key.toLowerCase())) {
+        return value;
+      }
+    }
+    
+    // Default: use practice area name in headline
+    return `Fighting for ${areaName} Victims`;
+  };
+
+  const currentHeadline = getPracticeAreaHeadline(selectedPracticeArea);
+
   return (
     <div className="bg-white">
-      <nav className="container mx-auto max-w-6xl px-4 pt-6 text-sm text-gray-500" aria-label="Breadcrumb">
-        <ol className="flex flex-wrap items-center gap-2">
-          <li>
-            <Link to="/" className="hover:text-brand-primary">
-              {breadcrumbs?.home ?? 'Home'}
-            </Link>
-          </li>
-          <li aria-hidden="true" className="text-gray-400">
-            /
-          </li>
-          <li className="text-gray-800 font-semibold">
-            {breadcrumbs?.current ?? 'Practice Areas'}
-          </li>
-        </ol>
-      </nav>
+     
 
       <section className="px-4 py-16">
         <div className="container mx-auto max-w-6xl">
@@ -109,23 +133,23 @@ export default function PracticeAreas() {
             </select>
           </div>
 
-          <div className="grid gap-12 lg:grid-cols-5">
-            <div className="lg:col-span-3">
+          <div className="grid gap-12">
+            <div>
               <h1 className="text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-gray-900 mb-6">
-                {heroConfig.headline}
+                {currentHeadline}
               </h1>
               <p className="text-lg md:text-xl text-gray-700 max-w-2xl">
                 {heroConfig.subheadline}
               </p>
             </div>
 
-            <div className="lg:col-span-2 space-y-6">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {heroCards.map((card, index) => (
                 <div
                   key={`${card.title}-${index}`}
                   className="flex gap-4 rounded-2xl bg-brand-light/80 p-6 shadow-sm ring-1 ring-brand-light transition hover:-translate-y-1 hover:shadow-lg"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-brand-primary shadow">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-brand-primary shadow flex-shrink-0">
                     <HeroIcon type={card.icon} />
                   </div>
                   <div>
@@ -194,9 +218,9 @@ export default function PracticeAreas() {
               <h3 className="text-xl font-semibold">
                 {corporateNegligence?.title}
               </h3>
-              <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-wide">
+              {/* <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-wide">
                 {String(activeCorporateIndex + 1).padStart(2, '0')}/{String(corporateItems.length || 1).padStart(2, '0')}
-              </span>
+              </span> */}
             </div>
 
             <div className="mt-8">
