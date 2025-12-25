@@ -1,0 +1,526 @@
+{
+  "common": {
+    "phone": "(844) 332-1326",
+    "buttons": {
+      "freeCaseReview": "Evaluación de caso gratuita",
+      "startClaim": "Inicia tu reclamación",
+      "meetAttorneys": "Conoce a los abogados",
+      "learnCaseProcess": "Más sobre el proceso del caso",
+      "seeMoreResults": "Ver más resultados",
+      "viewHelpfulArticles": "Ver más artículos útiles",
+      "viewAll": "Ver todo",
+      "howWeHelp": "Cómo ayudamos",
+      "meetOurAttorneys": "Conoce a nuestros abogados",
+      "viewArticles": "Ver más artículos útiles",
+      "submitting": "Enviando..."
+    },
+    "form": {
+      "fullName": "Nombre Completo",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "phone": "Número de teléfono",
+      "zip": "Código postal",
+      "email": "Correo electrónico",
+      "caseType": "Tipo de caso",
+      "caseTypePlaceholder": "- Tipo de caso -",
+      "description": "Describe lo que ocurrió",
+      "consent": "Autorizo expresamente recibir comunicaciones automatizadas, incluidas llamadas, mensajes de texto, correos electrónicos y/o mensajes grabados.",
+      "consentRequired": "Se requiere tu autorización",
+      "terms": "Al enviar este formulario, aceptas nuestros Términos y reconoces nuestro Aviso de Privacidad."
+    },
+    "messages": {
+      "submissionSuccess": "¡Gracias! Nuestro equipo se comunicará contigo muy pronto.",
+      "submissionError": "No pudimos procesar tu solicitud. Inténtalo de nuevo o llámanos directamente.",
+      "locationGuess": "Ubicación detectada: {{city}}, {{region}}, {{country}} (fuente: {{source}})"
+    },
+    "disclaimers": {
+      "resultsMayVary": "Los resultados pueden variar según los hechos y circunstancias legales de tu caso.",
+      "copyright": "Los resultados pueden variar según los hechos y circunstancias legales de tu caso. ©2025 Morgan and Morgan, P.A. Todos los derechos reservados.",
+      "attorneyAvailability": "Los abogados mostrados en estos videos pueden no estar autorizados en tu estado. Para encontrar un abogado autorizado en tu área, visita nuestra página de abogados.",
+      "attorneyFeature": "El abogado mostrado arriba está autorizado en Florida. Para ver la lista completa de abogados en tu estado, visita nuestra página de abogados. Los resultados pueden variar según los hechos y circunstancias legales de tu caso."
+    },
+    "aria": {
+      "goToSlide": "Ir a la diapositiva {{index}}",
+      "playVideo": "Reproducir video de {{name}}",
+      "showPreviousAttorney": "Mostrar abogado anterior",
+      "showNextAttorney": "Mostrar abogado siguiente"
+    },
+    "language": {
+      "toSpanish": "Español",
+      "toEnglish": "English"
+    }
+  },
+  "header": {
+    "logo": "MORGAN & MORGAN",
+    "tagline": {
+      "prefix": "LA FIRMA DE LESIONES ",
+      "highlight": "MÁS GRANDE",
+      "suffix": " DE ESTADOS UNIDOS"
+    },
+    "nav": {
+      "locations": "Oficinas",
+      "practiceAreas": "Áreas de práctica",
+      "attorneys": "Abogados",
+      "about": "Nosotros",
+      "results": "Nuestro proceso",
+      "contact": "Contacto",
+      "calculator": "Calculadora de Accidentes",
+      "aboutDropdown": {
+        "whoWeAre": "Quiénes Somos",
+        "blog": "Blog",
+        "disclaimer": "Aviso Legal y Términos de Uso"
+      }
+    }
+  },
+  "practiceAreas": {
+    "breadcrumbs": {
+      "home": "Inicio",
+      "current": "Áreas de práctica"
+    },
+    "hero": {
+      "headline": "Luchamos por ti, donde sea que la vida golpee",
+      "subheadline": "Luchamos por la compensación que mereces. Con más de 50 tipos de casos, te guiamos en cada paso.",
+      "cards": [
+        {
+          "icon": "car",
+          "title": "Accidentes de auto",
+          "description": "Hemos ayudado a miles a recuperar gastos médicos, salarios perdidos y más después de choques causados por negligencia."
+        },
+        {
+          "icon": "slip",
+          "title": "Resbalones y caídas",
+          "description": "Desde pisos mojados hasta condiciones inseguras, responsabilizamos a los dueños de propiedades por tus lesiones."
+        },
+        {
+          "icon": "workers",
+          "title": "Compensación laboral",
+          "description": "Guiamos a los trabajadores durante el proceso de reclamaciones para obtener los beneficios que merecen por lesiones laborales."
+        }
+      ]
+    },
+    "allPracticeAreas": {
+      "title": "Áreas de práctica",
+      "items": [
+        "Derecho marítimo y de almirantazgo",
+        "Ley de Estadounidenses con Discapacidades",
+        "Accidente de aviación",
+        "Lesión de nacimiento",
+        "Accidente en bote",
+        "Lesión cerebral",
+        "Incumplimiento de contrato",
+        "Lesión por quemaduras",
+        "Incendios en California",
+        "Accidente automovilístico",
+        "Eventos catastróficos",
+        "Abuso sexual infantil",
+        "Acción colectiva",
+        "Accidente de construcción",
+        "Defecto de construcción",
+        "Medicamentos peligrosos",
+        "Privacidad de datos",
+        "Airbags defectuosos",
+        "Depo-Provera",
+        "Discriminación",
+        "Mordedura de perro",
+        "Responsabilidad de bares",
+        "Accidente por ahogamiento",
+        "Abuso a personas mayores",
+        "Clasificación errónea de empleados",
+        "Demanda de servicios pagos de Experian",
+        "Explosiones",
+        "Ley de licencia familiar y médica",
+        "Demanda por tintes para el cabello",
+        "Reclamaciones de seguros",
+        "Laboral y empleo",
+        "Arbitraje masivo",
+        "Demandas masivas",
+        "Negligencia médica",
+        "Mesotelioma",
+        "Accidente de motocicleta",
+        "Seguridad negligente",
+        "Abuso en asilos",
+        "Lesiones en alta mar",
+        "Lesiones personales",
+        "Responsabilidad de locales",
+        "Responsabilidad por productos",
+        "Responsabilidad profesional",
+        "Resbalones y caídas",
+        "Discapacidad del Seguro Social",
+        "Lesión de columna",
+        "Demandas por aire tóxico",
+        "Casos tóxicos y ambientales",
+        "Accidente de camión",
+        "Alimentos ultraprocesados",
+        "Horas extras no pagadas",
+        "Beneficios para veteranos",
+        "Salarios y horas",
+        "Medicamentos para bajar de peso",
+        "Denunciantes y Qui Tam",
+        "Incendios forestales",
+        "Compensación laboral",
+        "Muerte por negligencia",
+        "Despido injustificado"
+      ]
+    },
+    "otherWays": {
+      "title": "Otras maneras en que podemos ayudar",
+      "categories": [
+        "Negligencia médica",
+        "Abuso en asilos",
+        "Medicamentos peligrosos",
+        "Productos defectuosos",
+        "Discapacidad del Seguro Social",
+        "Laboral y empleo"
+      ],
+      "cta": "Comienza ahora"
+    },
+    "corporateNegligence": {
+      "title": "Casos contra la negligencia corporativa",
+      "items": [
+        {
+          "title": "Depo-Provera",
+          "description": "Un anticonceptivo popular puede causar tumores cerebrales y espinales."
+        },
+        {
+          "title": "Fórmula infantil tóxica",
+          "description": "Padres toman acción por enfermedades vinculadas a fórmulas peligrosas."
+        },
+        {
+          "title": "Exposición a Roundup",
+          "description": "Trabajadores agrícolas expuestos a químicos cancerígenos merecen justicia."
+        }
+      ],
+      "cta": "Más información"
+    },
+    "moreSection": {
+      "title": "Más de lo que hacemos",
+      "description": "Sin importar el área de práctica, cada caso recibe nuestra fuerza, enfoque y cuidado."
+    }
+  },
+  "locations": {
+    "breadcrumbs": {
+      "home": "Inicio",
+      "current": "Oficinas"
+    },
+    "hero": {
+      "title": "Tenemos una oficina cerca de ti",
+      "searchPlaceholder": "Ingresa tu ciudad, estado o código postal",
+      "searchButton": "Buscar",
+      "viewAll": "Ver todas las oficinas",
+      "localOfficeLabel": "Tu oficina local",
+      "localOffice": {
+        "name": "Morgan & Morgan Anchorage",
+        "addressLines": [
+          "1577 C. Street, Suite 204-M",
+          "Anchorage, AK 99501"
+        ],
+        "phoneLabel": "Llamar",
+        "phone": "(907) 531-0511",
+        "cta": "Ver oficina"
+      }
+    },
+    "remoteHelp": {
+      "title": "No necesitas visitar la oficina.",
+      "features": [
+        "Firma acuerdos de forma digital",
+        "Carga documentos",
+        "Sigue tu caso en tiempo real"
+      ],
+      "cta": "Inicia tu reclamación"
+    },
+    "coverage": {
+      "title": "Con 125 oficinas en todo el país, estamos listos para ayudarte.",
+      "description": "De costa a costa, nuestros abogados pueden reunirse contigo en persona o trabajar de forma virtual: lo que necesites.",
+      "mapAlt": "Mapa de Estados Unidos con oficinas de Morgan & Morgan"
+    },
+    "states": {
+      "title": "Explora nuestras oficinas por estado",
+      "items": [
+        { "state": "Alabama", "cities": ["Birmingham", "Huntsville", "Mobile", "Montgomery"] },
+        { "state": "Alaska", "cities": ["Anchorage"] },
+        { "state": "Arizona", "cities": ["Chandler", "Mesa", "Peoria", "Phoenix", "Tucson"] },
+        { "state": "Arkansas", "cities": ["Little Rock"] },
+        { "state": "California", "cities": ["Irvine", "Los Ángeles", "Riverside", "Sacramento", "San Diego", "San Francisco"] },
+        { "state": "Colorado", "cities": ["Denver"] },
+        { "state": "Connecticut", "cities": ["Hamden", "New Haven"] },
+        { "state": "Delaware", "cities": ["Wilmington"] },
+        { "state": "Florida", "cities": ["Bradenton", "Daytona Beach", "DeLand", "Fort Lauderdale", "Fort Myers", "Gainesville", "Jacksonville", "Key West", "Kissimmee", "Lakeland", "Melbourne", "Miami", "Naples", "Ocala", "Orlando", "Palm Harbor", "Panama City", "Pensacola", "Port St. Lucie", "Sarasota", "Spring Hill", "St. Augustine", "St. Petersburg", "Tallahassee", "Tampa", "Titusville", "West Palm Beach", "Winter Haven"] },
+        { "state": "Georgia", "cities": ["Albany", "Alpharetta", "Atlanta", "Augusta", "Brunswick", "Columbus", "Macon", "Marietta", "Savannah"] },
+        { "state": "Hawái", "cities": ["Honolulu"] },
+        { "state": "Idaho", "cities": ["Boise"] },
+        { "state": "Illinois", "cities": ["Chicago"] },
+        { "state": "Indiana", "cities": ["Indianápolis", "New Albany"] },
+        { "state": "Iowa", "cities": ["Des Moines"] },
+        { "state": "Kansas", "cities": ["Wichita"] },
+        { "state": "Kentucky", "cities": ["Bowling Green", "Lexington", "Louisville", "Owensboro", "Paducah"] },
+        { "state": "Luisiana", "cities": ["Nueva Orleans"] },
+        { "state": "Maine", "cities": ["Portland"] },
+        { "state": "Maryland", "cities": ["Baltimore"] },
+        { "state": "Massachusetts", "cities": ["Boston", "Medford"] },
+        { "state": "Míchigan", "cities": ["Detroit", "Grand Rapids"] },
+        { "state": "Minnesota", "cities": ["Mineápolis"] },
+        { "state": "Misisipi", "cities": ["Biloxi", "Hattiesburg", "Jackson"] },
+        { "state": "Misuri", "cities": ["San Luis"] },
+        { "state": "Montana", "cities": ["Bozeman"] },
+        { "state": "Nebraska", "cities": ["Lincoln"] },
+        { "state": "Nevada", "cities": ["Henderson", "Las Vegas", "Reno"] },
+        { "state": "New Hampshire", "cities": ["Bedford"] },
+        { "state": "Nueva Jersey", "cities": ["Jersey City", "Jersey Shore", "Mount Laurel"] },
+        { "state": "Nuevo México", "cities": ["Albuquerque"] },
+        { "state": "Nueva York", "cities": ["Bronx", "Búfalo", "Nueva York", "Queens"] },
+        { "state": "Carolina del Norte", "cities": ["Charlotte", "Raleigh"] },
+        { "state": "Dakota del Norte", "cities": ["Fargo"] },
+        { "state": "Ohio", "cities": ["Cincinnati", "Columbus", "Dayton"] },
+        { "state": "Oklahoma", "cities": ["Oklahoma City"] },
+        { "state": "Oregón", "cities": ["Portland"] },
+        { "state": "Pensilvania", "cities": ["Filadelfia", "Pittsburgh", "Scranton"] },
+        { "state": "Rhode Island", "cities": ["Providence"] },
+        { "state": "Carolina del Sur", "cities": ["Charleston", "Columbia", "Greenville", "Hilton Head", "Myrtle Beach"] },
+        { "state": "Dakota del Sur", "cities": ["Sioux Falls"] },
+        { "state": "Tennessee", "cities": ["Chattanooga", "Knoxville", "Memphis", "Nashville"] },
+        { "state": "Texas", "cities": ["Dallas", "Houston"] },
+        { "state": "Utah", "cities": ["Salt Lake City"] },
+        { "state": "Vermont", "cities": ["Burlington"] },
+        { "state": "Virginia", "cities": ["Arlington", "Richmond"] },
+        { "state": "Washington", "cities": ["Seattle"] },
+        { "state": "Washington D. C.", "cities": ["Washington D. C."] },
+        { "state": "Virginia Occidental", "cities": ["Charleston"] },
+        { "state": "Wisconsin", "cities": ["Milwaukee"] },
+        { "state": "Wyoming", "cities": ["Cheyenne"] }
+      ]
+    }
+  },
+  "hero": {
+    "titleLine1": "Abogados de lesiones personales",
+    "titleLine2": "Luchamos por ti",
+    "description": "Con 35 años de experiencia, 1,000 abogados y $25 mil millones recuperados, luchamos para conseguir lo que mereces: inicia tu evaluación gratuita en cualquier momento por texto, teléfono o en línea.",
+    "features": [
+      "Luchamos por más",
+      "La tarifa es gratis, a menos que ganemos",
+      "Atención local + poder nacional"
+    ]
+  },
+  "feeFree": {
+    "heading": "LA FIRMA DE LESIONES MÁS GRANDE DE ESTADOS UNIDOS™",
+    "subheading": "Obtén una evaluación <0>GRATUITA</0> de tu caso hoy mismo.",
+    "asSeenOn": "Como se vio en:",
+    "videoAlt": "Miniatura de historia de cliente",
+    "formTitle": "Es fácil comenzar.",
+    "startButton": "Inicia tu reclamación",
+    "caseTypes": [
+      { "value": "car-accident", "label": "Accidente de auto" },
+      { "value": "truck-accident", "label": "Accidente de camión" },
+      { "value": "motorcycle-accident", "label": "Accidente de motocicleta" },
+      { "value": "slip-fall", "label": "Resbalón y caída" },
+      { "value": "medical-malpractice", "label": "Negligencia médica" },
+      { "value": "workers-compensation", "label": "Compensación laboral" },
+      { "value": "other", "label": "Otro" }
+    ]
+  },
+  "bigWins": {
+    "title": "El despacho correcto para grandes victorias",
+    "description": "Las aseguradoras nos conocen y saben que peleamos por cada dólar.",
+    "cta": "Obtén una evaluación gratuita",
+    "link": "Ver más resultados",
+    "caseHighlight": "Kimberly ganó <0>20 veces</0> lo que le ofrecieron",
+    "insuranceOffer": "oferta del seguro",
+    "verdict": "veredicto",
+    "caseDetails": "Accidente automovilístico | Orlando, FL",
+    "disclaimer": "Los resultados pueden variar según los hechos y circunstancias legales de tu caso. Los abogados mostrados en estas fotografías pueden no estar autorizados en tu estado. Para encontrar un abogado autorizado en tu área, visita nuestra página de abogados."
+  },
+  "ways": {
+    "title": "Formas en que podemos ayudarte",
+    "cards": [
+      {
+        "title": "¿Lesionado en un accidente de auto?",
+        "description": "Hemos ayudado a miles de personas a recuperar gastos médicos, salarios perdidos y más después de choques causados por negligencia."
+      },
+      {
+        "title": "¿Te lastimaste en una caída?",
+        "description": "Desde pisos mojados hasta condiciones peligrosas, responsabilizamos a los dueños de las propiedades por tus lesiones."
+      },
+      {
+        "title": "¿Te lesionaste en el trabajo?",
+        "description": "Guiamos a los trabajadores durante el proceso de reclamaciones para obtener los beneficios que merecen por lesiones laborales."
+      }
+    ]
+  },
+  "caseTypes": {
+    "title": "Más de 50 tipos de casos, incluyendo:",
+    "items": [
+      "Seguro Social",
+      "Abuso en asilos",
+      "Medicamentos peligrosos",
+      "Laboral y empleo",
+      "Productos defectuosos",
+      "Accidentes de camión",
+      "Negligencia médica",
+      "Demandas colectivas"
+    ]
+  },
+  "faces": {
+    "title": "Los rostros de la justicia",
+    "description": "Nuestros más de 1,000 abogados son brillantes, compasivos y están listos para ir más allá por sus clientes.",
+    "signatureLabel": "Firma",
+    "profileName": "Matt Morgan",
+    "profileTitle": "Socio director",
+    "meetLink": "Conoce a nuestros abogados",
+    "disclaimer": "Los abogados mostrados en estos videos pueden no estar autorizados en tu estado. Para encontrar un abogado autorizado en tu área, visita nuestra página de abogados."
+  },
+  "compensation": {
+    "title": "Estamos aquí para ayudarte a recuperar compensación por:",
+    "items": [
+      "Tratamientos médicos",
+      "Salarios perdidos",
+      "Dolor y sufrimiento"
+    ]
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "description": "¿No sabes qué hacer ahora? Con 35 años de experiencia, nuestros abogados de lesiones personales te guiarán en cada paso.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Contáctanos 24/7: es gratis",
+        "description": "Comienza con una evaluación gratuita y sin compromiso en línea, por teléfono o por mensaje de texto. Cuéntanos tu historia: estamos para escucharte.",
+        "link": "Inicia tu reclamación"
+      },
+      {
+        "number": "2",
+        "title": "Conoce a tu abogado dedicado",
+        "description": "Si tu caso califica, te asignaremos un abogado y un equipo de apoyo. Ellos se encargarán de todo, te mantendrán informado y responderán tus preguntas.",
+        "link": "Conoce a los abogados"
+      },
+      {
+        "number": "3",
+        "title": "Luchamos por más",
+        "description": "Tu equipo legal construirá un caso sólido, negociará con las aseguradoras y buscará los máximos resultados que mereces.",
+        "link": "Más sobre el proceso del caso"
+      }
+    ],
+    "channels": {
+      "form": "Formulario",
+      "phone": "Teléfono",
+      "text": "Texto"
+    }
+  },
+  "fighting": {
+    "title": "Luchamos por la gente",
+    "description": "Hay una razón por la que somos la firma de lesiones más grande del país: nuestro tamaño nos permite ayudar a más personas, en más lugares, y luchar por la justicia que merecen.",
+    "stats": [
+      {
+        "value": "$25 MIL MILLONES",
+        "label": "Recuperados para clientes en todo el país"
+      },
+      {
+        "value": "700,000+",
+        "label": "Clientes y familias"
+      },
+      {
+        "value": "50 ESTADOS",
+        "label": "Con abogados listos para ayudarte"
+      },
+      {
+        "value": "1",
+        "label": "Clic puede cambiar tu vida"
+      }
+    ]
+  },
+  "pain": {
+    "title": "CONOCEMOS TU DOLOR.",
+    "description": "El hermano de John Morgan, Tim, se lesionó cuando era adolescente. Su experiencia con un abogado fue terrible. John pasó 35 años construyendo un despacho que trata mejor a las familias como la suya. Y la tuya.",
+    "disclaimer": "El abogado mostrado arriba está autorizado en Florida. Para ver la lista completa de abogados en tu estado, visita nuestra página de abogados. Los resultados pueden variar según los hechos y circunstancias legales de tu caso."
+  },
+  "insights": {
+    "title": "Recursos e información",
+    "description": "Explora artículos y recursos que te guiarán sobre tus opciones y te ayudarán a tomar decisiones informadas después de un accidente.",
+    "articles": [
+      "Lo básico: ¿qué es una demanda por lesiones personales?",
+      "¿Cuánto vale mi caso de lesiones personales?",
+      "La diferencia de Morgan & Morgan",
+      "Por qué los detalles del caso importan"
+    ]
+  },
+  "feeFreeForm": {
+    "title": "LA TARIFA ES GRATIS®",
+    "description": "Solo pagas si ganamos. Contáctanos 24/7.",
+    "subtitle": "Es fácil comenzar",
+    "intro": "Proporciona algunos detalles sencillos sobre tu lesión y nuestro equipo se encargará del resto.",
+    "submit": "Inicia tu reclamación"
+  },
+  "footer": {
+    "intro": {
+      "headline": "MORGAN & MORGAN",
+      "tagline": "LA FIRMA DE LESIONES MÁS GRANDE DE ESTADOS UNIDOS",
+      "description": "Después de 35 años, Morgan & Morgan sigue siendo una firma familiar dedicada a defender a la familia estadounidense promedio.",
+      "reviews": "Más de 100 mil reseñas de 5 estrellas"
+    },
+    "columns": {
+      "mm": {
+        "title": "M&M",
+        "links": [
+          "Oficinas",
+          "Áreas de práctica",
+          "Nuestros resultados",
+          "Cómo funciona",
+          "Oportunidades laborales",
+          "Contáctanos"
+        ]
+      },
+      "about": {
+        "title": "Nosotros",
+        "links": [
+          "Nuestra historia",
+          "Nuestros abogados",
+          "Noticias",
+          "Preguntas frecuentes",
+          "En los medios",
+          "Impacto comunitario"
+        ]
+      },
+      "quickLinks": {
+        "title": "Enlaces útiles",
+        "links": [
+          "Accesibilidad",
+          "Quejas",
+          "Pound Law",
+          "Cancelar suscripción",
+          "Co-counsel",
+          "Política editorial"
+        ]
+      },
+      "social": {
+        "title": "Redes sociales",
+        "appStores": "Tiendas de apps"
+      }
+    },
+    "selectOffices": "Oficinas destacadas",
+    "officesList": "Orlando, Fort Myers, Jacksonville, Miami, Atlanta, Tampa, Los Ángeles, Boston, Nueva York, Filadelfia, Nashville",
+    "officeLink": "Para ver todas las oficinas en tu área, visita nuestra página de {{link}}.",
+    "officeLinkLabel": "Oficinas",
+    "disclaimer": "Este sitio está diseñado para ser accesible y fácil de usar para personas con y sin discapacidades. Contáctanos si encuentras algún problema de accesibilidad o usabilidad. Publicidad de abogados. Los resultados anteriores no garantizan resultados similares. Los casos serán manejados por abogados autorizados en la jurisdicción local. Los casos pueden asociarse con, o remitirse a, otros despachos como co-counsel o abogados corresponsales. Basado en reseñas seleccionadas a nivel nacional.",
+    "privacyChoices": "Tus opciones de privacidad.",
+    "privacyPolicy": "Aviso de privacidad",
+    "terms": "Avisos legales y términos de uso",
+    "copyright": "©2025 Morgan and Morgan, P.A. Todos los derechos reservados"
+  },
+  "contact": {
+    "title": "CONTÁCTANOS A TU MANERA",
+    "description": "No importa dónde ocurra una lesión, obtener ayuda no debería ser difícil. Morgan & Morgan facilita la lucha por la compensación que mereces.",
+    "formTitle": "Es Gratis Comenzar",
+    "here247": "Estamos aquí 24/7.",
+    "formDescription": "Completa el formulario, llámanos al {{phone}}, o usa el botón de texto para tu evaluación de caso gratuita.",
+    "attorneyDisclaimer": "El abogado mostrado arriba puede no estar autorizado en tu estado. Para encontrar un abogado autorizado en tu área, visita nuestra",
+    "attorneyPage": "página de abogados",
+    "whyTitle": "¿Por qué Morgan & Morgan?",
+    "whyDescription": "Elegir Morgan & Morgan significa más que contratar un bufete de abogados—es tener un equipo fuerte, solidario y probado de tu lado.",
+    "fightingForMore": "LUCHANDO POR MÁS",
+    "fightingDescription": "35 años. 1,000 abogados. $25 mil millones recuperados. Tenemos el poder para enfrentar a cualquier corporación.",
+    "feeFree": "LA TARIFA ES GRATIS, A MENOS QUE GANEMOS",
+    "feeDescription": "Es fácil comenzar con una evaluación de caso gratuita por teléfono, texto o web — 24/7. La tarifa siempre es gratis a menos que ganemos.",
+    "localCare": "ATENCIÓN LOCAL + PODER NACIONAL",
+    "localDescription": "Tu abogado es de tu comunidad — respaldado por la fortaleza de una firma nacional.",
+    "findOffice": "Encuentra una oficina cerca de ti"
+  }
+}
+

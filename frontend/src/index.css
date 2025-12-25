@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Accessibility Widget Positioning - Mobile */
+@media (max-width: 768px) {
+  /* UserWay Widget */
+  #userway-accessibility-widget,
+  #userway-accessibility-widget iframe,
+  .userway_accessibility_widget,
+  [id*="userway"],
+  [class*="userway"] {
+    right: auto !important;
+    left: 20px !important;
+    bottom: 16px !important;
+    top: auto !important;
+  }
+
+  /* accessiBe Widget */
+  #accessibe-widget,
+  #accessibe-widget iframe,
+  [id*="accessibe"],
+  [class*="accessibe"] {
+    right: auto !important;
+    left: 20px !important;
+    bottom: 16px !important;
+    top: auto !important;
+  }
+
+  /* Ensure it doesn't overlap with chat widget on mobile */
+  #tidio-chat-widget,
+  #tidio-chat-widget iframe,
+  [id*="tidio"] {
+    right: 16px !important;
+    left: auto !important;
+  }
+
+  /* Add bottom padding to prevent content from being hidden behind fixed call button on mobile */
+  body {
+    padding-bottom: 72px;
+  }
+}
+
+/* Ensure floating call button has space on desktop */
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 80px;
+  }
+}

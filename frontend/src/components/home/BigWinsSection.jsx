@@ -1,0 +1,45 @@
+import React, { useState } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
+
+export default function BigWinsSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = 5;
+  const { t } = useTranslation();
+
+  return (
+    <section className="bg-brand-primary text-white py-12 md:py-16 px-4">
+      <div className="container mx-auto max-w-4xl">
+        <div className="flex flex-col items-center text-center">
+          {/* Main Heading */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            {t('bigWins.title')}
+          </h2>
+          
+          {/* Sub-heading/Description */}
+          <p className="text-lg md:text-xl mb-8 text-gray-200">
+            {t('bigWins.description')}
+          </p>
+          
+          {/* Call to Action Button */}
+          <button className="bg-brand-accent text-black font-bold px-6 py-4 rounded-lg hover:bg-brand-accentDark transition-colors text-lg mb-6 w-full md:w-auto">
+            {t('bigWins.cta')}
+          </button>
+          
+          {/* Secondary Link */}
+          <a href="#" className="flex items-center justify-center gap-2 text-white transition-colors hover:text-brand-accent mb-8 group">
+            <span>{t('bigWins.link')}</span>
+            <svg className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          
+          {/* Legal Disclaimer */}
+          <p className="text-xs text-gray-400 leading-relaxed max-w-2xl">
+            {t('bigWins.disclaimer')}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
