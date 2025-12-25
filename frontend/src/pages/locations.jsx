@@ -106,6 +106,7 @@ function RemoteHelp() {
               ))}
             </div>
           </div>
+          <Link to="/">
           <button
             type="button"
             className="inline-flex items-center rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-primaryDark"
@@ -115,6 +116,7 @@ function RemoteHelp() {
               <path fillRule="evenodd" d="M10.293 3.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.586 11H4a1 1 0 0 1 0-2h9.586l-3.293-3.293a1 1 0 0 1 0-1.414Z" clipRule="evenodd" />
             </svg>
           </button>
+          </Link> 
         </div>
       </div>
     </section>

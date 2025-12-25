@@ -349,9 +349,7 @@ export default function BigResultsSection() {
               style={{ backfaceVisibility: 'hidden' }}
               onClick={() => toggleFlip(index)}
             >
-              <div className="px-4 py-3 text-sm font-medium text-gray-700 bg-gray-50">
-                {result.location}
-              </div>
+            
               <div className="flex-1 px-4 py-6 flex flex-col items-center justify-center text-center">
                 <div className="mb-4">
                   <img
@@ -370,9 +368,6 @@ export default function BigResultsSection() {
                 <div className="text-lg font-semibold text-gray-900">
                   {result.title}
                 </div>
-              </div>
-              <div className="px-4 py-3 border-t border-gray-200">
-                <span className="text-sm font-semibold text-gray-700">Read more</span>
               </div>
             </div>
 

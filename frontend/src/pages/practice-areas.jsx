@@ -191,11 +191,7 @@ export default function PracticeAreas() {
                   className="group flex items-center justify-between rounded-xl bg-white p-5 text-left shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-1 hover:shadow-lg"
                 >
                   <span className="text-base font-semibold text-gray-900">{category}</span>
-                  <span className="ml-4 flex h-10 w-10 items-center justify-center rounded-full bg-brand-light text-brand-primary transition group-hover:bg-brand-primary group-hover:text-white">
-                    <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.586 11H4a1 1 0 0 1 0-2h9.586l-3.293-3.293a1 1 0 0 1 0-1.414Z" clipRule="evenodd" />
-                    </svg>
-                  </span>
+                 
                 </button>
               ))}
             </div>
@@ -244,20 +240,7 @@ export default function PracticeAreas() {
                 )}
               </div>
 
-              <div className="mt-6 flex items-center justify-center gap-3">
-                {corporateItems.map((_, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => handleCorporateIndicator(index)}
-                    className={`h-2.5 rounded-full transition ${
-                      index === activeCorporateIndex ? 'w-8 bg-brand-accent' : 'w-2 bg-white/40 hover:bg-white/60'
-                    }`}
-                    aria-label={t('common.aria.goToSlide', { index: index + 1 })}
-                    aria-pressed={index === activeCorporateIndex}
-                  />
-                ))}
-              </div>
+              
             </div>
           </div>
         </div>

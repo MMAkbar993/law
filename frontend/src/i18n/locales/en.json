@@ -236,68 +236,401 @@
     "states": {
       "title": "Explore our offices by state",
       "items": [
-        { "state": "Alabama", "cities": ["Birmingham", "Huntsville", "Mobile", "Montgomery"] },
-        { "state": "Alaska", "cities": ["Anchorage"] },
-        { "state": "Arizona", "cities": ["Chandler", "Mesa", "Peoria", "Phoenix", "Tucson"] },
-        { "state": "Arkansas", "cities": ["Little Rock"] },
-        { "state": "California", "cities": ["Irvine", "Los Angeles", "Riverside", "Sacramento", "San Diego", "San Francisco"] },
-        { "state": "Colorado", "cities": ["Denver"] },
-        { "state": "Connecticut", "cities": ["Hamden", "New Haven"] },
-        { "state": "Delaware", "cities": ["Wilmington"] },
-        { "state": "Florida", "cities": ["Bradenton", "Daytona Beach", "DeLand", "Fort Lauderdale", "Fort Myers", "Gainesville", "Jacksonville", "Key West", "Kissimmee", "Lakeland", "Melbourne", "Miami", "Naples", "Ocala", "Orlando", "Palm Harbor", "Panama City", "Pensacola", "Port St. Lucie", "Sarasota", "Spring Hill", "St. Augustine", "St. Petersburg", "Tallahassee", "Tampa", "Titusville", "West Palm Beach", "Winter Haven"] },
-        { "state": "Georgia", "cities": ["Albany", "Alpharetta", "Atlanta", "Augusta", "Brunswick", "Columbus", "Macon", "Marietta", "Savannah"] },
-        { "state": "Hawaii", "cities": ["Honolulu"] },
-        { "state": "Idaho", "cities": ["Boise"] },
-        { "state": "Illinois", "cities": ["Chicago"] },
-        { "state": "Indiana", "cities": ["Indianapolis", "New Albany"] },
-        { "state": "Iowa", "cities": ["Des Moines"] },
-        { "state": "Kansas", "cities": ["Wichita"] },
-        { "state": "Kentucky", "cities": ["Bowling Green", "Lexington", "Louisville", "Owensboro", "Paducah"] },
-        { "state": "Louisiana", "cities": ["New Orleans"] },
-        { "state": "Maine", "cities": ["Portland"] },
-        { "state": "Maryland", "cities": ["Baltimore"] },
-        { "state": "Massachusetts", "cities": ["Boston", "Medford"] },
-        { "state": "Michigan", "cities": ["Detroit", "Grand Rapids"] },
-        { "state": "Minnesota", "cities": ["Minneapolis"] },
-        { "state": "Mississippi", "cities": ["Biloxi", "Hattiesburg", "Jackson"] },
-        { "state": "Missouri", "cities": ["St. Louis"] },
-        { "state": "Montana", "cities": ["Bozeman"] },
-        { "state": "Nebraska", "cities": ["Lincoln"] },
-        { "state": "Nevada", "cities": ["Henderson", "Las Vegas", "Reno"] },
-        { "state": "New Hampshire", "cities": ["Bedford"] },
-        { "state": "New Jersey", "cities": ["Jersey City", "Jersey Shore", "Mount Laurel"] },
-        { "state": "New Mexico", "cities": ["Albuquerque"] },
-        { "state": "New York", "cities": ["Bronx", "Buffalo", "New York City", "Queens"] },
-        { "state": "North Carolina", "cities": ["Charlotte", "Raleigh"] },
-        { "state": "North Dakota", "cities": ["Fargo"] },
-        { "state": "Ohio", "cities": ["Cincinnati", "Columbus", "Dayton"] },
-        { "state": "Oklahoma", "cities": ["Oklahoma City"] },
-        { "state": "Oregon", "cities": ["Portland"] },
-        { "state": "Pennsylvania", "cities": ["Philadelphia", "Pittsburgh", "Scranton"] },
-        { "state": "Rhode Island", "cities": ["Providence"] },
-        { "state": "South Carolina", "cities": ["Charleston", "Columbia", "Greenville", "Hilton Head", "Myrtle Beach"] },
-        { "state": "South Dakota", "cities": ["Sioux Falls"] },
-        { "state": "Tennessee", "cities": ["Chattanooga", "Knoxville", "Memphis", "Nashville"] },
-        { "state": "Texas", "cities": ["Dallas", "Houston"] },
-        { "state": "Utah", "cities": ["Salt Lake City"] },
-        { "state": "Vermont", "cities": ["Burlington"] },
-        { "state": "Virginia", "cities": ["Arlington", "Richmond"] },
-        { "state": "Washington", "cities": ["Seattle"] },
-        { "state": "Washington D.C.", "cities": ["Washington, D.C."] },
-        { "state": "West Virginia", "cities": ["Charleston"] },
-        { "state": "Wisconsin", "cities": ["Milwaukee"] },
-        { "state": "Wyoming", "cities": ["Cheyenne"] }
+        {
+          "state": "Alabama",
+          "cities": [
+            "Birmingham",
+            "Huntsville",
+            "Mobile",
+            "Montgomery"
+          ]
+        },
+        {
+          "state": "Alaska",
+          "cities": [
+            "Anchorage"
+          ]
+        },
+        {
+          "state": "Arizona",
+          "cities": [
+            "Chandler",
+            "Mesa",
+            "Peoria",
+            "Phoenix",
+            "Tucson"
+          ]
+        },
+        {
+          "state": "Arkansas",
+          "cities": [
+            "Little Rock"
+          ]
+        },
+        {
+          "state": "California",
+          "cities": [
+            "Irvine",
+            "Los Angeles",
+            "Riverside",
+            "Sacramento",
+            "San Diego",
+            "San Francisco"
+          ]
+        },
+        {
+          "state": "Colorado",
+          "cities": [
+            "Denver"
+          ]
+        },
+        {
+          "state": "Connecticut",
+          "cities": [
+            "Hamden",
+            "New Haven"
+          ]
+        },
+        {
+          "state": "Delaware",
+          "cities": [
+            "Wilmington"
+          ]
+        },
+        {
+          "state": "Florida",
+          "cities": [
+            "Bradenton",
+            "Daytona Beach",
+            "DeLand",
+            "Fort Lauderdale",
+            "Fort Myers",
+            "Gainesville",
+            "Jacksonville",
+            "Key West",
+            "Kissimmee",
+            "Lakeland",
+            "Melbourne",
+            "Miami",
+            "Naples",
+            "Ocala",
+            "Orlando",
+            "Palm Harbor",
+            "Panama City",
+            "Pensacola",
+            "Port St. Lucie",
+            "Sarasota",
+            "Spring Hill",
+            "St. Augustine",
+            "St. Petersburg",
+            "Tallahassee",
+            "Tampa",
+            "Titusville",
+            "West Palm Beach",
+            "Winter Haven"
+          ]
+        },
+        {
+          "state": "Georgia",
+          "cities": [
+            "Albany",
+            "Alpharetta",
+            "Atlanta",
+            "Augusta",
+            "Brunswick",
+            "Columbus",
+            "Macon",
+            "Marietta",
+            "Savannah"
+          ]
+        },
+        {
+          "state": "Hawaii",
+          "cities": [
+            "Honolulu"
+          ]
+        },
+        {
+          "state": "Idaho",
+          "cities": [
+            "Boise"
+          ]
+        },
+        {
+          "state": "Illinois",
+          "cities": [
+            "Chicago"
+          ]
+        },
+        {
+          "state": "Indiana",
+          "cities": [
+            "Indianapolis",
+            "New Albany"
+          ]
+        },
+        {
+          "state": "Iowa",
+          "cities": [
+            "Des Moines"
+          ]
+        },
+        {
+          "state": "Kansas",
+          "cities": [
+            "Wichita"
+          ]
+        },
+        {
+          "state": "Kentucky",
+          "cities": [
+            "Bowling Green",
+            "Lexington",
+            "Louisville",
+            "Owensboro",
+            "Paducah"
+          ]
+        },
+        {
+          "state": "Louisiana",
+          "cities": [
+            "New Orleans"
+          ]
+        },
+        {
+          "state": "Maine",
+          "cities": [
+            "Portland"
+          ]
+        },
+        {
+          "state": "Maryland",
+          "cities": [
+            "Baltimore"
+          ]
+        },
+        {
+          "state": "Massachusetts",
+          "cities": [
+            "Boston",
+            "Medford"
+          ]
+        },
+        {
+          "state": "Michigan",
+          "cities": [
+            "Detroit",
+            "Grand Rapids"
+          ]
+        },
+        {
+          "state": "Minnesota",
+          "cities": [
+            "Minneapolis"
+          ]
+        },
+        {
+          "state": "Mississippi",
+          "cities": [
+            "Biloxi",
+            "Hattiesburg",
+            "Jackson"
+          ]
+        },
+        {
+          "state": "Missouri",
+          "cities": [
+            "St. Louis"
+          ]
+        },
+        {
+          "state": "Montana",
+          "cities": [
+            "Bozeman"
+          ]
+        },
+        {
+          "state": "Nebraska",
+          "cities": [
+            "Lincoln"
+          ]
+        },
+        {
+          "state": "Nevada",
+          "cities": [
+            "Henderson",
+            "Las Vegas",
+            "Reno"
+          ]
+        },
+        {
+          "state": "New Hampshire",
+          "cities": [
+            "Bedford"
+          ]
+        },
+        {
+          "state": "New Jersey",
+          "cities": [
+            "Jersey City",
+            "Jersey Shore",
+            "Mount Laurel"
+          ]
+        },
+        {
+          "state": "New Mexico",
+          "cities": [
+            "Albuquerque"
+          ]
+        },
+        {
+          "state": "New York",
+          "cities": [
+            "Bronx",
+            "Buffalo",
+            "New York City",
+            "Queens"
+          ]
+        },
+        {
+          "state": "North Carolina",
+          "cities": [
+            "Charlotte",
+            "Raleigh"
+          ]
+        },
+        {
+          "state": "North Dakota",
+          "cities": [
+            "Fargo"
+          ]
+        },
+        {
+          "state": "Ohio",
+          "cities": [
+            "Cincinnati",
+            "Columbus",
+            "Dayton"
+          ]
+        },
+        {
+          "state": "Oklahoma",
+          "cities": [
+            "Oklahoma City"
+          ]
+        },
+        {
+          "state": "Oregon",
+          "cities": [
+            "Portland"
+          ]
+        },
+        {
+          "state": "Pennsylvania",
+          "cities": [
+            "Philadelphia",
+            "Pittsburgh",
+            "Scranton"
+          ]
+        },
+        {
+          "state": "Rhode Island",
+          "cities": [
+            "Providence"
+          ]
+        },
+        {
+          "state": "South Carolina",
+          "cities": [
+            "Charleston",
+            "Columbia",
+            "Greenville",
+            "Hilton Head",
+            "Myrtle Beach"
+          ]
+        },
+        {
+          "state": "South Dakota",
+          "cities": [
+            "Sioux Falls"
+          ]
+        },
+        {
+          "state": "Tennessee",
+          "cities": [
+            "Chattanooga",
+            "Knoxville",
+            "Memphis",
+            "Nashville"
+          ]
+        },
+        {
+          "state": "Texas",
+          "cities": [
+            "Dallas",
+            "Houston"
+          ]
+        },
+        {
+          "state": "Utah",
+          "cities": [
+            "Salt Lake City"
+          ]
+        },
+        {
+          "state": "Vermont",
+          "cities": [
+            "Burlington"
+          ]
+        },
+        {
+          "state": "Virginia",
+          "cities": [
+            "Arlington",
+            "Richmond"
+          ]
+        },
+        {
+          "state": "Washington",
+          "cities": [
+            "Seattle"
+          ]
+        },
+        {
+          "state": "Washington D.C.",
+          "cities": [
+            "Washington, D.C."
+          ]
+        },
+        {
+          "state": "West Virginia",
+          "cities": [
+            "Charleston"
+          ]
+        },
+        {
+          "state": "Wisconsin",
+          "cities": [
+            "Milwaukee"
+          ]
+        },
+        {
+          "state": "Wyoming",
+          "cities": [
+            "Cheyenne"
+          ]
+        }
       ]
     }
   },
   "hero": {
-    "titleLine1": "Personal Injury Lawyers",
+    "titleLine1": "Personal Lawyers",
     "titleLine2": "Fighting For You",
-    "description": "With 35 years, 1,000 attorneys, and $25 billion recovered, we fight to get you what you deserve—start your free case review anytime by text, phone, or online.",
+    "description": "We fight to get you what you deserve—start your free case review anytime by text, phone, or online.",
     "features": [
       "FIGHTING FOR MORE",
-      "THE FEE IS FREE, UNLESS WE WIN",
-      "LOCAL CARE + NATIONAL POWER"
+      "FREE, UNLESS WE WIN",
+      "LOCAL CARE"
     ]
   },
   "feeFree": {
@@ -308,18 +641,39 @@
     "formTitle": "It's Easy to Get Started.",
     "startButton": "Start your claim",
     "caseTypes": [
-      { "value": "car-accident", "label": "Car Accident" },
-      { "value": "truck-accident", "label": "Truck Accident" },
-      { "value": "motorcycle-accident", "label": "Motorcycle Accident" },
-      { "value": "slip-fall", "label": "Slip and Fall" },
-      { "value": "medical-malpractice", "label": "Medical Malpractice" },
-      { "value": "workers-compensation", "label": "Workers' Compensation" },
-      { "value": "other", "label": "Other" }
+      {
+        "value": "car-accident",
+        "label": "Car Accident"
+      },
+      {
+        "value": "truck-accident",
+        "label": "Truck Accident"
+      },
+      {
+        "value": "motorcycle-accident",
+        "label": "Motorcycle Accident"
+      },
+      {
+        "value": "slip-fall",
+        "label": "Slip and Fall"
+      },
+      {
+        "value": "medical-malpractice",
+        "label": "Medical Malpractice"
+      },
+      {
+        "value": "workers-compensation",
+        "label": "Workers' Compensation"
+      },
+      {
+        "value": "other",
+        "label": "Other"
+      }
     ]
   },
   "bigWins": {
-    "title": "The Right Firm for Big Wins",
-    "description": "Insurance companies know us—and they know we fight for every dollar.",
+    "title": "The Right Firm",
+    "description": "Insurance companies know us—and they know we fight.",
     "cta": "Get a free case evaluation",
     "link": "See more results",
     "caseHighlight": "Kimberly won <0>20x</0> what was offered",
@@ -360,8 +714,8 @@
     ]
   },
   "faces": {
-    "title": "The Faces of Justice",
-    "description": "Our 1,000+ attorneys are whip-smart, bighearted, and passionate people who wouldn't hesitate to go the extra mile for their clients.",
+    "title": "Faces of Justice",
+    "description": "Our attorneys are whip-smart and passionate people who go the extra mile for clients.",
     "signatureLabel": "Signature",
     "profileName": "Matt Morgan",
     "profileTitle": "Managing Partner",
@@ -473,15 +827,14 @@
           "Our Story",
           "Our Attorneys",
           "Newsroom",
-          "FAQ"
+          "FAQ",
+          "Accessibility"
         ]
       },
       "quickLinks": {
         "title": "Quick Links",
         "links": [
-          "Accessibility",
-          "Complaints",
-          "Opt Out"
+          "Accessibility"
         ]
       },
       "social": {
@@ -498,8 +851,8 @@
     "copyright": "©2025 Morgan and Morgan, P.A. All rights reserved"
   },
   "contact": {
-    "title": "CONTACT US YOUR WAY",
-    "description": "No matter where an injury happens, getting help shouldn't be hard. Morgan & Morgan makes it easy to fight for the compensation you deserve.",
+    "title": "CONTACT US",
+    "description": "Getting help shouldn't be hard.",
     "formTitle": "It's Free to Get Started",
     "here247": "We're here 24/7.",
     "formDescription": "Fill out the form, call us at {{phone}}, or use the text button for your free case evaluation.",
@@ -516,4 +869,3 @@
     "findOffice": "Find an office near you"
   }
 }
-

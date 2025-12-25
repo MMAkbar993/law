@@ -67,7 +67,6 @@ export default function ReviewsSection() {
       <div className="container mx-auto max-w-6xl px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-extrabold">100,000+ Five Star Reviews</h2>
-          <p className="mt-3 text-lg text-white/80">The reasons why clients trust Morgan &amp; Morgan.</p>
         </div>
 
         <div className="flex justify-center">

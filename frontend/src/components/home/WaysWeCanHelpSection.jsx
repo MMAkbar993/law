@@ -35,12 +35,7 @@ export default function WaysWeCanHelpSection() {
               <p className="text-gray-700 mb-4 leading-relaxed">
                 {card.description}
               </p>
-              <a href={card.link ?? '#'} className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group">
-                {t('common.buttons.howWeHelp')}
-                <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+              
             </div>
           ))}
         </div>

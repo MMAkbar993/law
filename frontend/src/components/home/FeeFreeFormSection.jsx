@@ -22,7 +22,7 @@ export default function FeeFreeFormSection() {
           {/* Right Column - Simple Button */}
           <div className="flex flex-col items-center justify-center">
             <Link
-              to="/"
+              to="/auto-accident-calculator"
               className="w-full max-w-md border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg transition-colors hover:bg-white hover:text-brand-primary text-lg text-center"
             >
               Start your claim

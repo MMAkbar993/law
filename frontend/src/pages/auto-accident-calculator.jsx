@@ -13,8 +13,7 @@ const STEP_DEFINITIONS = [
     disqualifyMessage: 'Sorry, we can only help with accidents that happened less than a year ago.',
     options: [
       { label: 'In the past month', value: 'within_1_month' },
-      { label: '1 to 3 months ago', value: 'within_3_months' },
-      { label: '4 to 6 months ago', value: 'within_6_months' },
+      { label: '1 to 6 months ago', value: 'within_6_months' },
       { label: 'Within the last year', value: 'within_year' },
       { label: 'Over a year ago', value: 'over_year', disqualify: true },
     ],
@@ -78,7 +77,7 @@ const STEP_DEFINITIONS = [
     field: ['details', 'state'],
     label: 'Can you quickly explain what happened?',
     helper:
-      'This information will help our AI match you with similar successful cases to give a better estimated payout.',
+      'This information will help our match you with similar successful cases to give a better estimated payout.',
   },
   {
     id: 'contact',
@@ -92,7 +91,7 @@ const STEP_DEFINITIONS = [
     type: 'phone',
     field: ['phone', 'consent'],
     label: 'Final Step!',
-    helper: 'To help confirm you’re not a robot, we ask for you to submit a valid phone number.',
+    helper: 'Submit a valid phone number.',
   },
 ];
 
@@ -439,7 +438,7 @@ export default function AutoAccidentCalculator() {
               </div>
             </div>
             <div className="mt-12 text-xs text-white/60">
-              Questions? Answers © {new Date().getFullYear()} Case Connect, LLC. Terms &amp; Disclosure: Our qualification
+              Our qualification
               tool is designed to give a general idea of whether you may qualify for compensation, based solely on the
               information you provide. This does not constitute legal advice or a guarantee of results. Individual results
               vary. By submitting, you consent to contact from Case Connect and our partners by phone, text, and email. No
@@ -462,7 +461,7 @@ export default function AutoAccidentCalculator() {
                 </div>
                 <h2 className="text-2xl font-semibold">One moment please...</h2>
                 <p className="text-base text-white/80">
-                  We&apos;re reviewing your answers. A Case Connect specialist will reach out shortly with your estimated
+                  We&apos;re reviewing your answers.we will reach out shortly with your estimated
                   payout details.
                 </p>
               </div>

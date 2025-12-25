@@ -85,7 +85,7 @@ export default function Footer() {
             </div>
 
             {/* Quick Links Column */}
-            <div>
+            {/* <div>
               <h3 className="font-bold mb-4">{t('footer.columns.quickLinks.title')}</h3>
               <ul className="space-y-2 text-sm">
                 {quickLinks.map((link, index) => (
@@ -96,7 +96,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Social Column */}
             <div>
@@ -143,7 +143,7 @@ export default function Footer() {
                   </div>
                 </a>
               </div>
-              <div>
+              {/* <div>
                 <h4 className="font-semibold mb-2 text-sm">{t('footer.columns.social.appStores')}</h4>
                 <div className="space-y-2">
                   <a href="#" className="block">
@@ -163,7 +163,7 @@ export default function Footer() {
                     </div>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function Footer() {
         <div className="mb-8">
           <p className="text-sm text-gray-600">
             {officeLinkBefore}
-            <a href="#" className="text-brand-accent hover:underline">
+            <a href="/locations" className="text-brand-accent hover:underline">
               {t('footer.officeLinkLabel')}
             </a>
             {officeLinkAfter}

@@ -8,7 +8,6 @@ import FacesOfJusticeSection from '../components/home/FacesOfJusticeSection';
 import CompensationSection from '../components/home/CompensationSection';
 import HowItWorksSection from '../components/home/HowItWorksSection';
 import FightingForPeopleSection from '../components/home/FightingForPeopleSection';
-import WeKnowYourPainSection from '../components/home/WeKnowYourPainSection';
 import InsightsResourcesSection from '../components/home/InsightsResourcesSection';
 import FeeFreeFormSection from '../components/home/FeeFreeFormSection';
 import GetJusticeStepsSection from '../components/home/GetJusticeStepsSection';
@@ -27,13 +26,13 @@ export default function Home() {
       <WaysWeCanHelpSection />
       <CaseTypesSection />
       <FacesOfJusticeSection />
-      <CompensationSection />
+      {/* <CompensationSection /> */}
       <ReviewsSection />
       <HowItWorksSection />
 
       <FightingForPeopleSection />
      
-      <InsightsResourcesSection />
+      {/* <InsightsResourcesSection /> */}
       <FeeFreeFormSection />
     </>
   );

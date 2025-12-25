@@ -78,32 +78,15 @@ export default function FeeFreeSection() {
                 components={[<span className="underline font-semibold" />]}
               />
             </p> */}
-            
+
             {/* Phone Number */}
-            <a 
+            <a
               href={`tel:${t('common.phone').replace(/[^\d]/g, '')}`}
               className="mb-8 text-xl md:text-2xl font-bold text-[#f5d000] hover:text-[#f5d000]/80 transition-colors inline-block"
             >
               {t('common.phone')}
             </a>
 
-            {/* Video Player */}
-            <div className="relative mb-10 w-full max-w-lg md:max-w-xl">
-              <div className="relative aspect-video overflow-hidden rounded-2xl bg-[#102a59] shadow-[0_20px_45px_rgba(0,0,0,0.35)]">
-                {/* Video Thumbnail Placeholder */}
-                <div className="absolute inset-0">
-                  <img src="16.webp" alt={t('feeFree.videoAlt')} className="h-full w-full object-cover" />
-                </div>
-                {/* Play Button */}
-                <button className="group absolute inset-0 flex items-center justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#f5d000] shadow-[0_12px_25px_rgba(0,0,0,0.4)] transition-transform group-hover:scale-110 md:h-20 md:w-20">
-                    <svg className="ml-1 h-8 w-8 text-black md:h-10 md:w-10" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </button>
-              </div>
-            </div>
 
             {/* As seen on */}
             <div className="flex flex-col gap-3 ">
@@ -183,12 +166,10 @@ export default function FeeFreeSection() {
             <h2 className="mb-2 text-2xl font-semibold md:text-3xl text-center">
               Get your FREE case evaluation
             </h2>
-            <h3 className="mb-2 text-xl font-semibold md:text-2xl text-center text-white/80">
-              {t('feeFree.formTitle')}
-            </h3>
-            
+
+
             {/* Phone Number */}
-            <a 
+            <a
               href={`tel:${t('common.phone').replace(/[^\d]/g, '')}`}
               className="mb-6 ml-24 text-xl md:text-2xl font-bold text-[#f5d000] hover:text-[#f5d000]/80 transition-colors inline-block"
             >
@@ -218,8 +199,8 @@ export default function FeeFreeSection() {
                 required
               />
 
-               {/* Phone Number and Zip Code */}
-               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {/* Phone Number and Zip Code */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <input
                   type="tel"
                   name="phone"
@@ -273,7 +254,7 @@ export default function FeeFreeSection() {
                   type="checkbox"
                   name="consent"
                   id="consent"
-                  checked={formData.consent}
+                  checked={true}
                   onChange={handleChange}
                   className="mt-1 w-5 h-5 rounded border-gray-300 text-brand-primary focus:ring-brand-accent"
                   required
@@ -283,10 +264,7 @@ export default function FeeFreeSection() {
                 </label>
               </div>
 
-              {/* Terms & Privacy */}
-              <p className="text-xs text-white/70">
-                {t('common.form.terms')}
-              </p>
+
 
               {/* Submit Button */}
               <div className="space-y-3">
@@ -322,8 +300,11 @@ export default function FeeFreeSection() {
                 </div>
               </div>
 
+           
+
               {/* Copyright Notice */}
               <p className="mt-4 text-center text-xs text-white/60">
+                {t('common.form.terms')}
                 {t('common.disclaimers.copyright')}
               </p>
             </form>

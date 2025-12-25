@@ -86,23 +86,7 @@ export default function Header() {
             >
               {t('header.nav.attorneys')}
             </Link>
-            <div 
-              className="relative"
-              onMouseEnter={() => {
-                if (aboutDropdownTimeout) {
-                  clearTimeout(aboutDropdownTimeout);
-                  setAboutDropdownTimeout(null);
-                }
-                setIsAboutDropdownOpen(true);
-              }}
-              onMouseLeave={() => {
-                const timeout = setTimeout(() => {
-                  setIsAboutDropdownOpen(false);
-                }, 200); // 200ms delay before closing
-                setAboutDropdownTimeout(timeout);
-              }}
-            >
-              <Link 
+           <Link 
                 to="/our-firm" 
                 className={navLinkBase}
                 style={{ '--hover-color': accentColor }}
@@ -110,43 +94,7 @@ export default function Header() {
                 onMouseLeave={(e) => e.target.style.color = 'white'}
               >
                 {t('header.nav.about')}
-                <svg 
-                  className={`ml-1 h-4 w-4 transition-transform ${isAboutDropdownOpen ? 'rotate-180' : ''}`}
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
               </Link>
-              {isAboutDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 pt-2 w-64 z-50"
-                  onMouseEnter={() => {
-                    if (aboutDropdownTimeout) {
-                      clearTimeout(aboutDropdownTimeout);
-                      setAboutDropdownTimeout(null);
-                    }
-                    setIsAboutDropdownOpen(true);
-                  }}
-                  onMouseLeave={() => {
-                    const timeout = setTimeout(() => {
-                      setIsAboutDropdownOpen(false);
-                    }, 200);
-                    setAboutDropdownTimeout(timeout);
-                  }}
-                >
-                  <div className="bg-white rounded-lg shadow-lg py-2">
-                    <Link
-                      to="/our-firm"
-                      className="block px-4 py-2 text-gray-900 hover:bg-blue-50 transition-colors text-sm font-semibold"
-                    >
-                      {t('header.nav.aboutDropdown.whoWeAre')}
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
             <Link 
               to="/our-results" 
               className={navLinkBase}

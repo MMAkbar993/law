@@ -82,7 +82,7 @@ export default function FacesOfJusticeSection() {
             </div>
             
             <a
-              href="#"
+              href="/attorneys"
               className="group mb-8 inline-flex items-center font-semibold text-brand-primary transition hover:text-brand-primary/80"
             >
               {t('common.buttons.meetOurAttorneys')}

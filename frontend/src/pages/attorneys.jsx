@@ -555,79 +555,7 @@ export default function Attorneys() {
               <p className="h5 total-count-attorneys text-lg font-bold text-gray-900">
                 {filteredAndSortedAttorneys.length}+ Attorneys
               </p>
-              <div className="sort-attorneys body-sm-bold" ref={sortRef}>
-                <div className="filter-row citrus-select-list sort-options relative">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSortOpen(!sortOpen);
-                      setPracticeAreaOpen(false);
-                      setStateOpen(false);
-                      setCityOpen(false);
-                    }}
-                    className="selected-item flex items-center justify-between px-4 py-2 border border-gray-300 rounded-lg bg-white hover:border-gray-400 transition"
-                    aria-label="Sort options"
-                    aria-expanded={sortOpen}
-                  >
-                    <span>{getSortLabel()}</span>
-                    <svg className={`w-4 h-4 transition-transform ${sortOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  {sortOpen && (
-                    <ul className="absolute top-full right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-50 min-w-[150px]">
-                      <li>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setSortBy('firstName');
-                            setSortOpen(false);
-                          }}
-                          className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${sortBy === 'firstName' ? 'bg-blue-50 font-semibold' : ''}`}
-                        >
-                          First Name
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setSortBy('lastName');
-                            setSortOpen(false);
-                          }}
-                          className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${sortBy === 'lastName' ? 'bg-blue-50 font-semibold' : ''}`}
-                        >
-                          Last Name
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setSortBy('state');
-                            setSortOpen(false);
-                          }}
-                          className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${sortBy === 'state' ? 'bg-blue-50 font-semibold' : ''}`}
-                        >
-                          State
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setSortBy('city');
-                            setSortOpen(false);
-                          }}
-                          className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${sortBy === 'city' ? 'bg-blue-50 font-semibold' : ''}`}
-                        >
-                          City
-                        </button>
-                      </li>
-                    </ul>
-                  )}
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -740,40 +668,9 @@ export default function Attorneys() {
       <MissionVideoSection
         title={config.mission?.title}
         description={config.mission?.description}
-        videoThumbnail={config.mission?.videoThumbnail}
-        disclaimer={config.mission?.disclaimer}
       />
 
-      {/* Looking to join our team? Section */}
-      <CareersSection
-        title={config.careers?.title}
-        features={config.careers?.features}
-        buttonText={config.careers?.buttonText}
-        buttonUrl={config.careers?.buttonUrl}
-      />
 
-      {/* Floating TEXT US Sidebar */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
-        <div className="bg-blue-100 rounded-l-lg p-4 shadow-lg">
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-blue-900 font-bold text-sm transform -rotate-90 whitespace-nowrap">
-              TEXT US
-            </div>
-            <div className="text-blue-900 text-xs font-semibold">
-              24/7/365
-            </div>
-            <button
-              type="button"
-              className="mt-2 w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center hover:bg-yellow-500 transition shadow-md"
-              aria-label="Text us"
-            >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
       <FeeFreeFormSection />
       
       {/* Attorney Modal */}

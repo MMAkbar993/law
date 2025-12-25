@@ -311,7 +311,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <FeeFreeFormSection />
     </div>
   );

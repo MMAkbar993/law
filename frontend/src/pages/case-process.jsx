@@ -47,22 +47,7 @@ export default function CaseProcess() {
 
   return (
     <div className="bg-white">
-      {/* Breadcrumb Navigation */}
-      <nav className="container mx-auto max-w-6xl px-4 pt-6 text-sm text-gray-500" aria-label="Breadcrumb">
-        <ol className="flex flex-wrap items-center gap-2">
-          <li>
-            <Link to="/" className="hover:text-brand-primary">
-              {breadcrumbs?.home ?? 'Home'}
-            </Link>
-          </li>
-          <li aria-hidden="true" className="text-gray-400">
-            {'>'}
-          </li>
-          <li className="text-gray-800 font-semibold">
-            {breadcrumbs?.current ?? 'Blog Index'}
-          </li>
-        </ol>
-      </nav>
+
 
       {/* Hero Section - Modern and Clean */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-50 px-4 py-20">
@@ -72,7 +57,7 @@ export default function CaseProcess() {
               {heroConfig.titlePart1 ?? 'THE CASE'} {heroConfig.titlePart2 ?? 'PROCESS'}
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-              {heroConfig.description ?? "Injured and not sure what to do next? Start here. We'll guide you through what you need to know."}
+              {heroConfig.description ?? "Start here. We'll guide you through what you need to know."}
             </p>
           </div>
         </div>
@@ -91,83 +76,7 @@ export default function CaseProcess() {
           </div>
 
           {/* Content Cards - Modern Grid */}
-          <div className="grid gap-8 md:grid-cols-3">
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-              >
-                {/* Card Illustration */}
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 flex items-center justify-center min-h-[240px]">
-                  {card.illustration ? (
-                    <img
-                      src={card.illustration}
-                      alt={card.title}
-                      className="w-full h-auto max-w-[180px]"
-                    />
-                  ) : (
-                    <div className="w-full h-32 bg-gray-200 rounded flex items-center justify-center">
-                      <span className="text-gray-400 text-sm">Illustration</span>
-                    </div>
-                  )}
-                </div>
 
-                {/* Card Title */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {card.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
-
-            {/* Default Cards if no translation data */}
-            {cards.length === 0 && (
-              <>
-                <div className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden transition hover:-translate-y-1 hover:shadow-lg">
-                  <div className=" p-8 flex items-center justify-center min-h-[200px]">
-                    <div className="w-[314px] h-314px] rounded flex items-center justify-center">
-                      {/* <span className="text-gray-400 text-sm">Hand with Bandage</span> */}
-                      <img className="w-full h-full object-contain" src="tcp-injury2x.avif" alt="Hand with Bandage" />
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      Next Steps: The Post-Injury Checklist
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden transition hover:-translate-y-1 hover:shadow-lg">
-                  <div className="p-8 flex items-center justify-center min-h-[200px]">
-                    <div className="flex items-center justify-center">
-                      {/* <span className="text-gray-400 text-sm">Boot on Bar</span> */}
-                      <img className="w-[314px] h-314px] object-contain" src="tcp-trip2x.avif" alt="Boot on Bar" />
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      The Basics: What is a personal injury lawsuit?
-                    </h3>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden transition hover:-translate-y-1 hover:shadow-lg">
-                  <div className="p-8 flex items-center justify-center min-h-[200px]">
-                    <div className="w-[314px] h-314px] flex items-center justify-center">
-                      {/* <span className="text-gray-400 text-sm">Fist with Impact</span> */}
-                      <img className="w-full h-full object-contain" src="tcp-point2x.avif" alt="Fist with Impact" />
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      What Your Insurance Company Doesn't Want You to Know
-                    </h3>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
         </div>
       </section>
 
@@ -519,37 +428,7 @@ export default function CaseProcess() {
       </section>
 
       {/* How much is my case worth? Section - Simplified */}
-      <section className="bg-gradient-to-br from-indigo-50 to-blue-50 px-4 py-20">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {caseWorthConfig.title ?? 'How much is my case worth?'}
-          </h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            {caseWorthConfig.description ?? 'The estimated value of a claim is based on something called "damages."'}
-          </p>
-          <Link
-            to={caseWorthConfig.linkUrl || '#'}
-            className="inline-flex items-center text-xl font-bold text-blue-600 hover:text-blue-700 transition group"
-          >
-            <span>{caseWorthConfig.linkText ?? "Here's how it works."}</span>
-            <div className="ml-3 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-700 transition">
-              <svg
-                className="w-4 h-4 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </div>
-          </Link>
-        </div>
-      </section>
+
 
       {/* Working with an Attorney Section - Simplified */}
       <section className="bg-white px-4 py-20">
@@ -564,73 +443,6 @@ export default function CaseProcess() {
           </div>
 
           {/* Content Cards - Modern Grid */}
-          <div className="grid gap-8 md:grid-cols-3">
-            {workingCards.length > 0 ? (
-              workingCards.map((card, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-                >
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 flex items-center justify-center min-h-[240px]">
-                    {card.illustration ? (
-                      <img
-                        src={card.illustration}
-                        alt={card.title}
-                        className="w-full h-auto max-w-[180px]"
-                      />
-                    ) : (
-                      <div className="w-full h-32 bg-gray-200 rounded flex items-center justify-center">
-                        <span className="text-gray-400 text-sm">Illustration</span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {card.title}
-                    </h3>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <>
-                {/* Card 1 - Alarm Clock */}
-                <div className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden transition hover:-translate-y-1 hover:shadow-lg">
-                  <div className="bg-gray-100 p-8 flex items-center justify-center min-h-[200px]">
-                   <img src="tcp-clock2x.avif" alt="" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      The Case Process: A Timeline
-                    </h3>
-                  </div>
-                </div>
-
-                {/* Card 2 - Money/Dollar Bill */}
-                <div className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden transition hover:-translate-y-1 hover:shadow-lg">
-                  <div className="bg-gray-100 p-8 flex items-center justify-center min-h-[200px]">
-                    <img src="tcp-money2x.avif" alt="" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      How Long Does It Take to Get Paid?
-                    </h3>
-                  </div>
-                </div>
-
-                {/* Card 3 - Warning Sign */}
-                <div className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden transition hover:-translate-y-1 hover:shadow-lg">
-                  <div className="bg-gray-100 p-8 flex items-center justify-center min-h-[200px]">
-                      <img src="tcp-warning2x.avif" alt="" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      Dos and Don'ts for Case Success
-                    </h3>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
         </div>
       </section>
 
@@ -650,233 +462,8 @@ export default function CaseProcess() {
       </section>
 
       {/* The Case Process: A Breakdown Section - Simplified */}
-      <section className="bg-white px-4 py-20">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {caseBreakdownConfig.title ?? 'The Case Process: A Breakdown'}
-            </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              {caseBreakdownConfig.intro ?? 'Explore the steps of a personal injury case from start to finish.'}
-            </p>
-          </div>
 
-          <div className="grid gap-8 lg:grid-cols-3">
-            {/* Left Column - Main Video Player */}
-            <div className="lg:col-span-2">
-              <div className="bg-blue-100 rounded-lg overflow-hidden shadow-lg">
-                <div className="relative aspect-video bg-blue-200">
-                  {videoSeries.length > 0 && videoSeries[selectedVideo] ? (
-                    <>
-                      <img
-                        src="video.webp"
-                        alt={videoSeries[selectedVideo].title}
-                        className="w-full h-full object-cover"
-                      />
-                      <button
-                        type="button"
-                        className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition"
-                        aria-label="Play video"
-                      >
-                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                          <svg
-                            className="w-10 h-10 text-gray-900 ml-1"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      <img
-                        src="video.webp"
-                        alt="Video thumbnail"
-                        className="w-full h-full object-cover"
-                      />
-                      <button
-                        type="button"
-                        className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition"
-                        aria-label="Play video"
-                      >
-                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                          <svg
-                            className="w-10 h-10 text-gray-900 ml-1"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                      </button>
-                    </>
-                  )}
-                </div>
-                <div className="p-4 bg-white">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                    {videoSeries.length > 0 && videoSeries[selectedVideo]
-                      ? videoSeries[selectedVideo].title
-                      : 'Introducing: The Case Process Series'}
-                  </h3>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>
-                      {videoSeries.length > 0 && videoSeries[selectedVideo]
-                        ? videoSeries[selectedVideo].duration
-                        : '00:38'}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Right Column - Video Series Playlist */}
-            <div className="lg:col-span-1">
-              <div className="bg-white rounded-lg shadow-sm ring-1 ring-gray-200 overflow-hidden">
-                <div className="p-4 border-b border-gray-200">
-                  <h3 className="text-sm font-semibold text-gray-900">
-                    {caseBreakdownConfig.playlistTitle ?? `Video Series (${selectedVideo + 1} of ${videoSeries.length || 12})`}
-                  </h3>
-                </div>
-                <div className="max-h-[600px] overflow-y-auto">
-                  {videoSeries.length > 0 ? (
-                    <div className="divide-y divide-gray-200">
-                      {videoSeries.map((video, index) => (
-                        <button
-                          key={index}
-                          type="button"
-                          onClick={() => setSelectedVideo(index)}
-                          className={`w-full p-4 text-left hover:bg-gray-50 transition ${
-                            selectedVideo === index ? 'bg-blue-50' : ''
-                          }`}
-                        >
-                          <div className="flex gap-3">
-                            <div className="relative flex-shrink-0 w-24 h-16 bg-gray-200 rounded overflow-hidden">
-                              <img
-                                src={video.thumbnail || 'video.webp'}
-                                alt={video.title}
-                                className="w-full h-full object-cover"
-                              />
-                              {selectedVideo === index && (
-                                <div className="absolute inset-0 bg-blue-600/20 flex items-center justify-center">
-                                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                                    <svg className="w-3 h-3 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                                      <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-semibold text-gray-900 mb-1 line-clamp-2">
-                                {video.title}
-                              </h4>
-                              <div className="flex items-center text-xs text-gray-600">
-                                <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>{video.duration}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="divide-y divide-gray-200">
-                      {[
-                        { title: 'Determining Case Value', duration: '01:01' },
-                        { title: 'Meetings & Appointments', duration: '01:46' },
-                        { title: 'Throughout the Case Process', duration: '01:49' },
-                        { title: 'Going to Trial', duration: '01:00' },
-                      ].map((video, index) => (
-                        <button
-                          key={index}
-                          type="button"
-                          onClick={() => setSelectedVideo(index)}
-                          className={`w-full p-4 text-left hover:bg-gray-50 transition ${
-                            selectedVideo === index ? 'bg-blue-50' : ''
-                          }`}
-                        >
-                          <div className="flex gap-3">
-                            <div className="relative flex-shrink-0 w-24 h-16 bg-gray-200 rounded overflow-hidden">
-                              <img
-                                src="video.webp"
-                                alt={video.title}
-                                className="w-full h-full object-cover"
-                              />
-                              {selectedVideo === index && (
-                                <div className="absolute inset-0 bg-blue-600/20 flex items-center justify-center">
-                                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                                    <svg className="w-3 h-3 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                                      <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-semibold text-gray-900 mb-1 line-clamp-2">
-                                {video.title}
-                              </h4>
-                              <div className="flex items-center text-xs text-gray-600">
-                                <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>{video.duration}</span>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Documents 101: A Checklist Section - Simplified */}
-      <section className="bg-gray-50 px-4 py-20">
-        <div className="container mx-auto max-w-4xl">
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 md:p-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              {documents101Config.title ?? 'Documents 101: A Checklist'}
-            </h2>
-            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-              {documents101Config.description ?? "Piles of paperwork can get messy. If you're wondering how to approach the forms, receipts, bills, and more related to your injury, look no further."}
-            </p>
-            <Link
-              to={documents101Config.linkUrl || '#'}
-              className="inline-flex items-center text-xl font-bold text-gray-900 hover:text-blue-600 transition group"
-            >
-              <span>{documents101Config.linkText ?? 'Learn More'}</span>
-              <div className="ml-3 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center group-hover:bg-yellow-500 transition">
-                <svg
-                  className="w-5 h-5 text-gray-900"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Glossary Section - Simplified */}
       <section className="bg-white px-4 py-20">
@@ -1034,31 +621,7 @@ export default function CaseProcess() {
                   </Link>
                 </div>
               )}
-              {!glossaryConfig.linkText && glossaryTerms.length === 0 && (
-                <div className="mt-12 text-center">
-                  <Link
-                    to="#"
-                    className="inline-flex items-center text-xl font-bold text-gray-900 hover:text-blue-600 transition group"
-                  >
-                    <span>Read all glossary terms</span>
-                    <div className="ml-3 w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center group-hover:bg-yellow-500 transition">
-                      <svg
-                        className="w-5 h-5 text-gray-900"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
-                  </Link>
-                </div>
-              )}
+
           </div>
         </div>
       </section>
@@ -1071,7 +634,7 @@ export default function CaseProcess() {
               {learnMoreConfig.title ?? 'Learn More'}
             </h2>
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              {learnMoreConfig.description ?? "Injured and not sure what to do next? We'll guide you through everything you need to know."}
+              {learnMoreConfig.description ?? "We'll guide you through everything you need to know."}
             </p>
           </div>
 
