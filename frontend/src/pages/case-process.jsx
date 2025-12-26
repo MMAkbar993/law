@@ -626,34 +626,34 @@ export default function CaseProcess() {
         </div>
       </section>
 
-      {/* Learn More Section - Simplified */}
+      {/* Learn More Section - Modern Design */}
       <section className="bg-white px-4 py-20">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {learnMoreConfig.title ?? 'Learn More'}
             </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              {learnMoreConfig.description ?? "We'll guide you through everything you need to know."}
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              {learnMoreConfig.description ?? "Injured and not sure what to do next? We'll guide you through everything you need to know."}
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2">
             {learnMoreLinks.length > 0 ? (
               <>
-                <div className="space-y-0">
+                <div className="space-y-0 bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
                   {learnMoreLinks.slice(0, Math.ceil(learnMoreLinks.length / 2)).map((link, index) => (
                     <Link
                       key={index}
                       to={link.url || '#'}
-                      className="block py-5 border-b border-gray-200 hover:bg-blue-50 transition group"
+                      className="block px-6 py-5 border-b border-gray-200 last:border-b-0 hover:bg-white hover:shadow-sm transition-all duration-200 group"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="text-lg font-bold text-gray-900 group-hover:text-blue-600">
+                      <div className="flex items-center justify-between gap-4">
+                        <span className="text-base md:text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug flex-1">
                           {link.title}
                         </span>
                         <svg
-                          className="w-6 h-6 text-gray-600 flex-shrink-0 ml-4 group-hover:text-blue-600"
+                          className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-200"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -669,19 +669,19 @@ export default function CaseProcess() {
                     </Link>
                   ))}
                 </div>
-                <div className="space-y-0">
+                <div className="space-y-0 bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
                   {learnMoreLinks.slice(Math.ceil(learnMoreLinks.length / 2)).map((link, index) => (
                     <Link
                       key={index + Math.ceil(learnMoreLinks.length / 2)}
                       to={link.url || '#'}
-                      className="block py-4 border-b border-gray-200 hover:bg-gray-50 transition group"
+                      className="block px-6 py-5 border-b border-gray-200 last:border-b-0 hover:bg-white hover:shadow-sm transition-all duration-200 group"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="text-base font-semibold text-gray-900 group-hover:text-brand-primary">
+                      <div className="flex items-center justify-between gap-4">
+                        <span className="text-base md:text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug flex-1">
                           {link.title}
                         </span>
                         <svg
-                          className="w-5 h-5 text-gray-600 flex-shrink-0 ml-4"
+                          className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-200"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -700,7 +700,7 @@ export default function CaseProcess() {
               </>
             ) : (
               <>
-                <div className="space-y-0">
+                <div className="space-y-0 bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
                   {[
                     'How Much Does a Personal Injury Lawyer Cost?',
                     'Can You Switch Personal Injury Lawyers?',
@@ -711,14 +711,14 @@ export default function CaseProcess() {
                     <Link
                       key={index}
                       to="#"
-                      className="block py-4 border-b border-gray-200 hover:bg-gray-50 transition group"
+                      className="block px-6 py-5 border-b border-gray-200 last:border-b-0 hover:bg-white hover:shadow-sm transition-all duration-200 group"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="text-base font-semibold text-gray-900 group-hover:text-brand-primary">
+                      <div className="flex items-center justify-between gap-4">
+                        <span className="text-base md:text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug flex-1">
                           {title}
                         </span>
                         <svg
-                          className="w-5 h-5 text-gray-600 flex-shrink-0 ml-4"
+                          className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-200"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -734,7 +734,7 @@ export default function CaseProcess() {
                     </Link>
                   ))}
                 </div>
-                <div className="space-y-0">
+                <div className="space-y-0 bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
                   {[
                     'Lawsuit Settlements: When and How You\'ll Get Paid',
                     'Should I Represent Myself in a Personal Injury Case?',
@@ -745,14 +745,14 @@ export default function CaseProcess() {
                     <Link
                       key={index}
                       to="#"
-                      className="block py-4 border-b border-gray-200 hover:bg-gray-50 transition group"
+                      className="block px-6 py-5 border-b border-gray-200 last:border-b-0 hover:bg-white hover:shadow-sm transition-all duration-200 group"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="text-base font-semibold text-gray-900 group-hover:text-brand-primary">
+                      <div className="flex items-center justify-between gap-4">
+                        <span className="text-base md:text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug flex-1">
                           {title}
                         </span>
                         <svg
-                          className="w-5 h-5 text-gray-600 flex-shrink-0 ml-4"
+                          className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-200"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -773,14 +773,14 @@ export default function CaseProcess() {
           </div>
 
           {learnMoreConfig.showLoadMore !== false && (
-            <div className="mt-8">
+            <div className="mt-12 text-center">
               <button
                 type="button"
-                className="inline-flex items-center text-base font-semibold text-blue-600 hover:text-blue-700 transition"
+                className="inline-flex items-center gap-2 text-base font-semibold text-blue-600 hover:text-blue-700 transition-colors group"
               >
                 <span>{learnMoreConfig.loadMoreText ?? 'Load more'}</span>
                 <svg
-                  className="w-5 h-5 ml-2"
+                  className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-200"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
