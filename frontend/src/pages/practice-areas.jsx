@@ -72,7 +72,7 @@ export default function PracticeAreas() {
   // Map practice area names to their headlines
   const getPracticeAreaHeadline = (areaName) => {
     if (!areaName) return heroConfig.headline;
-    
+
     // Map specific practice areas to their headlines
     const headlineMap = {
       'Car Accident': 'Fighting for Car Accident Victims',
@@ -87,12 +87,12 @@ export default function PracticeAreas() {
       'Product Liability': 'Fighting for Product Liability Victims',
       'Premises Liability': 'Fighting for Premises Liability Victims',
     };
-    
+
     // Try exact match first
     if (headlineMap[areaName]) {
       return headlineMap[areaName];
     }
-    
+
     // Try partial match (case-insensitive)
     const areaLower = areaName.toLowerCase();
     for (const [key, value] of Object.entries(headlineMap)) {
@@ -100,7 +100,7 @@ export default function PracticeAreas() {
         return value;
       }
     }
-    
+
     // Default: use practice area name in headline
     return `Fighting for ${areaName} Victims`;
   };
@@ -109,7 +109,7 @@ export default function PracticeAreas() {
 
   return (
     <div className="bg-white">
-     
+
 
       <section className="px-4 py-16">
         <div className="container mx-auto max-w-6xl">
@@ -171,15 +171,17 @@ export default function PracticeAreas() {
                 {otherWays?.title}
               </h2>
               {otherWays?.cta && (
-                <button
-                  type="button"
-                  className="hidden rounded-full border border-brand-primary px-5 py-2 text-sm font-semibold text-brand-primary transition hover:bg-brand-primary hover:text-white md:inline-flex md:items-center md:justify-center"
-                >
-                  {otherWays.cta}
-                  <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.586 11H4a1 1 0 0 1 0-2h9.586l-3.293-3.293a1 1 0 0 1 0-1.414Z" clipRule="evenodd" />
-                  </svg>
-                </button>
+                <Link to="/">
+                  <button
+                    type="button"
+                    className="hidden rounded-full border border-brand-primary px-5 py-2 text-sm font-semibold text-brand-primary transition hover:bg-brand-primary hover:text-white md:inline-flex md:items-center md:justify-center"
+                  >
+                    {otherWays.cta}
+                    <svg className="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 0 1 1.414 0l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414-1.414L13.586 11H4a1 1 0 0 1 0-2h9.586l-3.293-3.293a1 1 0 0 1 0-1.414Z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                </Link>
               )}
             </div>
 
@@ -191,7 +193,7 @@ export default function PracticeAreas() {
                   className="group flex items-center justify-between rounded-xl bg-white p-5 text-left shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-1 hover:shadow-lg"
                 >
                   <span className="text-base font-semibold text-gray-900">{category}</span>
-                 
+
                 </button>
               ))}
             </div>
@@ -240,7 +242,7 @@ export default function PracticeAreas() {
                 )}
               </div>
 
-              
+
             </div>
           </div>
         </div>
@@ -291,7 +293,7 @@ export default function PracticeAreas() {
         </div>
       </section>
 
-      
+
       <FeeFreeFormSection />
     </div>
   );

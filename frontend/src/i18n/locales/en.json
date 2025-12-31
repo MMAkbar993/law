@@ -79,22 +79,22 @@
     },
     "hero": {
       "headline": "Fighting for you, wherever life strikes",
-      "subheadline": "We fight for the compensation you deserve. With over 50 case types, we’re here to guide your next steps.",
+      "subheadline": "We fight for we’re here to guide your next steps.",
       "cards": [
         {
           "icon": "car",
           "title": "Car Accidents",
-          "description": "We’ve helped thousands recover medical bills, lost wages, and more after crashes caused by negligence."
+          "description": "We’ve helped recover medical bills, lost wages, and more after crashes caused by negligence."
         },
         {
           "icon": "slip",
           "title": "Slip and Fall",
-          "description": "From wet floors to unsafe conditions, we fight to hold property owners accountable for your injuries."
+          "description": "We fight to hold property owners accountable for your injuries."
         },
         {
           "icon": "workers",
           "title": "Workers’ Compensation",
-          "description": "We guide workers through the claims process to secure the benefits they deserve for workplace injuries."
+          "description": "We guide workers through the claims process for workplace injuries."
         }
       ]
     },

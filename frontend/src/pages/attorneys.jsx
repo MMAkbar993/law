@@ -488,7 +488,7 @@ export default function Attorneys() {
                 </li>
 
                 {/* City Filter */}
-                <li className={`city-filter ${!state ? 'opacity-50' : ''}`} ref={cityRef}>
+                {/* <li className={`city-filter ${!state ? 'opacity-50' : ''}`} ref={cityRef}>
                   <div className="filter-row citrus-select-list filter-city relative">
                     <button
                       type="button"
@@ -543,7 +543,7 @@ export default function Attorneys() {
                       </ul>
                     )}
                   </div>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -552,7 +552,7 @@ export default function Attorneys() {
           <div className="attorney-table-top max-w-7xl mx-auto">
             <div className="scroll-target" style={{ height: 0 }}></div>
             <div className="attorney-active-filters flex items-center justify-between mb-6 px-4">
-              <p className="h5 total-count-attorneys text-lg font-bold text-gray-900">
+              <p className="h5 mt-2 total-count-attorneys text-lg font-bold text-gray-900">
                 {filteredAndSortedAttorneys.length}+ Attorneys
               </p>
 
