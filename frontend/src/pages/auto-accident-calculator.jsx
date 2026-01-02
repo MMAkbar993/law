@@ -335,10 +335,6 @@ export default function AutoAccidentCalculator() {
           className="mt-3 rounded-lg border border-[#1149bc] bg-[#0f2f67]/40 px-4 py-3 text-white placeholder:text-white/50 focus:border-[#55c7d0] focus:outline-none focus:ring-2 focus:ring-[#55c7d0]"
         />
       </div>
-      <p className="text-sm text-white/80">
-        Our team will quickly analyze your case and send you an estimate of what your settlement could look like. It&apos;s
-        fast, free, and comes with no obligation.
-      </p>
     </div>
   );
 
@@ -346,9 +342,6 @@ export default function AutoAccidentCalculator() {
     <div className="space-y-6">
       <div>
         <p className="text-lg font-semibold text-[#55c7d0]">Final Step!</p>
-        <p className="mt-2 text-sm text-white/80">
-          To help confirm you’re not a robot, we ask for you to submit a valid phone number.
-        </p>
       </div>
       <div>
         <label htmlFor="phone" className="block text-lg font-semibold text-[#feb602]">
@@ -374,8 +367,7 @@ export default function AutoAccidentCalculator() {
           className="mt-1 h-5 w-5 rounded border-white/40 bg-transparent text-[#55c7d0] focus:ring-[#55c7d0]"
         />
         <label htmlFor="consent">
-          Your phone number helps us verify you&apos;re a real person, not a bot. By submitting, you agree to the Case
-          Connect terms and privacy policy, consent to be contacted using automated technology, and acknowledge results are
+          By submitting, you agree to the terms and privacy policy, consent to be contacted  and acknowledge results are
           not guaranteed.
         </label>
       </div>
@@ -420,28 +412,15 @@ export default function AutoAccidentCalculator() {
               </div>
               <p className="text-lg text-white/80">
                 Our calculator uses secrets from thousands of accident payouts to show what your case could be worth before
-                hiring an accident attorney. If you qualify, most people get up to 60% more and you&apos;ll never pay out
-                of pocket.
+                hiring an accident attorney.
               </p>
-              <div className="flex items-center gap-4">
-                <span className="text-sm uppercase tracking-widest text-white/60">As featured on</span>
-                <div className="flex flex-wrap items-center gap-3 text-white/70">
-                  {['ABC', 'CNN', 'FOX', 'CBS', 'NBC'].map((brand) => (
-                    <span
-                      key={brand}
-                      className="rounded-full border border-white/20 px-3 py-1 text-xs font-semibold tracking-wide"
-                    >
-                      {brand}
-                    </span>
-                  ))}
-                </div>
-              </div>
+
             </div>
             <div className="mt-12 text-xs text-white/60">
               Our qualification
               tool is designed to give a general idea of whether you may qualify for compensation, based solely on the
               information you provide. This does not constitute legal advice or a guarantee of results. Individual results
-              vary. By submitting, you consent to contact from Case Connect and our partners by phone, text, and email. No
+              vary. By submitting, you consent to contact from and our partners by phone, text, and email. No
               attorney-client relationship is formed unless a formal agreement is signed with a law firm.
             </div>
           </div>
@@ -461,8 +440,7 @@ export default function AutoAccidentCalculator() {
                 </div>
                 <h2 className="text-2xl font-semibold">One moment please...</h2>
                 <p className="text-base text-white/80">
-                  We&apos;re reviewing your answers.we will reach out shortly with your estimated
-                  payout details.
+                  We&apos;re reviewing your answers.we will reach out shortly .
                 </p>
               </div>
             ) : (

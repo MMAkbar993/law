@@ -80,9 +80,7 @@ export default function ReviewsSection() {
                     } md:block md:opacity-100`}
                   aria-hidden={!isActive}
                 >
-                  <div className="mb-6 text-3xl text-[#3b82f6]" aria-hidden="true">
-                    “
-                  </div>
+
                   <p className="text-base leading-relaxed text-[#1f2937]">{review.quote}</p>
                   <div className="mt-6 font-semibold text-[#111827]">{review.author}</div>
                   <div className="text-sm text-[#374151]">{review.location}</div>

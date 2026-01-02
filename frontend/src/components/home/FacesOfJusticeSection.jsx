@@ -9,8 +9,7 @@ export default function FacesOfJusticeSection() {
       { name: 'Jason Miller', title: 'Managing Partner, Jacksonville', image: '3.avif' },
       { name: 'Jac', title: 'Trial Attorney', image: '1.avif' },
       { name: 'Attorney 4', title: 'Trial Attorney', image: '4.avif' },
-      { name: 'Attorney 5', title: 'Trial Attorney', image: '8.webp' },
-      { name: 'Attorney 6', title: 'Trial Attorney', image: '16.webp' },
+
     ],
     [],
   );
@@ -66,7 +65,6 @@ export default function FacesOfJusticeSection() {
             <p className="mb-8 text-base leading-relaxed text-gray-800 sm:text-lg md:text-xl">
               {t('faces.description')}
             </p>
-            
             <SignatureGraphic />
             
             {/* Matt Morgan Profile */}
@@ -209,7 +207,7 @@ function CarouselButton({ direction, onClick, label }) {
 
 function SignatureGraphic() {
   return (
-    <div className="mb-8 w-full max-w-xs sm:max-w-sm md:max-w-md">
+    <div className="mb-8 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]">
       <svg
         viewBox="0 0 360 90"
         role="img"

@@ -7,10 +7,10 @@ export default function FeeFreeFormSection() {
 
   return (
     <section className="bg-brand-primary text-white py-12 md:py-16 px-4">
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Column */}
-          <div className="flex flex-col">
+      <div className="container mx-auto max-w-4xl">
+        <div className="flex flex-col items-center text-center gap-8">
+          {/* Title and Description */}
+          <div className="flex flex-col items-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               THE FEE IS FREE®
             </h2>
@@ -19,8 +19,8 @@ export default function FeeFreeFormSection() {
             </p>
           </div>
 
-          {/* Right Column - Simple Button */}
-          <div className="flex flex-col items-center justify-center">
+          {/* Button */}
+          <div className="flex flex-col items-center">
             <Link
               to="/auto-accident-calculator"
               className="w-full max-w-md border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg transition-colors hover:bg-white hover:text-brand-primary text-lg text-center"

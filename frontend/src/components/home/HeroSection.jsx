@@ -23,17 +23,7 @@ export default function HeroSection() {
           {t('hero.description')}
         </p>
 
-        {/* Feature Boxes */}
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-          {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <div className="w-8 h-1 bg-blue-600 mb-4"></div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 uppercase tracking-wide">
-                {feature}
-              </h3>
-            </div>
-          ))}
-        </div>
+
       </div>
     </section>
   );

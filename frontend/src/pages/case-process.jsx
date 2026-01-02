@@ -6,6 +6,7 @@ import FeeFreeFormSection from '../components/home/FeeFreeFormSection';
 export default function CaseProcess() {
   const { t } = useTranslation();
   const [openAccordion, setOpenAccordion] = useState(null);
+  const [openAttorneyAccordion, setOpenAttorneyAccordion] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(0);
 
   const breadcrumbs = t('caseProcess.breadcrumbs', { returnObjects: true });
@@ -45,6 +46,10 @@ export default function CaseProcess() {
     setOpenAccordion(openAccordion === index ? null : index);
   };
 
+  const toggleAttorneyAccordion = (index) => {
+    setOpenAttorneyAccordion(openAttorneyAccordion === index ? null : index);
+  };
+
   return (
     <div className="bg-white">
 
@@ -57,7 +62,7 @@ export default function CaseProcess() {
               {heroConfig.titlePart1 ?? 'THE CASE'} {heroConfig.titlePart2 ?? 'PROCESS'}
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-              {heroConfig.description ?? "Start here. We'll guide you through what you need to know."}
+              {heroConfig.description ?? "We'll guide you through what you need to know."}
             </p>
           </div>
         </div>
@@ -71,7 +76,7 @@ export default function CaseProcess() {
               {afterInjuryConfig.title ?? 'After an Injury'}
             </h2>
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              {afterInjuryConfig.intro ?? "I've been hurt. Now what? Facing an injury can be overwhelming. Here are the basics."}
+              {afterInjuryConfig.intro ?? "Facing an injury can be overwhelming. Here are the basics."}
             </p>
           </div>
 
@@ -87,9 +92,7 @@ export default function CaseProcess() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {doIHaveCaseConfig.title ?? 'Do I have a case?'}
             </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              {doIHaveCaseConfig.intro ?? "Here's what we look for to see if an incident might qualify for a personal injury claim."}
-            </p>
+
           </div>
 
           {/* Accordion Items - Centered */}
@@ -278,179 +281,196 @@ export default function CaseProcess() {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {hiringAttorneyConfig.title ?? 'Hiring An Attorney 101'}
             </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              {hiringAttorneyConfig.intro ?? 'All law firms are not the same.'}
-            </p>
           </div>
 
-          {/* Links Card - Modernized */}
-          <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
-                {attorneyLinks.length > 0 ? (
-                  <div className="divide-y divide-gray-200">
-                    {attorneyLinks.map((link, index) => (
-                      <Link
-                        key={index}
-                        to={link.url || '#'}
-                        className="flex items-center justify-between p-6 hover:bg-blue-50 transition group border-b border-gray-100 last:border-b-0"
-                      >
-                        <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600">
-                          {link.title}
-                        </span>
-                        <div className="flex-shrink-0 ml-4">
-                          <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center group-hover:bg-yellow-500 transition">
-                            <svg
-                              className="w-6 h-6 text-black"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 5l7 7-7 7"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="divide-y divide-gray-200">
-                    <Link
-                      to="#"
-                      className="flex items-center justify-between p-5 hover:bg-gray-50 transition group"
+          {/* Accordion Items */}
+          <div className="space-y-4">
+            {attorneyLinks.length > 0 ? (
+              attorneyLinks.map((link, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleAttorneyAccordion(index)}
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-blue-50 transition"
+                    aria-expanded={openAttorneyAccordion === index}
+                  >
+                    <span className="text-xl font-bold text-gray-900">
+                      {link.title}
+                    </span>
+                    <svg
+                      className={`w-6 h-6 text-gray-600 transition-transform ${
+                        openAttorneyAccordion === index ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      <span className="text-lg font-semibold text-gray-900 group-hover:text-brand-primary">
-                        Choosing the Right Attorney for You
-                      </span>
-                      <div className="flex-shrink-0 ml-4">
-                        <div className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-black"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </Link>
-
-                    <Link
-                      to="#"
-                      className="flex items-center justify-between p-5 hover:bg-gray-50 transition group"
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {openAttorneyAccordion === index && (
+                    <div className="px-6 pb-6 text-gray-700 text-lg leading-relaxed">
+                      {link.content || link.description || 'Content for this question would appear here.'}
+                    </div>
+                  )}
+                </div>
+              ))
+            ) : (
+              <>
+                <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => toggleAttorneyAccordion(0)}
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-blue-50 transition"
+                    aria-expanded={openAttorneyAccordion === 0}
+                  >
+                    <span className="text-xl font-bold text-gray-900">
+                      Choosing the Right Attorney for You
+                    </span>
+                    <svg
+                      className={`w-6 h-6 text-gray-600 transition-transform ${
+                        openAttorneyAccordion === 0 ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      <span className="text-lg font-semibold text-gray-900 group-hover:text-brand-primary">
-                        Injury Attorney Fees: How It Works
-                      </span>
-                      <div className="flex-shrink-0 ml-4">
-                        <div className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-black"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </Link>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {openAttorneyAccordion === 0 && (
+                    <div className="px-6 pb-6 text-gray-700 text-lg leading-relaxed">
+                      When selecting an attorney, consider their experience in your type of case, their track record of success, communication style, and whether you feel comfortable working with them. Look for attorneys who specialize in personal injury law and have a proven history of securing favorable outcomes for clients similar to you.
+                    </div>
+                  )}
+                </div>
 
-                    <Link
-                      to="#"
-                      className="flex items-center justify-between p-5 hover:bg-gray-50 transition group"
+                <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => toggleAttorneyAccordion(1)}
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-blue-50 transition"
+                    aria-expanded={openAttorneyAccordion === 1}
+                  >
+                    <span className="text-xl font-bold text-gray-900">
+                      Injury Attorney Fees: How It Works
+                    </span>
+                    <svg
+                      className={`w-6 h-6 text-gray-600 transition-transform ${
+                        openAttorneyAccordion === 1 ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      <span className="text-lg font-semibold text-gray-900 group-hover:text-brand-primary">
-                        Why Do Cases Get Turned Down?
-                      </span>
-                      <div className="flex-shrink-0 ml-4">
-                        <div className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-black"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </Link>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {openAttorneyAccordion === 1 && (
+                    <div className="px-6 pb-6 text-gray-700 text-lg leading-relaxed">
+                      Most personal injury attorneys work on a contingency fee basis, which means you don't pay anything upfront. Instead, your attorney receives a percentage of the compensation you recover only if you win your case. If you don't win, you typically don't owe attorney fees. This arrangement makes legal representation accessible to those who might not be able to afford hourly rates.
+                    </div>
+                  )}
+                </div>
 
-                    <Link
-                      to="#"
-                      className="flex items-center justify-between p-5 hover:bg-gray-50 transition group"
+                <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => toggleAttorneyAccordion(2)}
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-blue-50 transition"
+                    aria-expanded={openAttorneyAccordion === 2}
+                  >
+                    <span className="text-xl font-bold text-gray-900">
+                      Why Do Cases Get Turned Down?
+                    </span>
+                    <svg
+                      className={`w-6 h-6 text-gray-600 transition-transform ${
+                        openAttorneyAccordion === 2 ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      <span className="text-lg font-semibold text-gray-900 group-hover:text-brand-primary">
-                        The Morgan & Morgan Difference
-                      </span>
-                      <div className="flex-shrink-0 ml-4">
-                        <div className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-black"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-                )}
-              </div>
-            </div>
-      </section>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {openAttorneyAccordion === 2 && (
+                    <div className="px-6 pb-6 text-gray-700 text-lg leading-relaxed">
+                      Attorneys may decline cases for various reasons, including insufficient evidence of negligence, lack of damages, statute of limitations issues, or conflicts of interest. Cases may also be declined if the potential recovery is too small to justify the costs, or if the attorney doesn't have expertise in that particular area of law. A reputable attorney will explain their reasons for declining your case.
+                    </div>
+                  )}
+                </div>
 
-      {/* How much is my case worth? Section - Simplified */}
-
-
-      {/* Working with an Attorney Section - Simplified */}
-      <section className="bg-white px-4 py-20">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {workingWithAttorneyConfig.title ?? 'Working with an Attorney'}
-            </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              {workingWithAttorneyConfig.intro ?? 'Everything you need to know about what happens throughout your case journey.'}
-            </p>
+                <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => toggleAttorneyAccordion(3)}
+                    className="w-full flex items-center justify-between p-6 text-left hover:bg-blue-50 transition"
+                    aria-expanded={openAttorneyAccordion === 3}
+                  >
+                    <span className="text-xl font-bold text-gray-900">
+                      The Morgan & Morgan Difference
+                    </span>
+                    <svg
+                      className={`w-6 h-6 text-gray-600 transition-transform ${
+                        openAttorneyAccordion === 3 ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  {openAttorneyAccordion === 3 && (
+                    <div className="px-6 pb-6 text-gray-700 text-lg leading-relaxed">
+                      Morgan & Morgan is America's largest injury law firm, with over 1,000 attorneys ready to fight for you. We have the resources, experience, and track record to take on any case. Our size means we can help more people in more places, with local attorneys backed by national power. We're committed to fighting for the people, not the powerful, and we work on a contingency basis—no fee unless we win.
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
           </div>
-
-          {/* Content Cards - Modern Grid */}
         </div>
       </section>
+
+      
+
+ 
 
       {/* Injured? CTA Section - Simplified */}
       <section className="bg-gradient-to-r from-gray-900 to-gray-800 px-4 py-20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            {injuredCTAConfig.title ?? 'Injured? Getting the compensation you deserve starts here.'}
+            {injuredCTAConfig.title ?? 'Injured? start here.'}
           </h2>
           <Link
             to={injuredCTAConfig.buttonUrl || '#'}
@@ -473,7 +493,7 @@ export default function CaseProcess() {
               {glossaryConfig.title ?? 'Glossary'}
             </h2>
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              {glossaryConfig.description ?? 'From defense to depositions, view the complete guide for helpful explanations of common legal terms.'}
+              {glossaryConfig.description ?? 'A complete guide for helpful explanations of common legal terms.'}
             </p>
           </div>
 

@@ -3,14 +3,14 @@ import React from 'react';
 const STEPS = [
   {
     number: '1',
-    title: 'Free Case Evaluation',
+    title: 'Free Evaluation',
     description:
       "Tell us what happened—we'll listen, answer your questions, and explain your options with no obligation. Our team is available 24/7 to give you the guidance you need.",
     linkLabel: 'Get Justice',
   },
   {
     number: '2',
-    title: 'Best Legal Support',
+    title: 'Best Support',
     description:
       "From paperwork to dealing with insurance companies, we take care of every detail so you can focus on healing. You won't pay a dime until we win your case.",
 

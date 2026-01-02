@@ -521,6 +521,20 @@
     "localCare": "ATENCIÓN LOCAL + PODER NACIONAL",
     "localDescription": "Tu abogado es de tu comunidad — respaldado por la fortaleza de una firma nacional.",
     "findOffice": "Encuentra una oficina cerca de ti"
+  },
+  "ourFirm": {
+    "spanishBanner": {
+      "title": "Hablamos tu idioma",
+      "logoText": "ABOGADOS.COM",
+      "logoSubtext": "MORGAN & MORGAN",
+      "testimonialImage": "Rectangle 34624240-4_0.png.webp",
+      "testimonialName": "Oswaldo",
+      "testimonialQuote": "\"Comunicarse con ellos es rápido. Es confiable. Ellos son bilingües. Lo más lindo de todo esto es que el abogado, a uno le coge tanta confianza que uno se siente tan seguro.\"",
+      "testimonialAuthor": "Oswaldo, Cliente real de Morgan & Morgan",
+      "missionStatement": "Estamos aquí para los 42 millones de hispanohablantes en Estados Unidos—en su idioma.",
+      "buttonText": "Conoce tus derechos",
+      "buttonUrl": "#"
+    }
   }
 }
 

@@ -163,57 +163,57 @@ export default function OurFirm() {
             {/* Left Column - Text Content */}
             <div className="text-white flex flex-col items-center justify-center text-center lg:text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
-                {hero.title ?? 'OUR FAMILY, FIGHTING FOR YOURS'}
+                {hero.title ?? 'FIGHTING FOR YOU'}
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
                 {hero.description ?? "Morgan & Morgan was founded by John and Ultima Morgan in 1988. Our purpose is inspired by John's brother, Tim, who was paralyzed in a workplace accident. The insurance companies left his family with too little to cover his care. John vowed to fight for other families like theirs—and Morgan & Morgan was born."}
               </p>
               <Link
-                to={hero.buttonUrl || '#'}
+                to={hero.buttonUrl || '/contact'}
                 className="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 py-4 rounded-lg transition shadow-lg"
               >
-                {hero.buttonText ?? 'Watch our story'}
+                {hero.buttonText ?? 'Contact Us'}
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Through the Years Section */}
+    
     
 
       {/* We Built this Firm for You Section */}
-      <section className="bg-white px-4 py-16">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="bg-white px-4 py-12">          
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               {features.title ?? 'A Firm for You'}
             </h2>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {Array.isArray(features.items) && features.items.length > 0 ? (
               features.items.map((feature, index) => (
-                <div key={index} className="bg-blue-50 rounded-2xl p-8 md:p-12">
-                  <div className="grid gap-8 lg:grid-cols-2 items-center">
+                <div key={index} className="bg-blue-50 rounded-xl p-6 md:p-8">
+                  <div className="grid gap-6 lg:grid-cols-2 items-center">
                     <div className="flex justify-center lg:justify-start">
                       {feature.illustration ? (
                         <img
                           src={feature.illustration}
                           alt={feature.title}
-                          className="max-w-md w-full h-auto"
+                          className="max-w-xs w-full h-auto"
                         />
                       ) : (
-                        <div className="w-full max-w-md aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                        <div className="w-full max-w-xs aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
                           <span className="text-gray-400">Illustration</span>
                         </div>
                       )}
                     </div>
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                         {feature.title}
                       </h3>
-                      <p className="text-lg text-gray-700 mb-6">
+                      <p className="text-base text-gray-700 mb-4">
                         {feature.description}
                       </p>
                       {feature.linkText && (
@@ -244,43 +244,43 @@ export default function OurFirm() {
             ) : (
               <>
                 {/* Feature 1: Everywhere for Everyone */}
-                <div className="bg-blue-50 rounded-2xl p-8 md:p-12">
-                  <div className="grid gap-8 lg:grid-cols-1 items-center">
-                    <div className="bg-white text-center p-4 rounded-lg w-full">
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                        Everywhere for Everyone
+                <div className="bg-blue-50 rounded-xl p-6 md:p-8">
+                  <div className="grid gap-6 lg:grid-cols-1 items-center">
+                    <div className="bg-white text-center p-6 rounded-lg w-full">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                        Everywhere
                       </h3>
-                      <p className="text-lg text-gray-700 mb-6">
-                        With 125 offices nationwide, we're committed to being accessible to all. No matter where you are, you can count on a dedicated team ready to fight for you.
+                      <p className="text-base text-gray-700 mb-4">
+                        We're committed to being accessible to all.You can count on a dedicated team ready to fight for you.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Feature 2: Fighting for More */}
-                <div className="bg-blue-50 rounded-2xl p-8 md:p-12">
-                  <div className="grid gap-8 lg:grid-cols-1 items-center">
+                <div className="bg-blue-50 rounded-xl p-6 md:p-8">
+                  <div className="grid gap-6 lg:grid-cols-1 items-center">
 
-                    <div className="bg-white text-center p-4 rounded-lg w-full">
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                        Fighting for More
+                    <div className="bg-white text-center p-6 rounded-lg w-full">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                        Fighting
                       </h3>
-                      <p className="text-lg text-gray-700 mb-6">
-                        We have the experience, credibility and resources to fight for what you deserve. Don't settle for less.
+                      <p className="text-base text-gray-700 mb-4">
+                        We have the experience, credibility and resources to fight for what you deserve.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Feature 3: Here for You, Every Step of the Way */}
-                <div className="bg-blue-50 rounded-2xl p-8 md:p-12">
-                  <div className="grid gap-8 lg:grid-cols-1 items-center">
-                    <div className="bg-white text-center p-4 rounded-lg w-full">
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                        Here for You, Every Step of the Way
+                <div className="bg-blue-50 rounded-xl p-6 md:p-8">
+                  <div className="grid gap-6 lg:grid-cols-1 items-center">
+                    <div className="bg-white text-center p-6 rounded-lg w-full">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                        Every Step
                       </h3>
-                      <p className="text-lg text-gray-700 mb-6">
-                        Call or text us 24/7, track updates through our app, and stay informed with clear communication at every stage. We're here to guide you from start to finish.
+                      <p className="text-base text-gray-700 mb-4">
+                        Call or text us 24/7 and stay informed with clear communication at every stage. We're here to guide you .
                       </p>
                     </div>
                   </div>
@@ -291,7 +291,7 @@ export default function OurFirm() {
         </div>
       </section>
 
-      {/* Hablamos tu idioma - Spanish Banner Section */}
+      {/* We Speak Your Language / Hablamos tu idioma - Bilingual Banner Section */}
       <section className="bg-gray-900 px-4 py-16">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
@@ -397,10 +397,10 @@ export default function OurFirm() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Righting a Rigged System
+                    Fighting
                   </h3>
                   <p className="text-gray-700">
-                    At our core, Morgan & Morgan is centered on advocating for individuals, fighting for justice, and empowering those who may not have a voice in the legal system.
+                    Centered on advocating for individuals, fighting for justice, and empowering those who may not have a voice in the legal system.
                   </p>
                 </div>
 
@@ -412,10 +412,10 @@ export default function OurFirm() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Stronger Together
+                    Team
                   </h3>
                   <p className="text-gray-700">
-                    We've grown our firm so that our collective knowledge, resources, and talent can help us achieve more for those who need it most.
+                    Our collective knowledge, resources, and talent can help us achieve more for those who need it most.
                   </p>
                 </div>
 
@@ -427,10 +427,10 @@ export default function OurFirm() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Practice of Compassion
+                    Compasion
                   </h3>
                   <p className="text-gray-700">
-                    It's more than words—we built our firm for you. We strive to make the process as smooth as possible—our clients can focus on recovery while we handle the rest.
+                    We built our firm for you. We strive to make the process as smooth as possible .
                   </p>
                 </div>
               </>
@@ -456,16 +456,15 @@ export default function OurFirm() {
       </section>
 
     
-
       {/* Standing Up for Change Section */}
       <section className="bg-white px-4 py-16 text-center">
-        <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto max-w-4xl">
           <div className="mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {standingUp.title ?? 'Standing Up for Change'}
             </h2>
             <p className="text-lg text-gray-600 hidden lg:block">
-              {standingUp.subtitle ?? "For John Morgan, advocacy is more than winning cases."}
+              {standingUp.subtitle ?? "Advocacy is more than winning cases."}
             </p>
           </div>
 

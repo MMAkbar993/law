@@ -50,7 +50,7 @@ export default function FeeFreeSection() {
       <div className="mx-auto w-full max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,500px)] lg:items-start lg:gap-16">
           {/* Left Column */}
-          <div className="flex flex-col">
+          <div className="flex justify-center items-center flex-col">
             {/* Header Text */}
             <h1 className="mb-4 text-3xl font-extrabold leading-tight text-white md:text-4xl lg:text-[56px] lg:leading-[1.05]">
               {t('feeFree.heading')}

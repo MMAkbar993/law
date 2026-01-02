@@ -171,28 +171,15 @@ export default function Footer() {
         {/* Footer Logos */}
         <div className=" border-gray-200 pt-8 mb-8 bg-[#F5F5F5] rounded-lg p-4 w-full justify-center items-center flex">
           <div className="flex flex-wrap gap-8 mb-8 justify-around items-center w-full">
-            <div className="text-sm font-bold"><img src="morganconnection-black.svg" alt="" /></div>
-            <div className="text-sm font-bold"><img src="businesstrialgroup-black.svg" alt="" /></div>
-            <div className="text-sm font-bold"><img src="whistleblower-black.svg" alt="" /></div>
-            <div className="text-sm font-bold"><img src="abogados-black-v2.svg" alt="" /></div>
-            <div className="text-sm font-bold flex items-center">
-              <img src="classaction-black.svg" alt="" />
-              {/* CLASS ACTION COM
-              <svg className="w-5 h-4 ml-1" viewBox="0 0 20 16" fill="none">
-                <rect x="0" y="0" width="20" height="2.67" fill="currentColor"/>
-                <rect x="0" y="2.67" width="20" height="2.67" fill="white"/>
-                <rect x="0" y="5.34" width="20" height="2.67" fill="currentColor"/>
-                <rect x="0" y="8" width="20" height="2.67" fill="white"/>
-                <rect x="0" y="10.67" width="20" height="2.67" fill="currentColor"/>
-                <rect x="0" y="13.34" width="20" height="2.67" fill="white"/>
-                <path d="M0 0 L0 16 L6 12 L0 8 Z" fill="currentColor" opacity="0.3"/>
-              </svg> */}
-            </div>
+            <div className=" w-20 "><img src="aaj-logo copy.png" alt="" /></div>
+            <div className="w-20"><img src="AVVORATING copy.png" alt="" /></div>
+            <div className="w-20"><img src="superlawyer copy.png" alt="" /></div>
+            <div className="w-20"><img src="clientschoice copy.png" alt="" /></div>
           </div>
         </div>
 
         {/* Office Locations */}
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <p className="text-sm text-gray-600">
             {officeLinkBefore}
             <a href="/locations" className="text-brand-accent hover:underline">
@@ -200,40 +187,24 @@ export default function Footer() {
             </a>
             {officeLinkAfter}
           </p>
-        </div>
+        </div> */}
 
         {/* Legal Disclaimer */}
         <div className="mb-8 text-xs text-gray-600">
           <p>
             {t('footer.disclaimer')}
           </p>
+
+          <div className="text-sm text-gray-600 mt-4">
+              {t('footer.copyright')}
+            </div>
         </div>
       </div>
 
       {/* Newsletter Section */}
       <NewsletterSection />
 
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-200">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-            <div className="text-sm text-gray-600">
-              {t('footer.copyright')}
-            </div>
-            <div className="flex items-center space-x-4">
-              <button className="bg-gray-700 text-white px-4 py-2 text-sm hover:bg-gray-800 transition-colors">
-                {t('footer.privacyChoices')}
-              </button>
-              <a href="#" className="text-sm text-gray-600 transition-colors hover:text-brand-accent">
-                {t('footer.privacyPolicy')}
-              </a>
-              <Link to="/disclaimer-and-terms-of-use" className="text-sm text-gray-600 transition-colors hover:text-brand-accent">
-                {t('footer.terms')}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </footer>
   );
 }

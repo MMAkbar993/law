@@ -64,14 +64,7 @@ export default function Contact() {
                 {t('contact.description')}
               </p>
 
-              {/* Attorney Image */}
-              <div className="mb-6">
-                <img
-                  src="female-attorney-at-desk.avif"
-                  alt="Morgan & Morgan attorney"
-                  className="w-full rounded-lg shadow-lg"
-                />
-              </div>
+
 
               {/* Contact Info Box */}
               <div className="bg-blue-50 rounded-xl p-6 md:p-8">
@@ -128,28 +121,6 @@ export default function Contact() {
                   required
                 />
 
-                {/* Phone Number and Zip Code */}
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder={t('common.form.phone')}
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="zipCode"
-                    placeholder={t('common.form.zip')}
-                    value={formData.zipCode}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                    required
-                  />
-                </div>
-
                 {/* Email */}
                 <input
                   type="email"
@@ -205,7 +176,7 @@ export default function Contact() {
                 </div>
 
                 {/* Terms & Privacy */}
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-center text-gray-500">
                   {t('common.form.terms')}
                 </p>
 
@@ -288,25 +259,7 @@ export default function Contact() {
               <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
                 {t('contact.localDescription')}
               </p>
-              <Link
-                to="/locations"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
-              >
-                <span>{t('contact.findOffice')}</span>
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Link>
+            
             </div>
           </div>
         </div>

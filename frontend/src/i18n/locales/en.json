@@ -36,7 +36,7 @@
     "disclaimers": {
       "resultsMayVary": "Results may vary depending on your particular facts and legal circumstances.",
       "copyright": "Results may vary depending on your particular facts and legal circumstances. ©2025 Morgan and Morgan, P.A. All rights reserved.",
-      "attorneyAvailability": "The attorneys shown in these videos may not be licensed in your state. To find an attorney licensed in your area, please visit our attorney page.",
+      "attorneyAvailability": "The attorneys shown in these videos may not be licensed in your state.",
       "attorneyFeature": "The attorney featured above is licensed in Florida. For a full list of attorneys in your state please visit our attorney page. Results may vary depending on your particular facts and legal circumstances."
     },
     "aria": {
@@ -626,7 +626,7 @@
   "hero": {
     "titleLine1": "Personal Lawyers",
     "titleLine2": "Fighting For You",
-    "description": "We fight to get you what you deserve—start your free case review anytime by text, phone, or online.",
+    "description": "Start your free case review anytime by text, phone, or online.",
     "features": [
       "FIGHTING FOR MORE",
       "FREE, UNLESS WE WIN",
@@ -680,17 +680,17 @@
     "insuranceOffer": "insurance offer",
     "verdict": "verdict",
     "caseDetails": "Car Accident | Orlando, FL",
-    "disclaimer": "Results may vary depending on your particular facts and legal circumstances. The attorneys shown in these photos may not be licensed in your state. To find an attorney licensed in your area, please visit our attorney page."
+    "disclaimer": "Results may vary depending on your particular facts and legal circumstances. The attorneys shown in these photos may not be licensed in your state."
   },
   "ways": {
     "title": "Ways We Help",
     "cards": [
       {
-        "title": "Injured in a car accident?",
+        "title": "Car Accident?",
         "description": "We've helped thousands recover medical bills, lost wages, and more after crashes caused by negligence."
       },
       {
-        "title": "Hurt in a slip and fall?",
+        "title": "Slip and Fall?",
         "description": "From wet floors to unsafe conditions, we fight to hold property owners accountable for your injuries."
       },
       {
@@ -715,7 +715,7 @@
   },
   "faces": {
     "title": "Faces of Justice",
-    "description": "Our attorneys are whip-smart and passionate people who go the extra mile for clients.",
+    "description": "Our attorneys are whip-smart people who go the extra mile for clients.",
     "signatureLabel": "Signature",
     "profileName": "Matt Morgan",
     "profileTitle": "Managing Partner",
@@ -844,7 +844,7 @@
     },
     "officeLink": "For a full list of locations in your area please visit our {{link}} page.",
     "officeLinkLabel": "Office Locations",
-    "disclaimer": "This site is designed to be accessible to and usable by people with and without disabilities. Please contact us if you encounter an accessibility or usability issue on this site. Attorney advertising. Prior results do not guarantee a similar outcome. Cases will be handled by attorneys licensed in the local jurisdiction. Cases may be associated with, or referred to, other law firms as co-counsel or referral counsel. Based on select nationwide reviews.",
+    "disclaimer": "This site is designed to be accessible to and usable by people with and without disabilities. Please contact us if you encounter an accessibility or usability issue on this site. Prior results do not guarantee a similar outcome. Cases will be handled by attorneys licensed in the local jurisdiction. Cases may be associated with, or referred to, other law firms as co-counsel or referral counsel.",
     "privacyChoices": "Your privacy choices.",
     "privacyPolicy": "Privacy Policy",
     "terms": "Disclaimers and Terms of Use",
@@ -855,17 +855,31 @@
     "description": "Getting help shouldn't be hard.",
     "formTitle": "It's Free to Get Started",
     "here247": "We're here 24/7.",
-    "formDescription": "Fill out the form, call us at {{phone}}, or use the text button for your free case evaluation.",
+    "formDescription": "Fill out the form, call us at {{phone}}, for your free case evaluation.",
     "attorneyDisclaimer": "The attorney shown above may not be licensed in your state. To find an attorney licensed in your area, please visit our",
     "attorneyPage": "attorney page",
-    "whyTitle": "Why Morgan & Morgan?",
-    "whyDescription": "Choosing Morgan & Morgan means more than hiring a law firm—it's having a strong, supportive, and proven team on your side.",
-    "fightingForMore": "FIGHTING FOR MORE",
-    "fightingDescription": "35 years. 1,000 lawyers. $25 billion recovered. We have the power to take on any corporation.",
-    "feeFree": "THE FEE IS FREE, UNLESS WE WIN",
-    "feeDescription": "It's easy to get started with a free case evaluation by phone, text or web — 24/7. The fee is always free unless we win.",
-    "localCare": "LOCAL CARE + NATIONAL POWER",
-    "localDescription": "Your attorney is from your community — backed by the strength of a national firm.",
+    "whyTitle": "Why US",
+    "whyDescription": "Choosing us means more than hiring a law firm—it's having a strong, team on your side.",
+    "fightingForMore": "FIGHTING",
+    "fightingDescription": "We have the power to take on any corporation.",
+    "feeFree": "FREE, UNLESS WE WIN",
+    "feeDescription": "It's easy to get started with a free case evaluation by phone, text or web — 24/7.",
+    "localCare": "LOCAL CARE",
+    "localDescription": "Your attorney is from your community",
     "findOffice": "Find an office near you"
+  },
+  "ourFirm": {
+    "spanishBanner": {
+      "title": "We Speak Your Language",
+      "logoText": "ABOGADOS.COM",
+      "logoSubtext": "MORGAN & MORGAN",
+      "testimonialImage": "Rectangle 34624240-4_0.png.webp",
+      "testimonialName": "Oswaldo",
+      "testimonialQuote": "\"Communicating with them is fast. It's reliable. They are bilingual. The best part about all of this is that the attorney gives you so much confidence that you feel so safe.\"",
+      "testimonialAuthor": "Oswaldo, Real Morgan & Morgan Client",
+      "missionStatement": "We're here for the 42 million Spanish speakers in the U.S.—in their language.",
+      "buttonText": "Know Your Rights",
+      "buttonUrl": "#"
+    }
   }
 }
