@@ -409,7 +409,7 @@ export default function AutoAccidentCalculator() {
                 </h1>
               </div>
               <p className="text-lg text-white/80">
-                Our calculator uses thousands of ACCIDENT to show what your case could be worth before
+                Our calculator uses thousands of accident to show what your case could be worth before
                 hiring an attorney.
               </p>
 
