@@ -80,12 +80,14 @@ export default function ReviewsSection() {
                     } md:block md:opacity-100`}
                   aria-hidden={!isActive}
                 >
+                  <div className="mt-4 mb-4">
+                    <StarRow count={review.rating} />
+                  </div>
 
                   <p className="text-base leading-relaxed text-[#1f2937]">{review.quote}</p>
-                  <div className="mt-6 font-semibold text-[#111827]">{review.author}</div>
-                  <div className="text-sm text-[#374151]">{review.location}</div>
-                  <div className="mt-4">
-                    <StarRow count={review.rating} />
+                  <div className="text-center">
+                    <div className="mt-6 font-semibold text-[#111827]">{review.author}</div>
+                    <div className="text-sm text-[#374151]">{review.location}</div>
                   </div>
                 </article>
               );

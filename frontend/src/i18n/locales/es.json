@@ -217,7 +217,81 @@
         "phoneLabel": "Llamar",
         "phone": "(907) 531-0511",
         "cta": "Ver oficina"
-      }
+      },
+      "offices": [
+        {
+          "name": "Morgan & Morgan Anchorage",
+          "addressLines": [
+            "1577 C. Street, Suite 204-M",
+            "Anchorage, AK 99501"
+          ],
+          "phone": "(907) 531-0511",
+          "cta": "Ver oficina"
+        },
+        {
+          "name": "Morgan & Morgan Phoenix",
+          "addressLines": [
+            "40 N. Central Avenue, Suite 1400",
+            "Phoenix, AZ 85004"
+          ],
+          "phone": "(602) 737-2000",
+          "cta": "Ver oficina"
+        },
+        {
+          "name": "Morgan & Morgan Los Angeles",
+          "addressLines": [
+            "633 West 5th Street, 26th Floor",
+            "Los Angeles, CA 90071"
+          ],
+          "phone": "(213) 487-9500",
+          "cta": "Ver oficina"
+        },
+        {
+          "name": "Morgan & Morgan Miami",
+          "addressLines": [
+            "20 N. Orange Avenue, Suite 1600",
+            "Orlando, FL 32801"
+          ],
+          "phone": "(407) 420-1414",
+          "cta": "Ver oficina"
+        },
+        {
+          "name": "Morgan & Morgan Atlanta",
+          "addressLines": [
+            "191 Peachtree Street NE, Suite 4200",
+            "Atlanta, GA 30303"
+          ],
+          "phone": "(404) 737-2000",
+          "cta": "Ver oficina"
+        },
+        {
+          "name": "Morgan & Morgan Chicago",
+          "addressLines": [
+            "225 W. Wacker Drive, Suite 2100",
+            "Chicago, IL 60606"
+          ],
+          "phone": "(312) 726-2000",
+          "cta": "Ver oficina"
+        },
+        {
+          "name": "Morgan & Morgan New York",
+          "addressLines": [
+            "350 5th Avenue, Suite 7710",
+            "New York, NY 10118"
+          ],
+          "phone": "(212) 738-2000",
+          "cta": "Ver oficina"
+        },
+        {
+          "name": "Morgan & Morgan Houston",
+          "addressLines": [
+            "1001 Fannin Street, Suite 2700",
+            "Houston, TX 77002"
+          ],
+          "phone": "(713) 222-2000",
+          "cta": "Ver oficina"
+        }
+      ]
     },
     "remoteHelp": {
       "title": "No necesitas visitar la oficina.",

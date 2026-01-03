@@ -13,6 +13,7 @@ import FeeFreeFormSection from '../components/home/FeeFreeFormSection';
 import GetJusticeStepsSection from '../components/home/GetJusticeStepsSection';
 import ReviewsSection from '../components/home/ReviewsSection';
 import CalculatorTabBox from '../components/home/CalculatorTabBox';
+import AdditionalInquiriesSection from '../components/home/AdditionalInquiriesSection';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <HowItWorksSection />
 
       <FightingForPeopleSection />
+      <AdditionalInquiriesSection />
      
       {/* <InsightsResourcesSection /> */}
       <FeeFreeFormSection />

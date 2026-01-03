@@ -76,8 +76,6 @@ const STEP_DEFINITIONS = [
     type: 'details',
     field: ['details', 'state'],
     label: 'Can you quickly explain what happened?',
-    helper:
-      'This information will help our match you with similar successful cases to give a better estimated payout.',
   },
   {
     id: 'contact',
@@ -401,7 +399,7 @@ export default function AutoAccidentCalculator() {
           <div className="flex flex-col justify-center">
             <div className="mb-8 flex items-center gap-2 text-[#55c7d0]">
               <span className="inline-block rounded-full bg-[#55c7d0]/20 px-3 py-1 text-sm font-semibold tracking-wide uppercase">
-                Get the max auto accident payout
+                Get A QUOTE FAST
               </span>
             </div>
             <div className="flex flex-col gap-6">
@@ -411,8 +409,8 @@ export default function AutoAccidentCalculator() {
                 </h1>
               </div>
               <p className="text-lg text-white/80">
-                Our calculator uses secrets from thousands of accident payouts to show what your case could be worth before
-                hiring an accident attorney.
+                Our calculator uses thousands of ACCIDENT to show what your case could be worth before
+                hiring an attorney.
               </p>
 
             </div>
@@ -440,7 +438,7 @@ export default function AutoAccidentCalculator() {
                 </div>
                 <h2 className="text-2xl font-semibold">One moment please...</h2>
                 <p className="text-base text-white/80">
-                  We&apos;re reviewing your answers.we will reach out shortly .
+                  We&apos;re reviewing your answers. We will reach out shortly.
                 </p>
               </div>
             ) : (
